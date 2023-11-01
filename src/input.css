@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 /* Add Config Colors and Fonts */
+
 @font-face {
     font-family: kalameh-regular;
     src: url("../assets/fonts/Kalameh Regular.ttf");
