@@ -7,8 +7,9 @@
     <title>dashboard</title>
 </head>
 
-<body>
-    <div class="flex flex-col  justify-start items-center max-w-sm mx-auto border min-h-screen">
+<body class=" ">
+
+    <div class="flex flex-col  justify-start items-center max-w-sm mx-auto border min-h-screen mb-16">
         <div class="flex flex-col bg-gray-100 px-4 py-4 gap-y-4 w-full">
             <div class="flex justify-between items-center  ">
 
@@ -26,7 +27,7 @@
             </div>
             <div class="flex justify-between items-center ">
                 <p class="text-[14px] text-primary-900 font-bold">آخرین پیش فاکتور ها </p>
-                <span class="text-[12px]  text-gray-700">مشاهده همه</span>
+                <span class="text-[12px]  text-gray-700 hover:text-primary-900 transition-all">مشاهده همه</span>
             </div>
             <!--Swiper akharin pishfactor ha-->
             <div class="" dir="ltr">
@@ -120,11 +121,147 @@
 
 
         </div>
+        <div class="bg-white flex flex-col px-8 py-4 gap-y-4 w-full">
+            <h4 class="text-[14px] pr-3 font-bold text-primary-900">استعلام قیمت و موجودی</h4>
+            <div class="relative float-label-input">
+                <input type="text" id="name" placeholder=" " class="block rounded border-slate-200  text-sm relative w-full bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3 block appearance-none leading-normal focus:border-blue-400">
+
+                <div class="absolute left-2 top-2 text-blue-500 flex justify-center items-center border rounded-lg border-blue-400 ">
+                <img src="../assets/icons/barcode%201.svg" class="px-1 py-1 w-7" >
+                </div>
+                <!--                    <svg  class="absolute left-2 top-3 text-blue-500"  width="20" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12.1601 10.87C12.0601 10.86 11.9401 10.86 11.8301 10.87C9.45006 10.79 7.56006 8.84 7.56006 6.44C7.56006 3.99 9.54006 2 12.0001 2C14.4501 2 16.4401 3.99 16.4401 6.44C16.4301 8.84 14.5401 10.79 12.1601 10.87Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7.15997 14.56C4.73997 16.18 4.73997 18.82 7.15997 20.43C9.90997 22.27 14.42 22.27 17.17 20.43C19.59 18.81 19.59 16.17 17.17 14.56C14.43 12.73 9.91997 12.73 7.15997 14.56Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>-->
+                </input>
+                <label for="name" class="absolute top-3 right-2 text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-sm px-2 text-grey-darker">نام محصول</label>
+            </div>
+            <div class="flex flex-col justify-center items-center ">
+                <span class="text-gray-700 text-[12px] py-2">استعلام محصولی گرفته نشده است</span>
+
+                <div class="flex flex-col w-full ">
+                    <h6>ادو پرفیوم مردانه نوئوو مدل Black Afgano ظرفیت 50 میلی لیتر دارای عصاره ی بنفشه و شهد انگور </h6>
+                    <div class="flex justify-between items-center gap-x-2">
+                        <div class="bg-primary-100 w-full text-primary-300 px-1 py-2 rounded-lg flex justify-between  items-center ">
+                            <span >موجودی : </span>
+                            <p>
+                                <span class="font-bold text-primary-500">250</span>
+                                عدد
+                            </p>
+                        </div>
+
+                        <div class="bg-secondary-100 text-secondary-500 w-full px-1 py-2 rounded-lg flex justify-center items-center gap-x-2 ">
+
+                            <p class="font-bold text-md" >250/000/000</p>
+                            تومان
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
+
+
+    <div class="  w-full flex fixed  bottom-0 inset-x-0 "  >
+        <div class="max-w-sm mx-auto border bg-yellow-50 w-full">
+            <div class="bg-white  shadow-t-xl border flex justify-between px-10 py-2 text-[12px] items-end  text-primary-900 font-bold ">
+                <div class="flex flex-col justify-center items-center gap-y-1 ">
+                    <img src="../assets/icons/profile2user.svg" class="w-4" />
+                    مشتریان
+                </div>
+                <div class="flex flex-col justify-center items-center gap-y-1 relative  ">
+                    <div class="rounded-full p-2 bg-gray-200 absolute -top-12 flex justify-center items-center indicator">
+                        <div class="rounded-full  p-[6px]   bg-blue-500 z-80 cursor-pointer " id="RegistrationNewInvoice">
+                            <img src="../assets/icons/add.svg">
+                        </div>
+                    </div>
+                    سفارش جدید
+                </div>
+                <div class="flex flex-col justify-center items-center gap-y-1 ">
+                    <img src="../assets/icons/Vector.svg" class="w-4">
+                    فاکتور ها
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalNewFactor" class="h-screen transition-all w-full flex fixed  -bottom-[101vh] overflow-hidden z-[999999999999999999]">
+        <div id="modalNewFactorParent" class="max-w-sm mx-auto w-full border bg-black/80 flex justify-center items-end">
+            <div class="w-full  bg-white px-4 py-2 flex flex-col gap-y-2 justify-center ">
+                <img src="../assets/icons/Rectangle%20140.svg" class="w-12 mb-8 mx-auto">
+                <a href="#" class="border border-primary-500 bg-primary-500 text-white py-4 text-center text-[14px] rounded-lg">ثبت فاکتور جدید</a>
+                <a href="#" class="border border-primary-500 text-primary-500 text-[14px] py-4 text-center rounded-lg" >ثبت فاکتور پیش از فاکتور</a>
+                <a href="#" class="border border-primary-500 text-primary-500 text-[14px] py-4 text-center rounded-lg" >ثبت پیش فاکتور جدید</a>
+            </div>
+        </div>
+    </div>
+
+
+<style>
+    .bottom-0-important {
+        bottom: 0px ;
+    }
+    .indicator{
+        /*position: absolute;*/
+        /*top: -50%;*/
+        /*width: 70px;*/
+        /*height: 70px;*/
+        /*background: red;*/
+    }
+    .indicator::before{
+        content: "";
+        position: absolute;
+        /* border: 1px solid; */
+        top: 43%;
+        left: -9px;
+        width: 13px;
+        height: 20px;
+        background: #F3F3F3;
+        border-bottom-left-radius: 62px;
+        border-top-right-radius: 47px;
+        box-shadow: 2px 0px 1px 1px #f3f3f3;
+    }
+    .indicator::after{
+        content: "";
+        position: absolute;
+        /* border: 1px solid; */
+        top: 40%;
+        /* transform: rotateZ(33deg); */
+        right: -5px;
+        width: 13px;
+        height: 20px;
+        background: #F3F3F3;
+        border-bottom-right-radius: 62px;
+        border-top-left-radius: 47px;
+        box-shadow: 2px 0px 1px 1px #f3f3f3;
+    }
+</style>
 </body>
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script>
+    const btnNewFactor = document.getElementById('RegistrationNewInvoice')
+    const modalNewFactor = document.getElementById('modalNewFactor')
+    const toggleNewFactor = () => {
+        modalNewFactor.classList.toggle('bottom-0-important')
+        // console.log('toggleNewFactor')
+    }
+    btnNewFactor.addEventListener('click' , toggleNewFactor)
+
+    document.addEventListener('click' , (event) => {
+        if (event.target.id === 'modalNewFactorParent'){
+            console.log(event.target.id)
+            toggleNewFactor()
+        }else{
+            console.log(event.target.id)
+        }
+
+    })
+
+</script>
+
+
 <style>
     swiper-container {
         width: 100%;
@@ -148,4 +285,6 @@
         object-fit: cover;
     }
 </style>
+
+
 </html>
