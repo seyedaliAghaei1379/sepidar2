@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: kalameh-regular;
-    src: url("../assets/fonts/Kalameh Regular.ttf");
+    src: url("../assets/fonts/KalamehWebFaNum-Regular.woff");
 }
 @font-face {
     font-family: kalameh-black;
-    src: url("../assets/fonts/Kalameh Black.ttf");
+    src: url("../assets/fonts/KalamehWebFaNum-Black.woff");
 }
 .font-kalameh{
     font-family: kalameh-regular;
@@ -49,4 +49,41 @@ input{
     100% {
         background-position: 0% 50%;
     }
+}
+.bottom-0-important {
+    bottom: 0px ;
+}
+.indicator{
+    /*position: absolute;*/
+    /*top: -50%;*/
+    /*width: 70px;*/
+    /*height: 70px;*/
+    /*background: red;*/
+}
+.indicator::before{
+    content: "";
+    position: absolute;
+    /* border: 1px solid; */
+    top: 43%;
+    left: -9px;
+    width: 13px;
+    height: 20px;
+    background: #F3F3F3;
+    border-bottom-left-radius: 62px;
+    border-top-right-radius: 47px;
+    box-shadow: 2px 0px 1px 1px #f3f3f3;
+}
+.indicator::after{
+    content: "";
+    position: absolute;
+    /* border: 1px solid; */
+    top: 40%;
+    /* transform: rotateZ(33deg); */
+    right: -5px;
+    width: 13px;
+    height: 20px;
+    background: #F3F3F3;
+    border-bottom-right-radius: 62px;
+    border-top-left-radius: 47px;
+    box-shadow: 2px 0px 1px 1px #f3f3f3;
 }

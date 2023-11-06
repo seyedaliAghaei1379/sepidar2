@@ -608,6 +608,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-\[0\.5px\] {
   height: 0.5px;
 }
@@ -622,6 +626,14 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-\[34px\] {
+  height: 34px;
 }
 
 .min-h-screen {
@@ -662,6 +674,22 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-\[34px\] {
+  width: 34px;
 }
 
 .max-w-sm {
@@ -849,6 +877,15 @@ video {
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.bg-black\/60 {
+  background-color: rgb(0 0 0 / 0.6);
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -959,6 +996,10 @@ video {
   line-height: 1rem;
 }
 
+.text-\[16px\] {
+  font-size: 16px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1040,13 +1081,13 @@ video {
 @font-face {
   font-family: kalameh-regular;
 
-  src: url("../assets/fonts/Kalameh Regular.ttf");
+  src: url("../assets/fonts/KalamehWebFaNum-Regular.woff");
 }
 
 @font-face {
   font-family: kalameh-black;
 
-  src: url("../assets/fonts/Kalameh Black.ttf");
+  src: url("../assets/fonts/KalamehWebFaNum-Black.woff");
 }
 
 .font-kalameh{
@@ -1097,6 +1138,47 @@ input{
   100% {
     background-position: 0% 50%;
   }
+}
+
+.bottom-0-important {
+  bottom: 0px ;
+}
+
+.indicator{
+  /*position: absolute;*/
+  /*top: -50%;*/
+  /*width: 70px;*/
+  /*height: 70px;*/
+  /*background: red;*/
+}
+
+.indicator::before{
+  content: "";
+  position: absolute;
+  /* border: 1px solid; */
+  top: 43%;
+  left: -9px;
+  width: 13px;
+  height: 20px;
+  background: #F3F3F3;
+  border-bottom-left-radius: 62px;
+  border-top-right-radius: 47px;
+  box-shadow: 2px 0px 1px 1px #f3f3f3;
+}
+
+.indicator::after{
+  content: "";
+  position: absolute;
+  /* border: 1px solid; */
+  top: 40%;
+  /* transform: rotateZ(33deg); */
+  right: -5px;
+  width: 13px;
+  height: 20px;
+  background: #F3F3F3;
+  border-bottom-right-radius: 62px;
+  border-top-left-radius: 47px;
+  box-shadow: 2px 0px 1px 1px #f3f3f3;
 }
 
 .hover\:border-zinc-200:hover {
