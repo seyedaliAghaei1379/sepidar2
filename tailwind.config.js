@@ -20,6 +20,9 @@ module.exports = {
           100 : "#EDFFF4",
           500 : "#73D697",
         }
+      },
+      height : {
+        input : "56px"
       }
     }
   },
