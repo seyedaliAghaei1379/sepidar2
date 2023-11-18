@@ -22,7 +22,8 @@ module.exports = {
         }
       },
       height : {
-        input : "56px"
+        input : "56px",
+        btn : "56px",
       }
     }
   },

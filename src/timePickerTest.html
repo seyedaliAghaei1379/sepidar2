@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../dist/output.css" rel="stylesheet">
+
+
+    <title>time picker</title>
+</head>
+<body
+>
+<h1>Timepicker using Swiper.js</h1>
+<p>Use arrow keys or drag/swipe to change value</p>
+<div class="input-wrapper">
+    <input type="text" id="input" value="1402:37:00" readonly />
+</div>
+<div class="flex flex-col max-w-sm mx-auto bg-red-500">
+<div class="picker arrows">
+    <div class="swiper-container year">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">1388</div>
+            <div class="swiper-slide">1389</div>
+            <div class="swiper-slide">1390</div>
+            <div class="swiper-slide">1391</div>
+            <div class="swiper-slide">1392</div>
+            <div class="swiper-slide">1393</div>
+            <div class="swiper-slide">1394</div>
+            <div class="swiper-slide">1395</div>
+            <div class="swiper-slide">1396</div>
+            <div class="swiper-slide">1397</div>
+            <div class="swiper-slide">1398</div>
+            <div class="swiper-slide">1399</div>
+            <div class="swiper-slide">1400</div>
+            <div class="swiper-slide">1401</div>
+            <div class="swiper-slide">1402</div>
+            <div class="swiper-slide">1403</div>
+            <div class="swiper-slide">1404</div>
+            <div class="swiper-slide">1405</div>
+            <div class="swiper-slide">1406</div>
+            <div class="swiper-slide">1407</div>
+            <div class="swiper-slide">1408</div>
+            <div class="swiper-slide">1409</div>
+            <div class="swiper-slide">1410</div>
+            <div class="swiper-slide">1411</div>
+            <div class="swiper-slide">1412</div>
+            <div class="swiper-slide">1413</div>
+            <div class="swiper-slide">1414</div>
+            <div class="swiper-slide">1415</div>
+            <div class="swiper-slide">1416</div>
+            <div class="swiper-slide">1417</div>
+            <div class="swiper-slide">1418</div>
+            <div class="swiper-slide">1419</div>
+            <div class="swiper-slide">1420</div>
+            <div class="swiper-slide">1421</div>
+            <div class="swiper-slide">1422</div>
+            <div class="swiper-slide">1423</div>
+            <div class="swiper-slide">1424</div>
+            <div class="swiper-slide">1425</div>
+            <div class="swiper-slide">1426</div>
+        </div>
+    </div>
+    <div class="swiper-container month">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">فروردین</div>
+            <div class="swiper-slide">اردیبهشت</div>
+            <div class="swiper-slide">خرداد</div>
+            <div class="swiper-slide">تیر</div>
+            <div class="swiper-slide">مرداد</div>
+            <div class="swiper-slide">شهریور</div>
+            <div class="swiper-slide">مهر</div>
+            <div class="swiper-slide">آبان</div>
+            <div class="swiper-slide">آذر</div>
+            <div class="swiper-slide">دی</div>
+            <div class="swiper-slide">بهمن</div>
+            <div class="swiper-slide">اسفند</div>
+        </div>
+    </div>
+    <div class="swiper-container days">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">01</div>
+            <div class="swiper-slide">02</div>
+            <div class="swiper-slide">03</div>
+            <div class="swiper-slide">04</div>
+            <div class="swiper-slide">05</div>
+            <div class="swiper-slide">06</div>
+            <div class="swiper-slide">07</div>
+            <div class="swiper-slide">08</div>
+            <div class="swiper-slide">09</div>
+            <div class="swiper-slide">10</div>
+            <div class="swiper-slide">11</div>
+            <div class="swiper-slide">12</div>
+            <div class="swiper-slide">13</div>
+            <div class="swiper-slide">14</div>
+            <div class="swiper-slide">15</div>
+            <div class="swiper-slide">16</div>
+            <div class="swiper-slide">17</div>
+            <div class="swiper-slide">18</div>
+            <div class="swiper-slide">19</div>
+            <div class="swiper-slide">20</div>
+            <div class="swiper-slide">21</div>
+            <div class="swiper-slide">22</div>
+            <div class="swiper-slide">23</div>
+            <div class="swiper-slide">24</div>
+            <div class="swiper-slide">25</div>
+            <div class="swiper-slide">26</div>
+            <div class="swiper-slide">27</div>
+            <div class="swiper-slide">28</div>
+            <div class="swiper-slide">29</div>
+            <div class="swiper-slide">30</div>
+            <div class="swiper-slide">31</div>
+        </div>
+    </div>
+    <div class="vizor border-primary-500"></div>
+</div>
+<button onclick="handleDate()" type="button" class="bg-blue-500 h-btn text-white rounded-md " >
+sasl
+</button>
+</div>
+<style>
+
+    .input-wrapper {
+        text-align: center;
+    }
+    .picker {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        place-items: center ;
+        position: relative;
+        /*width: 300px;*/
+        /*background: red !important;*/
+        overflow: hidden;
+        margin: 1rem auto 0;
+        outline: 1px solid #ccc;
+        padding: 0 30px;
+        background-color: #fff;
+        color: #252525;
+        height: 112px;
+    }
+
+    .swiper-container {
+        width: calc(312px / 3);
+        height: 100px;
+        float: left;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        opacity: 0.25;
+        transition: opacity 0.3s ease;
+        cursor: default;
+        /*font-weight: bold;*/
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .swiper-slide-prev,
+    .swiper-slide-next {
+        cursor: pointer;
+            }
+
+    .swiper-slide-active {
+        opacity: 1;
+    }
+
+    .vizor {
+        border-top: 1px solid #2987E5;
+        border-bottom: 1px solid #2987E5;
+        /*height: 70px;*/
+        height: 39px;
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        right: 1rem;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        line-height: 62px;
+    }
+    .vizor:before {
+        left: 95px;
+    }
+    .vizor:after {
+        left: 175px;
+    }
+
+    .arrows .swiper-container:after,
+    .arrows .swiper-container:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px;
+        border-color: transparent;
+        /*opacity: 0.5;*/
+        opacity: 0;
+    }
+
+    .arrows .swiper-container:before {
+        top: 0.5rem;
+        border-top-width: 0;
+        border-bottom-color: currentColor;
+    }
+
+    .arrows .swiper-container:after {
+        bottom: 0.5rem;
+        border-bottom-width: 0;
+        border-top-color: currentColor;
+    }
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<script>
+    var defaults = {
+        pagination: '.swiper-pagination',
+        slidesPerView: 3,
+        freeMode: true,
+        freeModeSticky: true,
+        freeModeMomentumRatio: 0.25,
+        freeModeVelocityRatio: 0.25,
+        freeModeMinimumVelocity: 0.1,
+        // loop: true,
+        loopAdditionalSlides: 5,
+        direction: 'vertical',
+        slideToClickedSlide: true,
+        centeredSlides: true,
+        onSlideChangeEnd: updateInput
+    };
+
+    var year = Swiper(
+        '.swiper-container.year',
+        Object.assign({}, defaults, {
+            initialSlide: 14
+        })
+    );
+    year.on('slideChangeEnd', function () {
+
+    })
+
+    var month = Swiper(
+        '.swiper-container.month',
+        Object.assign({}, defaults, {
+            initialSlide: 3
+        })
+    );
+
+    var days = Swiper('.swiper-container.days', Object.assign({}, defaults, {
+        initialSlide: 4
+    }));
+
+    var input = document.getElementById('input');
+    input.addEventListener('focus', moveLeft);
+
+    input.addEventListener('click', function (evt) {
+        var start = input.selectionStart;
+        var mod = start % 3;
+        start -=  mod;
+        input.setSelectionRange(start, start + 2);
+    });
+
+    input.addEventListener('keydown', function(evt) {
+        evt.preventDefault();
+        switch (evt.keyCode) {
+            case 38:
+                change(true);
+                break;
+            case 40:
+                change();
+                break;
+            case 37:
+                moveLeft();
+                break;
+            case 39:
+                moveRight();
+                break;
+        }
+    });
+
+    function moveLeft(e) {
+        var start = input.selectionStart;
+        var end = input.selectionEnd;
+
+        var invalidSelection = (end - start !== 2) || (start % 3 !== 0);
+
+        if (invalidSelection) {
+            input.setSelectionRange(0, 2);
+        } else if (start > 0) {
+            start -= 3;
+            input.setSelectionRange(start, start+2);
+        }
+    }
+
+    function moveRight() {
+        var start = input.selectionStart;
+        var end = input.selectionEnd;
+
+        if (end - start !== 2) {
+            input.setSelectionRange(0, 2);
+        }
+
+        if (end < input.value.length) {
+            start += 3;
+        }
+
+        input.setSelectionRange(start, start+2);
+    }
+
+    function findPart() {
+        var start = input.selectionStart;
+        var mod = start % 3;
+        start -=  mod;
+
+        if (start === 6) {
+            return days;
+        } else if (start === 3) {
+            return month;
+        }
+
+        return year;
+    }
+
+    function change(direction) {
+        var part = findPart();
+        direction? part.slideNext(true, 50) : part.slidePrev(true, 50);
+    }
+
+    function updateInput() {
+        if (!input) {
+            return false;
+        }
+
+        var start = input.selectionStart;
+        var end = input.selectionEnd;
+        // input.value
+        const months = ["فروردين", "ارديبهشت", "خرداد", "تير", "مرداد", "شهريور", "مهر", "آبان", "آذر", "دي", "بهمن", "اسفند"]
+        input.value = Number(Number(pad(year.realIndex))+1388) + '/' + months[Number(pad(month.realIndex))] + '/' + Number(Number(pad(days.realIndex)) + 1);
+        input.setSelectionRange(start, end);
+    }
+
+    function pad(v) {
+        return v > 9? v : "0" + String(v);
+    }
+
+    // input.focus();
+    // updateInput()
+    function handleDate(){
+        console.log("handleDate()")
+        updateInput()
+    }
+</script>
+
+</body>
+</html>
