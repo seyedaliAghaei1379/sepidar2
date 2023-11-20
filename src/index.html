@@ -148,7 +148,7 @@
 
 
         </div>
-        <div class="bg-white flex flex-col px-8 py-4 gap-y-4 w-full">
+        <div class=" flex flex-col px-8 py-4 gap-y-4 w-full mb-32">
             <h4 class="text-[14px] pr-3 font-medium text-primary-900">استعلام قیمت و موجودی</h4>
             <div class="relative float-label-input">
                 <input type="text" id="name" placeholder=" " class="block rounded border-slate-200 h-input text-sm relative w-full bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3 block appearance-none leading-normal focus:border-blue-400">
@@ -185,11 +185,50 @@
             </div>
 
         </div>
-        <div class="bg-gray-200 w-full h-32"></div>
+
     </div>
 
 
-    <div class="w-full flex fixed  bottom-0 inset-x-0  "  >
+    <div class="w-full mx-auto max-w-sm fixed  bottom-0 inset-x-0  flex justify-center text-[10px]  text-primary-900 ">
+        <div class="rounded-full absolute -top-1 z-30 ml-0.5  w-[60px] h-[60px] grid place-items-center  bg-blue-500 z-80 cursor-pointer " id="RegistrationNewInvoice">
+            <img src="../assets/icons/add.svg">
+        </div>
+        <svg class="max-w-sm " width="450" height="107" viewBox="0 0 360 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_951_1159)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M146.313 42.3456C142.783 34.3295 135.959 27 127.2 27H-51C-59.8366 27 -67 34.1634 -67 43V91C-67 99.8366 -59.8365 107 -51 107H411C419.837 107 427 99.8366 427 91V43C427 34.1634 419.837 27 411 27H233.8C225.041 27 218.217 34.3295 214.687 42.3456C208.803 55.7046 195.709 65 180.5 65C165.291 65 152.197 55.7046 146.313 42.3456Z" fill="white"/>
+            </g>
+            <defs>
+                <filter id="filter0_d_951_1159" x="-87" y="0" width="534" height="120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="-7"/>
+                    <feGaussianBlur stdDeviation="10"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_951_1159"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_951_1159" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
+        <div class="absolute px-6 h-16 flex w-full justify-center gap-x-16 items-center  bottom-2">
+        <div class="flex flex-col justify-between items-center gap-y-2  ">
+            <img src="../assets/icons/profile2user.svg" class="w-6" />
+            <a>مشتریان</a>
+        </div>
+        <div class="flex flex-col justify-between items-center gap-y-2 relative mt-8  ">
+<!--            <div class="opacity-0 block">.</div>-->
+            <a>سفارش جدید</a>
+        </div>
+        <div class="flex flex-col justify-between items-center gap-y-2 ">
+            <img src="../assets/icons/Vector.svg" class="w-6">
+            <a>فاکتور ها</a>
+
+        </div>
+        </div>
+    </div>
+
+
+    <div class="w-full  fixed  bottom-0 inset-x-0 hidden "  >
         <div class=" max-w-sm mx-auto border  w-full shadow-xl ">
             <div style="box-shadow: 0px 1px 4px #ccc " class="bg-white h-[80px]  border  flex justify-between px-10 py-3 text-[10px] items-end  text-primary-900 ">
                 <div class="flex flex-col justify-center items-center gap-y-2 ">
