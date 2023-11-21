@@ -9,6 +9,196 @@
     <title>افزودن اقلام</title>
 </head>
 <body>
+<div    class="flex flex-col justify-start items-center max-w-sm mx-auto border min-h-screen">
+    <div class="flex flex-col bg-gray-100 px-4 py-4 gap-y-4 w-full">
+        <div class="flex justify-between items-center">
+          <span class="w-[40px] h-[40px] bg-gray-200 rounded-full flex justify-center items-center">
+            <svg fill="#000000" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.055 32.055" xml:space="preserve" transform="rotate(90)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <path d="M3.968,12.061C1.775,12.061,0,13.835,0,16.027c0,2.192,1.773,3.967,3.968,3.967c2.189,0,3.966-1.772,3.966-3.967 C7.934,13.835,6.157,12.061,3.968,12.061z M16.233,12.061c-2.188,0-3.968,1.773-3.968,3.965c0,2.192,1.778,3.967,3.968,3.967 s3.97-1.772,3.97-3.967C20.201,13.835,18.423,12.061,16.233,12.061z M28.09,12.061c-2.192,0-3.969,1.774-3.969,3.967 c0,2.19,1.774,3.965,3.969,3.965c2.188,0,3.965-1.772,3.965-3.965S30.278,12.061,28.09,12.061z"></path>
+                </g>
+              </g>
+            </svg>
+          </span>
 
+            <div class="flex flex-col justify-center items-center gap-y-1">
+                <h4 class="text-primary-900 font-bold text-[20px]">سپیدار</h4>
+                <span class="text-gray-700 text-[12px] font-light">سه شنبه - 1383/03/16</span>
+            </div>
+            <img src="../assets/icons/arrowsquareleft.svg" alt="" class="p-2 w-[40px] h-[40px] rounded-full bg-gray-200">
+        </div>
+        <div class="flex justify-between items-start gap-2 w-full flex-col">
+            <p class="text-[16px] text-primary-900 font-semibold">
+                افزودن اقلام
+            </p>
+        </div>
+        <div class="flex gap-x-2 items-center justify-center w-full ">
+        <div class="relative float-label-input  bg-gray-100 w-full">
+            <input type="text" id="name" placeholder=" " class="block  rounded border-slate-200 h-input text-sm relative w-full bg-gray-100 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3 block appearance-none leading-normal focus:border-blue-400">
+            <div class="absolute left-2 top-[7px]  flex justify-center items-center  rounded-lg border-blue-400 ">
+                <img src="../assets/icons/searchnormal.svg" class="px-2 py-2 w-10">
+            </div>
+            <label for="name" class="absolute bg-gray-100 top-4 right-3 text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-sm px-2 text-grey-darker">نام محصول</label>
+        </div>
+            <img src="../assets/icons/categorySearch.svg" class="px-4 border border-primary-500 bg-white rounded-lg py-4 ">
+        </div>
+    </div>
+    <div class="flex flex-col bg-gray-100  pb-4 gap-y-2 w-full mb-16">
+        <!--        PRODUCT WITH IMG START -->
+        <div class="grid w-full gap-2 px-3 py-2 justify-center bg-white items-center" style="grid-template-columns: minmax(104px,auto) 1fr;grid-template-rows :  auto 40px ; ">
+            <img src="../assets/image/product1.png" class="w-[96px] h-[96px]">
+            <div class="  flex flex-col py-2 gap-y-1">
+                <h5 class="text-primary-900 text-[14px] leading-7">ادو پرفیوم مردانه نوئوو مدل Black Afgano ظرفیت 50 میلی لیتر</h5>
+                <div class="flex justify-between  w-full items-center text-[12px]">
+                    <span class="text-gray-700">قیمت</span>
+                    <span class="text-primary-600">
+                        <span class="font-semibold text-[14px]">6/500/000  </span>
+                    تومان
+                    </span>
+                </div>
+                <div class="flex justify-between  w-full items-center text-[12px] text-gray-700">
+                    <span>موجودی</span>
+                    <span> 25 عدد</span>
+                </div>
+            </div>
+
+            <div class="h-full px-2  border border-gray-200 flex justify-between items-center text-[12px] w-full rounded-lg">
+                انبار مرکزی
+                <img src="../assets/icons/chevronbottom.svg" width="12" height="7">
+            </div>
+            <div class="flex gap-x-1 h-full w-full">
+                <span class="bg-primary-100 h-full w-[40px] grid place-items-center rounded-lg ">
+                    <img src="../assets/icons/addsquare.svg" width="22" height="22" class="w-[22px]" >
+                </span>
+                <span class="bg-gray-200 h-full flex-1 rounded-lg grid place-items-center text-[14px] font-semibold">
+                    0
+                </span>
+                <span class="bg-primary-100 h-full w-[40px] grid place-items-center rounded-lg ">
+                    <img src="../assets/icons/addnegetive.svg" width="22" height="22" class="w-[22px]" >
+                </span>
+            </div>
+        </div>
+        <!--        PRODUCT WITH IMG END -->
+
+        <!--        PRODUCT WITH NO IMG START-->
+        <div class="flex flex-col gap-y-2 px-3 py-2 w-full bg-white">
+            <div class="  flex flex-col py-2 gap-y-1">
+                <h5 class="text-primary-900 text-[14px] leading-7">ادو پرفیوم مردانه نوئوو مدل Black Afgano ظرفیت 50 میلی لیتر</h5>
+                <div class="flex justify-between  w-full items-center text-[12px]">
+                    <span class="text-gray-700">قیمت</span>
+                    <span class="text-primary-600">
+                        <span class="font-semibold text-[14px]">6/500/000  </span>
+                    تومان
+                    </span>
+                </div>
+                <div class="flex justify-between  w-full items-center text-[12px] text-gray-700">
+                    <span>موجودی</span>
+                    <span> 25 عدد</span>
+                </div>
+            </div>
+            <div class="flex justify-between items-center h-[40px] gap-x-2">
+                <div class="h-full px-2 w-[104px] border border-gray-200 flex justify-between items-center text-[12px]  rounded-lg">
+                    انبار مرکزی
+                    <img src="../assets/icons/chevronbottom.svg" width="12" height="7">
+                </div>
+                <div class="flex gap-x-1 h-full flex-1">
+                <span class="bg-primary-100 h-full w-[40px] grid place-items-center rounded-lg ">
+                    <img src="../assets/icons/addsquare.svg" width="22" height="22" class="w-[22px]" >
+                </span>
+                    <span class="bg-gray-200 h-full flex-1 rounded-lg grid place-items-center text-[14px] font-semibold">
+                    0
+                </span>
+                    <span class="bg-primary-100 h-full w-[40px] grid place-items-center rounded-lg ">
+                    <img src="../assets/icons/addnegetive.svg" width="22" height="22" class="w-[22px]" >
+                </span>
+                </div>
+            </div>
+
+        </div>
+        <!--        PRODUCT WITH NO IMG END-->
+
+
+
+        <!--        PRODUCT WITH IMG START -->
+        <div class="grid w-full gap-2 px-3 py-2 justify-center bg-white items-center" style="grid-template-columns: minmax(104px,auto) 1fr;grid-template-rows :  auto 40px ; ">
+            <img src="../assets/image/product1.png" class="w-[96px] h-[96px]">
+            <div class="  flex flex-col py-2 gap-y-1">
+                <h5 class="text-primary-900 text-[14px] leading-7">ادو پرفیوم مردانه نوئوو مدل Black Afgano ظرفیت 50 میلی لیتر</h5>
+                <div class="flex justify-between  w-full items-center text-[12px]">
+                    <span class="text-gray-700">قیمت</span>
+                    <span class="text-primary-600">
+                        <span class="font-semibold text-[14px]">6/500/000  </span>
+                    تومان
+                    </span>
+                </div>
+                <div class="flex justify-between  w-full items-center text-[12px] text-gray-700">
+                    <span>موجودی</span>
+                    <span> 25 عدد</span>
+                </div>
+            </div>
+
+            <div class="h-full px-2  border border-gray-200 flex justify-between items-center text-[12px] w-full rounded-lg">
+                انبار مرکزی
+                <img src="../assets/icons/chevronbottom.svg" width="12" height="7">
+            </div>
+            <div class="flex gap-x-1 h-full w-full">
+                <span class="bg-primary-100 h-full w-[40px] grid place-items-center rounded-lg ">
+                    <img src="../assets/icons/addsquare.svg" width="22" height="22" class="w-[22px]" >
+                </span>
+                <span class="bg-gray-200 h-full flex-1 rounded-lg grid place-items-center text-[14px] font-semibold">
+                    0
+                </span>
+                <span class="bg-primary-100 h-full w-[40px] grid place-items-center rounded-lg ">
+                    <img src="../assets/icons/addnegetive.svg" width="22" height="22" class="w-[22px]" >
+                </span>
+            </div>
+        </div>
+        <!--        PRODUCT WITH IMG END -->
+        <!--        PRODUCT WITH IMG START -->
+        <div class="grid w-full gap-2 px-3 py-2 justify-center bg-white items-center" style="grid-template-columns: minmax(104px,auto) 1fr;grid-template-rows :  auto 40px ; ">
+            <img src="../assets/image/product1.png" class="w-[96px] h-[96px]">
+            <div class="  flex flex-col py-2 gap-y-1">
+                <h5 class="text-primary-900 text-[14px] leading-7">ادو پرفیوم مردانه نوئوو مدل Black Afgano ظرفیت 50 میلی لیتر</h5>
+                <div class="flex justify-between  w-full items-center text-[12px]">
+                    <span class="text-gray-700">قیمت</span>
+                    <span class="text-primary-600">
+                        <span class="font-semibold text-[14px]">6/500/000  </span>
+                    تومان
+                    </span>
+                </div>
+                <div class="flex justify-between  w-full items-center text-[12px] text-gray-700">
+                    <span>موجودی</span>
+                    <span> 25 عدد</span>
+                </div>
+            </div>
+
+            <div class="h-full px-2  border border-gray-200 flex justify-between items-center text-[12px] w-full rounded-lg">
+                انبار مرکزی
+                <img src="../assets/icons/chevronbottom.svg" width="12" height="7">
+            </div>
+            <div class="flex gap-x-1 h-full w-full">
+                <span class="bg-primary-100 h-full w-[40px] grid place-items-center rounded-lg ">
+                    <img src="../assets/icons/addsquare.svg" width="22" height="22" class="w-[22px]" >
+                </span>
+                <span class="bg-gray-200 h-full flex-1 rounded-lg grid place-items-center text-[14px] font-semibold">
+                    0
+                </span>
+                <span class="bg-primary-100 h-full w-[40px] grid place-items-center rounded-lg ">
+                    <img src="../assets/icons/addnegetive.svg" width="22" height="22" class="w-[22px]" >
+                </span>
+            </div>
+        </div>
+        <!--        PRODUCT WITH IMG END -->
+
+
+    </div>
+    <div class="bg-white shadow-xl insex-0 fixed w-full  max-w-sm mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2">
+        <a class="h-btn btn ">ادامه ثبت و فاکتور</a>
+        <img src="../assets/icons/barcode.svg" width="32" height="32" class="p-2 border border-primary-500 w-16 rounded-lg">
+    </div>
+</div>
 </body>
 </html>

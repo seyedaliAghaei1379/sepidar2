@@ -616,6 +616,10 @@ video {
   margin-right: auto;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-32 {
   margin-bottom: 8rem;
 }
@@ -716,8 +720,20 @@ video {
   height: 80px;
 }
 
+.h-\[96px\] {
+  height: 96px;
+}
+
 .h-btn {
   height: 56px;
+}
+
+.h-fixedbtnmodal {
+  height: 88px;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .h-input {
@@ -756,8 +772,16 @@ video {
   width: 100px;
 }
 
+.w-\[104px\] {
+  width: 104px;
+}
+
 .w-\[152px\] {
   width: 152px;
+}
+
+.w-\[22px\] {
+  width: 22px;
 }
 
 .w-\[38px\] {
@@ -776,8 +800,20 @@ video {
   width: 60px;
 }
 
+.w-\[96px\] {
+  width: 96px;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .min-w-\[278px\] {
@@ -985,10 +1021,6 @@ video {
   background-color: rgb(255 237 237 / var(--tw-bg-opacity));
 }
 
-.bg-black\/60 {
-  background-color: rgb(0 0 0 / 0.6);
-}
-
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
@@ -1132,6 +1164,10 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -1205,6 +1241,10 @@ video {
   font-weight: 600;
 }
 
+.leading-7 {
+  line-height: 1.75rem;
+}
+
 .leading-normal {
   line-height: 1.5;
 }
@@ -1237,6 +1277,11 @@ video {
 .text-primary-500 {
   --tw-text-opacity: 1;
   color: rgb(41 135 229 / var(--tw-text-opacity));
+}
+
+.text-primary-600 {
+  --tw-text-opacity: 1;
+  color: rgb(15 58 101 / var(--tw-text-opacity));
 }
 
 .text-primary-900 {
@@ -1373,7 +1418,7 @@ input{
   outline: none !important;
 }
 
-.float-label-input input:not(:-moz-placeholder-shown) + label, input:not(:-moz-placeholder-shown) ~ label
+.float-label-input input:not(:-moz-placeholder-shown) + label, .float-label-input input:not(:-moz-placeholder-shown) ~ label
 {
   transform: translateY(-1.5rem) scale(0.75);
   background-color: white;
@@ -1381,9 +1426,9 @@ input{
 
 .float-label-input:focus-within label,
 .float-label-input input:not(:placeholder-shown) + label ,
-select:not([value='']):valid ~ label,
-input:focus ~ label,
-input:not(:placeholder-shown) ~ label
+.float-label-input select:not([value='']):valid ~ label,
+.float-label-input input:focus ~ label,
+.float-label-input input:not(:placeholder-shown) ~ label
 {
   transform: translateY(-1.5rem) scale(0.75);
   background-color: white;
@@ -1582,4 +1627,23 @@ input:not(:placeholder-shown) ~ label
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:max-w-3xl {
+    max-width: 48rem;
+  }
+
+  .md\:max-w-lg {
+    max-width: 32rem;
+  }
 }

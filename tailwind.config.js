@@ -8,6 +8,7 @@ module.exports = {
           100 : "#F1F8FF",
           300 : "#7EBFFF",
           500 : "#2987E5",
+          600 : "#0F3A65",
           900 : "#081725",
         },
         gray : {
@@ -24,6 +25,7 @@ module.exports = {
       height : {
         input : "56px",
         btn : "56px",
+        fixedbtnmodal : "88px"
       }
     }
   },
