@@ -42,10 +42,6 @@
 
 /*@import "/dist/mobiscroll.javascript.min.css";*/
 
-
-
-
-
 @font-face {
     font-family: kalameh-black;
     src: url("../assets/fonts/KalamehWebFaNum-Black.woff");
@@ -61,6 +57,9 @@ body{
 input{
     outline: none !important;
 }
+input[type="text"]{
+    border-color: #f3f3f3;
+}
 .float-label-input:focus-within label,
 .float-label-input input:not(:placeholder-shown) + label ,
 .float-label-input select:not([value='']):valid ~ label,
@@ -68,7 +67,7 @@ input{
 .float-label-input input:not(:placeholder-shown) ~ label
 {
     transform: translateY(-1.5rem) scale(0.75);
-    background-color: white;
+    /*background-color: white;*/
 }
 /*.float-label-input:focus-within label,*/
 /*.float-label-input input:not(:placeholder-shown) + label {*/
@@ -123,9 +122,8 @@ input{
     }
 }
 .bottom-0-important {
-    bottom: 0px ;
+    bottom: 0px !important; ;
 }
-
 
 /*.indicator{*/
 /*    !*position: absolute;*!*/
@@ -173,4 +171,77 @@ input{
 .gradiantlogo{
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 24%, rgba(255,255,255,0.1657913165266106) 100%);
+}
+
+.labelcheckbox{
+    @apply w-full border h-[48px] border-gray-200 gap-x-4 items-center border rounded-lg px-3  flex items-center   py-2
+}
+.labelcheckbox {
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.labelcheckbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    border: 2px solid #A8ABB4;
+    background-color: #ffffff;
+}
+
+/* On mouse-over, add a grey background color */
+.labelcheckbox:hover input ~ .checkmark {
+    background-color: white;
+}
+
+/* When the checkbox is checked, add a blue background */
+.labelcheckbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.labelcheckbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.labelcheckbox .checkmark:after {
+    right: 4px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+label:has(input[type="checkbox"]:checked){
+    border-color: #2987E5 !important;
+    color: #081725 !important;
 }

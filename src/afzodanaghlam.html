@@ -9,11 +9,12 @@
     <title>افزودن اقلام</title>
 </head>
 <body>
-<div    class="flex flex-col justify-start items-center max-w-sm mx-auto border min-h-screen">
+<div id="primaryDiv" class="flex flex-col justify-start items-center max-w-sm mx-auto border min-h-screen">
     <div class="flex flex-col bg-gray-100 px-4 py-4 gap-y-4 w-full">
         <div class="flex justify-between items-center">
           <span class="w-[40px] h-[40px] bg-gray-200 rounded-full flex justify-center items-center">
-            <svg fill="#000000" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.055 32.055" xml:space="preserve" transform="rotate(90)">
+            <svg fill="#000000" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 32.055 32.055" xml:space="preserve" transform="rotate(90)">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
               <g id="SVGRepo_iconCarrier">
@@ -43,10 +44,10 @@
             </div>
             <label for="name" class="absolute bg-gray-100 top-4 right-3 text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-sm px-2 text-grey-darker">نام محصول</label>
         </div>
-            <img src="../assets/icons/categorySearch.svg" class="px-4 border border-primary-500 bg-white rounded-lg py-4 ">
+            <img onclick="openSearch()" src="../assets/icons/categorySearch.svg" class="px-4 border border-primary-500 bg-white rounded-lg py-4 ">
         </div>
     </div>
-    <div class="flex flex-col bg-gray-100  pb-4 gap-y-2 w-full mb-16">
+    <div class="flex flex-col bg-gray-100  pb-4 gap-y-2 w-full ">
         <!--        PRODUCT WITH IMG START -->
         <div class="grid w-full gap-2 px-3 py-2 justify-center bg-white items-center" style="grid-template-columns: minmax(104px,auto) 1fr;grid-template-rows :  auto 40px ; ">
             <img src="../assets/image/product1.png" class="w-[96px] h-[96px]">
@@ -84,7 +85,7 @@
         <!--        PRODUCT WITH IMG END -->
 
         <!--        PRODUCT WITH NO IMG START-->
-        <div class="flex flex-col gap-y-2 px-3 py-2 w-full bg-white">
+        <div class="flex flex-col gap-y-1 px-3 py-2 w-full bg-white">
             <div class="  flex flex-col py-2 gap-y-1">
                 <h5 class="text-primary-900 text-[14px] leading-7">ادو پرفیوم مردانه نوئوو مدل Black Afgano ظرفیت 50 میلی لیتر</h5>
                 <div class="flex justify-between  w-full items-center text-[12px]">
@@ -195,10 +196,161 @@
 
 
     </div>
-    <div class="bg-white shadow-xl insex-0 fixed w-full  max-w-sm mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2">
+    <div style="box-shadow: 0px -10px 20px 0px #e8e8e8" class="bg-white shadow-xl insex-0 fixed w-full  max-w-sm mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2">
         <a class="h-btn btn ">ادامه ثبت و فاکتور</a>
         <img src="../assets/icons/barcode.svg" width="32" height="32" class="p-2 border border-primary-500 w-16 rounded-lg">
     </div>
 </div>
+
+<!--search-->
+<div class="flex flex-col justify-start items-center max-w-sm mx-auto border  ">
+    <div class="flex justify-between items-center px-6 py-4 w-full  " >
+        <span class="text-primary-900  font-semibold text-[16px] flex gap-x-3">
+            <img class="w-[17.2px] h-[19.8px]" src="../assets/icons/categorySearch.svg"  />
+            فیلتر ها
+        </span>
+        <img onclick="closeSearch()" src="../assets/icons/closeDate.svg" width="16" height="16" class="w-[16px] h-[16px] cursor-pointer">
+    </div>
+    <div class="w-full px-6 py-2 flex flex-col gap-y-3  justify-start items-start ">
+        <div class="flex items-center justify-between w-full pt-2" >
+        <h5 class="font-medium text-primary-900 text-[14px]">دسته بندی </h5>
+        <span class="text-primary-600 text-[14px]">انتخاب همه</span>
+        </div>
+        <div class="relative float-label-input  bg-white w-full">
+            <input type="text" id="search" placeholder=" " class="block  rounded border-slate-200 h-input text-sm relative w-full bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3 block appearance-none leading-normal focus:border-blue-400">
+            <div class="absolute left-2 top-[7px]  flex justify-center items-center  rounded-lg border-blue-400 ">
+                <img src="../assets/icons/searchnormal.svg" class="px-2 py-2 w-10">
+            </div>
+            <label for="search" class="absolute bg-white top-4 right-3 text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-sm px-2 text-grey-darker">جستجو</label>
+        </div>
+        <div class="grid grid-cols-2   w-full gap-2 text-[14px] text-gray-700">
+            <label class="labelcheckbox">
+                <input type="checkbox">
+                <span class="checkmark "></span>
+                <span class="mr-8 min-w-fit text-[14px] block">
+                عطر و ادکلن
+                </span>
+            </label>
+            <label class="labelcheckbox">
+                <input type="checkbox">
+                <span class="checkmark "></span>
+                <span class="mr-8 min-w-fit text-[14px] block">
+                مراقبت از مو
+                </span>
+            </label>
+            <label class="labelcheckbox">
+                <input type="checkbox">
+                <span class="checkmark "></span>
+                <span class="mr-8 min-w-fit text-[14px] block">
+                شامپو
+                </span>
+            </label>
+            <label class="labelcheckbox">
+                <input type="checkbox">
+                <span class="checkmark "></span>
+                <span class="mr-8 min-w-fit text-[14px] block">
+                لوازم آرایشی
+                </span>
+            </label>
+            <label class="labelcheckbox">
+                <input type="checkbox">
+                <span class="checkmark "></span>
+                <span class="mr-8 min-w-fit text-[14px] block">
+                مراقبت از پوست
+                </span>
+            </label>
+            <label class="labelcheckbox">
+                <input type="checkbox">
+                <span class="checkmark "></span>
+                <span class="mr-8 min-w-fit text-[14px] block">
+                لوازم بهداشتی
+                </span>
+            </label>
+        </div>
+        <div class=" py-2 w-full flex flex-col gap-y-1 text-[14px] items-center justify-center ">
+            <h5 class="w-full text-right font-medium">نوع</h5>
+            <div class="grid grid-cols-2 w-full gap-2  text-gray-700">
+                <label class="labelcheckbox">
+                    <input type="checkbox">
+                    <span class="checkmark "></span>
+                    <span class="mr-8 min-w-fit text-[14px] block">
+                کالا
+                </span>
+                </label>
+                <label class="labelcheckbox">
+                    <input type="checkbox">
+                    <span class="checkmark "></span>
+                    <span class="mr-8 min-w-fit text-[14px] block">
+                خدمت
+                </span>
+                </label>
+            </div>
+        </div>
+        <div class=" py-2 w-full flex flex-col gap-y-1 text-[14px] items-center justify-center ">
+            <h5 class="w-full text-right font-medium">وضعیت کالا</h5>
+            <div class="grid grid-cols-2 w-full gap-2  text-gray-700">
+                <label class="labelcheckbox">
+                    <input type="checkbox">
+                    <span class="checkmark "></span>
+                    <span class="mr-8 min-w-fit text-[14px] block">
+                موجود
+                </span>
+                </label>
+                <label class="labelcheckbox">
+                    <input type="checkbox">
+                    <span class="checkmark "></span>
+                    <span class="mr-8 min-w-fit text-[14px] block">
+                ناموجود
+                </span>
+                </label>
+            </div>
+        </div>
+        <div class=" py-2 w-full flex flex-col gap-y-1 text-[14px] items-center justify-center ">
+            <h5 class="w-full text-right font-medium">نحوه نمایش</h5>
+            <div class="grid grid-cols-2 w-full gap-2  text-gray-700">
+                <label class="labelcheckbox">
+                    <input type="checkbox">
+                    <span class="checkmark "></span>
+                    <span class="mr-8 min-w-fit text-[14px] block">
+                همه
+                </span>
+                </label>
+                <label class="labelcheckbox">
+                    <input type="checkbox">
+                    <span class="checkmark "></span>
+                    <span class="mr-8 min-w-fit text-[14px] block">
+                افزوده شده ها
+                </span>
+                </label>
+            </div>
+        </div>
+        <a  class="h-btn btn ">ادامه ثبت و فاکتور</a>
+    </div>
+
+
+</div>
+<!--search-->
+<style>
+
+
+</style>
+<script>
+    let primaryDiv = document.getElementById('primaryDiv');
+
+    function closeSearch(){
+        primaryDiv.classList.remove('hidden')
+        primaryDiv.classList.add('flex')
+        
+
+    }
+    function openSearch(){
+        primaryDiv.classList.add('hidden')
+        primaryDiv.classList.remove('flex')
+    }
+    window.addEventListener('load',() => {
+        console.log('load')
+        openSearch()
+    })
+</script>
 </body>
 </html>
