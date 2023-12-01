@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="../dist/output.css">
     <title>افزودن اقلام</title>
 </head>
-<body>
-<div id="primaryDiv" class="flex flex-col justify-start items-center max-w-sm mx-auto border min-h-screen">
+<body id="bodyclass">
+<div id="primaryDiv" class="flex flex-col justify-start items-center max-w-3xl mx-auto border min-h-screen bg-gray-100">
     <div class="flex flex-col bg-gray-100 px-4 py-4 gap-y-4 w-full">
         <div class="flex justify-between items-center">
-          <span class="w-[40px] h-[40px] bg-gray-200 rounded-full flex justify-center items-center">
-            <svg fill="#000000" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          <span onclick="openNavMenu()" class="w-[40px] h-[40px] bg-gray-200 rounded-full flex justify-center items-center hover:bg-gray-300/30">
+            <svg  fill="#000000" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 32.055 32.055" xml:space="preserve" transform="rotate(90)">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -47,7 +47,7 @@
             <img onclick="openSearch()" src="../assets/icons/categorySearch.svg" class="px-4 border border-primary-500 bg-white rounded-lg py-4 ">
         </div>
     </div>
-    <div class="flex flex-col bg-gray-100  pb-4 gap-y-2 w-full ">
+    <div class="flex flex-col sm:grid sm:grid-cols-2 gap-x-2 px-2 bg-gray-100  pb-4 gap-y-2 w-full mb-16">
         <!--        PRODUCT WITH IMG START -->
         <div class="grid w-full gap-2 px-3 py-2 justify-center bg-white items-center" style="grid-template-columns: minmax(104px,auto) 1fr;grid-template-rows :  auto 40px ; ">
             <img src="../assets/image/product1.png" class="w-[96px] h-[96px]">
@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="h-full px-2  border border-gray-200 flex justify-between items-center text-[12px] w-full rounded-lg">
+            <div onclick="openModalChooseAnbar(1)" class="  h-full px-2  border border-gray-200 flex justify-between items-center text-[12px] w-full rounded-lg">
                 انبار مرکزی
                 <img src="../assets/icons/chevronbottom.svg" width="12" height="7">
             </div>
@@ -196,14 +196,117 @@
 
 
     </div>
-    <div style="box-shadow: 0px -10px 20px 0px #e8e8e8" class="bg-white shadow-xl insex-0 fixed w-full  max-w-sm mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2">
+    <div style="box-shadow: 0px -10px 20px 0px #e8e8e8" class="bg-white shadow-xl insex-0 fixed w-full  max-w-3xl mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2">
         <a class="h-btn btn ">ادامه ثبت و فاکتور</a>
         <img src="../assets/icons/barcode.svg" width="32" height="32" class="p-2 border border-primary-500 w-16 rounded-lg">
     </div>
 </div>
 
+<div id="chooseAnbarModal" class="hidden  fixed transition-all duration-200 bottom-0 inset-x-0  bg-white  mx-auto  w-full  max-w-3xl z-[999999999999999999] ">
+    <div class="flex justify-between items-center   w-full flex px-6 pt-6 ">
+        <span class="text-primary-900 font-medium text-[18px]">انتخاب انبار</span>
+        <img src="../assets/icons/closeDate.svg" class="cursor-pointer" onclick="closeModalChooseAnbar()">
+    </div>
+    <div class="flex flex-col justify-center items-center gap-y-4 px-6 py-4 text-gray-700">
+        <label class="labelcheckbox radiobox flex justify-between items-center ">
+            <input type="checkbox">
+            <span class="checkmark "></span>
+            <span class="mr-8 min-w-fit text-[14px] block">انبار مرکزی</span>
+            <span class="pl-4 text-[12px]" >200 عدد</span>
+        </label>
+        <label class="labelcheckbox radiobox flex justify-between items-center ">
+            <input type="checkbox">
+            <span class="checkmark "></span>
+            <span class="mr-8 min-w-fit text-[14px] block">انبار فروشگاه</span>
+            <span class="pl-4 text-[12px]" >200 عدد</span>
+        </label>
+        <label class="labelcheckbox radiobox flex justify-between items-center ">
+            <input type="checkbox">
+            <span class="checkmark "></span>
+            <span class="mr-8 min-w-fit text-[14px] block">انبار محصولات</span>
+            <span class="pl-4 text-[12px]" >200 عدد</span>
+
+        </label>
+    </div>
+
+</div>
+<div id="insetHelperModal" class="hidden opacity-0 inset-0 bg-zinc-950/20 fixed z-10 transition-all"> </div>
+<div id="sidebarMenu" class="fixed hidden transition-all duration-500 -right-full inset-y-0 w-full bg-white max-w-[400px] z-[999999999999999999] ">
+    <ul class="h-full bg-white w-full flex flex-col text-[16px] ">
+        <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <span onclick="closeNavMenu()" class="flex justify-start items-center h-full w-full pr-[5px]  gap-x-6 ">
+                    <span  class="bg-gray-200 w-[32px]  h-[32px] block rounded-full flex justify-center items-center ">
+                        <img class="w-[12px]  h-[12px]" width="14" height="14" src="../assets/icons/menu/setting-slider-horizontal%20copy.svg">
+                    </span>
+                    <span class="">منو</span>
+                </span>
+
+        </li>
+
+        <li class="px-5 h-[64px] flex w-full bg-primary-500 justify-center items-center ">
+            <a href="" class="flex justify-start items-center h-full flex-1  gap-x-6 ">
+                <img src="../assets/image/2%20602.png" class="rounded-full" width="48" height="48">
+                <span class="text-primary-100">سیدعلی سیدآقائی</span>
+            </a>
+
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.45884e-06 11.0039C-0.000222972 11.0788 0.0150549 11.1528 0.0448735 11.2215C0.0746922 11.2901 0.118405 11.3518 0.173257 11.4027L3.06907 14.2489C3.12185 14.3031 3.18492 14.3461 3.25459 14.3755C3.32425 14.4048 3.3991 14.42 3.4747 14.42C3.55031 14.42 3.62514 14.4048 3.69481 14.3755C3.76447 14.3461 3.82755 14.3031 3.88033 14.2489C3.9342 14.1976 3.97709 14.1358 4.00639 14.0674C4.03569 13.999 4.0508 13.9253 4.0508 13.8509C4.0508 13.7764 4.03569 13.7028 4.00639 13.6344C3.97709 13.5659 3.9342 13.5042 3.88033 13.4528L1.96904 11.5746H7.91604C8.06702 11.5746 8.21181 11.5146 8.31857 11.4078C8.42533 11.3011 8.4853 11.1563 8.4853 11.0053C8.4853 10.8544 8.42533 10.7096 8.31857 10.6028C8.21181 10.496 8.06702 10.4361 7.91604 10.4361H1.96904L3.88033 8.55783C3.9342 8.50647 3.97709 8.44471 4.00639 8.37628C4.03569 8.30786 4.0508 8.2342 4.0508 8.15977C4.0508 8.08534 4.03569 8.01168 4.00639 7.94326C3.97709 7.87483 3.9342 7.81307 3.88033 7.76171C3.82755 7.70757 3.76447 7.66455 3.69481 7.63518C3.62514 7.60581 3.55031 7.59067 3.4747 7.59067C3.3991 7.59067 3.32425 7.60581 3.25459 7.63518C3.18492 7.66455 3.12185 7.70757 3.06907 7.76171L0.173257 10.608C0.118745 10.6585 0.0752311 10.7198 0.0454243 10.7879C0.0156175 10.8561 0.000155744 10.9296 2.45884e-06 11.0039ZM2.72256 18.3918C2.7221 18.4657 2.73731 18.5388 2.76717 18.6063C2.79703 18.6739 2.84088 18.7343 2.89581 18.7837C5.01475 20.846 7.85493 22 10.8119 22C13.7688 22 16.6089 20.846 18.7279 18.7837C19.7638 17.7702 20.5868 16.56 21.1487 15.2242C21.7106 13.8884 22 12.4538 22 11.0046C22 9.55546 21.7106 8.12087 21.1487 6.78505C20.5868 5.44923 19.7638 4.23907 18.7279 3.22559C16.6118 1.15774 13.7706 0 10.8119 0C7.85314 0 5.01189 1.15774 2.89581 3.22559C2.84194 3.27696 2.79905 3.33872 2.76975 3.40714C2.74045 3.47556 2.72534 3.54922 2.72534 3.62366C2.72534 3.69809 2.74045 3.77175 2.76975 3.84017C2.79905 3.90859 2.84194 3.97035 2.89581 4.02172C2.94859 4.07585 3.01167 4.11887 3.08134 4.14825C3.151 4.17762 3.22584 4.19275 3.30145 4.19275C3.37705 4.19275 3.45189 4.17762 3.52156 4.14825C3.59122 4.11887 3.6543 4.07585 3.70708 4.02172C5.60459 2.16998 8.15088 1.13345 10.8022 1.13345C13.4536 1.13345 15.9999 2.16998 17.8974 4.02172C18.8276 4.92912 19.5669 6.01349 20.0717 7.21097C20.5764 8.40844 20.8365 9.69482 20.8365 10.9943C20.8365 12.2938 20.5764 13.5802 20.0717 14.7777C19.5669 15.9752 18.8276 17.0595 17.8974 17.9669C16.0008 19.8159 13.4579 20.8525 10.8092 20.8563C8.1604 20.8602 5.61454 19.831 3.71258 17.9876C3.63166 17.9081 3.52917 17.8541 3.41785 17.8324C3.30652 17.8106 3.19125 17.8221 3.08638 17.8653C2.9815 17.9085 2.89163 17.9816 2.82792 18.0754C2.76422 18.1693 2.72949 18.2798 2.72806 18.3932L2.72256 18.3918ZM10.233 11.0039C10.2311 11.1188 10.2634 11.2317 10.3258 11.3281C10.3882 11.4246 10.478 11.5003 10.5836 11.5456C10.6892 11.5909 10.8059 11.6037 10.9188 11.5825C11.0317 11.5612 11.1357 11.5069 11.2177 11.4263C11.2996 11.3458 11.3557 11.2426 11.3788 11.1301C11.4019 11.0175 11.3911 10.9007 11.3475 10.7943C11.304 10.688 11.2298 10.597 11.1344 10.533C11.039 10.4689 10.9268 10.4347 10.8119 10.4347C10.6596 10.4336 10.5132 10.4929 10.4047 10.5996C10.2962 10.7063 10.2344 10.8518 10.233 11.0039Z" fill="#F1F8FF"/>
+            </svg>
+
+        </li>
+        <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+            <a href="index.html" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                <img src="../assets/icons/menu/activity.svg">
+                <span class="">داشبورد</span>
+            </a>
+        </li>
+        <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+            <a href="addNewRecordFactor.html" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                <img src="../assets/icons/menu/addsquare.svg">
+                <span class="">ٍثبت فاکتور جدید</span>
+            </a>
+        </li>
+        <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+            <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                <img src="../assets/icons/menu/Frame%205.svg">
+                <span class="">لیست فاکتور ها</span>
+            </a>
+        </li>
+        <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+            <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                <img src="../assets/icons/menu/addsquare.svg">
+                <span class="">ثبت پیش فاکتور جدید</span>
+            </a>
+        </li>
+        <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+            <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                <img src="../assets/icons/menu/Frame%207.svg">
+                <span class="">لیست پیش فاکتور ها</span>
+            </a>
+        </li>
+        <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+            <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                <img src="../assets/icons/menu/profileadd.svg">
+                <span class="">ثبت مشتری جدید</span>
+            </a>
+        </li>
+        <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+            <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                <img src="../assets/icons/menu/profile2user.svg">
+                <span class="">لیست مشتریان</span>
+            </a>
+        </li>
+        <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+            <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                <img src="../assets/icons/menu/element3.svg">
+                <span class="">لیست کالا و خدمات</span>
+            </a>
+        </li>
+
+    </ul>
+</div>
 <!--search-->
-<div class="flex flex-col justify-start items-center max-w-sm mx-auto border  ">
+<div id="modalSearchCategory" class="hidden inset-0 fixed bg-white bottom-0 flex-col justify-start items-center max-w-3xl mx-auto border  ">
     <div class="flex justify-between items-center px-6 py-4 w-full  " >
         <span class="text-primary-900  font-semibold text-[16px] flex gap-x-3">
             <img class="w-[17.2px] h-[19.8px]" src="../assets/icons/categorySearch.svg"  />
@@ -308,14 +411,14 @@
         <div class=" py-2 w-full flex flex-col gap-y-1 text-[14px] items-center justify-center ">
             <h5 class="w-full text-right font-medium">نحوه نمایش</h5>
             <div class="grid grid-cols-2 w-full gap-2  text-gray-700">
-                <label class="labelcheckbox">
+                <label class="labelcheckbox radiobox">
                     <input type="checkbox">
                     <span class="checkmark "></span>
                     <span class="mr-8 min-w-fit text-[14px] block">
                 همه
                 </span>
                 </label>
-                <label class="labelcheckbox">
+                <label class="labelcheckbox radiobox">
                     <input type="checkbox">
                     <span class="checkmark "></span>
                     <span class="mr-8 min-w-fit text-[14px] block">
@@ -330,27 +433,52 @@
 
 </div>
 <!--search-->
+
+
 <style>
 
 
+
 </style>
+<script src="../assets/scripts/main.js"></script>
 <script>
-    let primaryDiv = document.getElementById('primaryDiv');
+    // let primaryDiv = document.getElementById('primaryDiv');
+    const modalSearchCategory = document.getElementById('modalSearchCategory')
+    const bodyclass = document.getElementById('bodyclass')
+    const chooseAnbarModal = document.getElementById('chooseAnbarModal')
+    // const insetHelperModal  = document.getElementById('insetHelperModal')
 
     function closeSearch(){
-        primaryDiv.classList.remove('hidden')
-        primaryDiv.classList.add('flex')
-        
-
+        modalSearchCategory.classList.add('hidden')
+        modalSearchCategory.classList.remove('flex')
+        // bodyclass.classList.remove('overflow-y-hidden')
     }
     function openSearch(){
-        primaryDiv.classList.add('hidden')
-        primaryDiv.classList.remove('flex')
+        modalSearchCategory.classList.remove('hidden')
+        modalSearchCategory.classList.add('flex')
+        // bodyclass.classList.add('overflow-y-hidden')
+
     }
-    window.addEventListener('load',() => {
-        console.log('load')
-        openSearch()
-    })
+    function openModalChooseAnbar(){
+        chooseAnbarModal.classList.remove('hidden')
+        insetHelperModal.classList.remove('hidden')
+        chooseAnbarModal.classList.add('bottom-0-impo')
+        insetHelperModal.classList.remove('opacity-0')
+    }
+    function closeModalChooseAnbar(){
+        chooseAnbarModal.classList.add('hidden')
+        insetHelperModal.classList.add('hidden')
+        chooseAnbarModal.classList.remove('bottom-0-impo')
+        insetHelperModal.classList.add('opacity-0')
+    }
+    insetHelperModal.onclick = () => {
+        closeNavMenu()
+        closeModalChooseAnbar()
+    }
+
+
+
+
 </script>
 </body>
 </html>
