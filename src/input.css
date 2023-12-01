@@ -223,7 +223,10 @@ label:has(input[type="checkbox"]:checked){
 .right-0-impo{
     right: 0 !important;
 }
-
+label:has(input[type="radio"]:checked){
+    border-color: #2987E5 !important;
+    color: #081725 !important;
+}
 .radiobox .checkmark:after {
     right: 0px;
     top: 0px;
