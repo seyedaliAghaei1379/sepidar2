@@ -62,10 +62,7 @@
                         <span class="text-[12px] text-gray-700">تاریخ : 1402/04/20</span>
                     </div>
                 </div>
-                <div class="w-[56px] h-[56px] grid place-items-center rounded-xl" style="border: 1px solid #007fff ">
-                    <img src="../assets/icons/renamesvg.svg" alt="">
-                </div>
-
+            </label>
         </div>
         <div class="bg-white py-2 flex justify-center w-full justify-between px-6 w-full text-[12px] text-primary-900 gap-x-6">
             <span id="orderBtn" class=" w-full bg-gray-200 py-2  px-3 w-[152px] h-[40px] grid place-items-center text-center rounded-lg ">اطلاعات سفارش </span>
@@ -73,275 +70,342 @@
         </div>
         <div id="orderInformationDiv" class=" w-full px-6 bg-white py-[30px] flex flex-col justify-between flex-1 ">
             <div class="flex flex-col gap-y-4   ">
-            <div class="relative float-label-input  ">
-                <input readonly onclick="openModalAddress()" type="text" id="address" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                <img class="absolute left-4 top-6  text-blue-500" src="../assets/icons/chevronb.svg">
-                <label for="address" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">آدرس مشتری</label>
+                <div class="relative float-label-input  ">
+                    <input readonly onclick="openModalAddress()" type="text" id="address" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <img class="absolute left-4 top-6  text-blue-500" src="../assets/icons/chevronb.svg">
+                    <label for="address" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">آدرس مشتری</label>
+                </div>
+                <div class="relative float-label-input  ">
+                    <input type="text" id="sellingType" readonly placeholder="" class="block rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <img class="absolute left-4 top-6  text-blue-500" src="../assets/icons/chevronb.svg">
+                    <label for="sellingType" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white">نوع فروش</label>
+                </div>
+                <div class="relative float-label-input  ">
+                    <input type="text" id="SettlementAgreements" placeholder="" class="block rounded-md  w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <label for="SettlementAgreements" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white">قراردادهای تسویه حساب</label>
+                </div>
+                <div class="relative float-label-input  ">
+                    <input  type="text" id="deliveryDate" readonly placeholder="" class="block rounded-md  w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <label for="deliveryDate" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white">تاریخ تحویل</label>
+                </div>
+                <div class="relative float-label-input  ">
+                    <input  type="text" id="deliveryDatePishFactor" readonly placeholder="" class="block rounded-md  w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <label for="deliveryDatePishFactor" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white"> تاریخ اعتبار پیش فاکتور</label>
+                </div>
             </div>
-            <div class="relative float-label-input  ">
-                <input type="text" id="sellingType" readonly placeholder="" class="block rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                <img class="absolute left-4 top-6  text-blue-500" src="../assets/icons/chevronb.svg">
-                <label for="sellingType" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white">نوع فروش</label>
+<!--            <div class="btn">-->
+<!--                ثبت فاکتور-->
+<!--            </div>-->
+            <!--        BTN SABT NAHAYI START-->
+            <div style="box-shadow: 0px -10px 20px 0px #e8e8e8" class="flex  justify-center items-center w-full absolute bottom-0 shadow-xl p-2 inset-x-0 mx-auto max-w-3xl h-[88px]">
+                <div class="btn flex-1" onclick="openModalHesabKetab()">
+                    ثبت نهایی
+                </div>
+                <div class="flex flex-col justify-center items-center min-w-[150px] text-[12px] gap-y-2">
+                    <h5 class=" text-gray-700">قیمت نهایی</h5>
+                    <span class="text-primary-600 font-bold">
+                        1/980/750/000
+                    <span class="text-[10px] font-light pr-1">تومان</span>
+                    </span>
+                </div>
             </div>
-            <div class="relative float-label-input  ">
-                <input type="text" id="SettlementAgreements" placeholder="" class="block rounded-md  w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                <label for="SettlementAgreements" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white">قراردادهای تسویه حساب</label>
-            </div>
-            <div class="relative float-label-input  ">
-                <input  type="text" id="deliveryDate" readonly placeholder="" class="block rounded-md  w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                <label for="deliveryDate" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white">تاریخ تحویل</label>
-            </div>
-            </div>
-            <div class="btn">
-                ثبت فاکتور
-            </div>
+            <!--        BTN SABT NAHAYI EHD -->
+
 
         </div>
         <div id="itemsDiv"  class="hidden w-full px-6 bg-white py-4 flex flex-col justify-between items-center  flex-1 gap-y-6 " >
-        <div class="flex flex-col justify-center items-center gap-y-4 sm:grid sm:grid-cols-2 gap-4 ">
-            <div class=" w-full flex flex-col justify-center items-center gap-y-4  ">
-                <h4 class=" text-[14px] text-primary-900">تستر ادو پرفیوم  ورساچه مدل Crystal Noir حجم 90 میلی لیتر</h4>
-                <div class=" w-full flex justify-between items-start">
-                    <ul class="flex flex-col gap-y-1 justify-center items-center max-w-fit text-gray-700 font-light min-w-[150px] text-[12px]  py-1" >
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>قیمت</span>
-                            <span class=" text-primary-600 text-[10px]">
+            <div class="flex flex-col justify-center items-center gap-y-4 sm:grid sm:grid-cols-2 gap-4 ">
+                <div class=" w-full flex flex-col justify-center items-center gap-y-4  ">
+                    <h4 class=" text-[14px] text-primary-900">تستر ادو پرفیوم  ورساچه مدل Crystal Noir حجم 90 میلی لیتر</h4>
+                    <div class=" w-full flex justify-between items-start">
+                        <ul class="flex flex-col gap-y-1 justify-center items-center max-w-fit text-gray-700 font-light min-w-[150px] text-[12px]  py-1" >
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>قیمت</span>
+                                <span class=" text-primary-600 text-[10px]">
                                 <span class="pl-0.5 font-bold text-[12px]">1/085/000</span>
                                 تومان
                             </span>
-                        </li>
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>فی</span>
-                            <span class="text-[10px]">
+                            </li>
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>فی</span>
+                                <span class="text-[10px]">
                                 <span class="pl-0.5 text-[12px]">500/000</span>
                                 تومان
                             </span>
-                        </li>
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>ارزش افزوده</span>
-                            <span class="text-[10px]">
+                            </li>
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>ارزش افزوده</span>
+                                <span class="text-[10px]">
                                 <span class="pl-0.5 text-[12px]">45/000</span>
                                 تومان
                             </span>
-                        </li>
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>تخفیف</span>
-                            <span class="text-[10px]">
+                            </li>
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>تخفیف</span>
+                                <span class="text-[10px]">
                                 <span class="pl-0.5 text-[12px]">5/000</span>
                                 تومان
                             </span>
-                        </li>
-                    </ul>
-                    <div class="min-w-[89px]  bg-gray-200 flex rounded-[8px] justify-center gap-y-2 items-center flex-col h-[64px] ">
-                        <span style="border-bottom: 1px solid #E4E4E4" class="text-[14px] w-full pb-1 text-center text-primary-600 ">35 عدد</span>
-                        <span class="text-[10px]">انبار مرکزی</span>
+                            </li>
+                        </ul>
+                        <div class="min-w-[89px]  bg-gray-200 flex rounded-[8px] justify-center gap-y-2 items-center flex-col h-[64px] ">
+                            <span style="border-bottom: 1px solid #E4E4E4" class="text-[14px] w-full pb-1 text-center text-primary-600 ">35 عدد</span>
+                            <span class="text-[10px]">انبار مرکزی</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class=" w-full flex flex-col justify-center items-center gap-y-4  ">
-                <h4 class=" text-[14px] text-primary-900">تستر ادو پرفیوم  ورساچه مدل Crystal Noir حجم 90 میلی لیتر</h4>
-                <div class=" w-full flex justify-between items-start">
-                    <ul class="flex flex-col gap-y-1 justify-center items-center max-w-fit text-gray-700 font-light min-w-[150px] text-[12px]  py-1" >
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>قیمت</span>
-                            <span class=" text-primary-600 text-[10px]">
+                <div class=" w-full flex flex-col justify-center items-center gap-y-4  ">
+                    <h4 class=" text-[14px] text-primary-900">تستر ادو پرفیوم  ورساچه مدل Crystal Noir حجم 90 میلی لیتر</h4>
+                    <div class=" w-full flex justify-between items-start">
+                        <ul class="flex flex-col gap-y-1 justify-center items-center max-w-fit text-gray-700 font-light min-w-[150px] text-[12px]  py-1" >
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>قیمت</span>
+                                <span class=" text-primary-600 text-[10px]">
                                 <span class="pl-0.5 font-bold text-[12px]">1/085/000</span>
                                 تومان
                             </span>
-                        </li>
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>فی</span>
-                            <span class="text-[10px]">
+                            </li>
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>فی</span>
+                                <span class="text-[10px]">
                                 <span class="pl-0.5 text-[12px]">500/000</span>
                                 تومان
                             </span>
-                        </li>
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>ارزش افزوده</span>
-                            <span class="text-[10px]">
+                            </li>
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>ارزش افزوده</span>
+                                <span class="text-[10px]">
                                 <span class="pl-0.5 text-[12px]">45/000</span>
                                 تومان
                             </span>
-                        </li>
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>تخفیف</span>
-                            <span class="text-[10px]">
+                            </li>
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>تخفیف</span>
+                                <span class="text-[10px]">
                                 <span class="pl-0.5 text-[12px]">5/000</span>
                                 تومان
                             </span>
-                        </li>
-                    </ul>
-                    <div class="min-w-[89px]  bg-gray-200 flex rounded-[8px] justify-center gap-y-2 items-center flex-col h-[64px] ">
-                        <span style="border-bottom: 1px solid #E4E4E4" class="text-[14px] w-full pb-1 text-center text-primary-600 ">35 عدد</span>
-                        <span class="text-[10px]">انبار مرکزی</span>
+                            </li>
+                        </ul>
+                        <div class="min-w-[89px]  bg-gray-200 flex rounded-[8px] justify-center gap-y-2 items-center flex-col h-[64px] ">
+                            <span style="border-bottom: 1px solid #E4E4E4" class="text-[14px] w-full pb-1 text-center text-primary-600 ">35 عدد</span>
+                            <span class="text-[10px]">انبار مرکزی</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class=" w-full flex flex-col justify-center items-center gap-y-4  ">
-                <h4 class=" text-[14px] text-primary-900">تستر ادو پرفیوم  ورساچه مدل Crystal Noir حجم 90 میلی لیتر</h4>
-                <div class=" w-full flex justify-between items-start">
-                    <ul class="flex flex-col gap-y-1 justify-center items-center max-w-fit text-gray-700 font-light min-w-[150px] text-[12px]  py-1" >
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>قیمت</span>
-                            <span class=" text-primary-600 text-[10px]">
+                <div class=" w-full flex flex-col justify-center items-center gap-y-4  ">
+                    <h4 class=" text-[14px] text-primary-900">تستر ادو پرفیوم  ورساچه مدل Crystal Noir حجم 90 میلی لیتر</h4>
+                    <div class=" w-full flex justify-between items-start">
+                        <ul class="flex flex-col gap-y-1 justify-center items-center max-w-fit text-gray-700 font-light min-w-[150px] text-[12px]  py-1" >
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>قیمت</span>
+                                <span class=" text-primary-600 text-[10px]">
                                 <span class="pl-0.5 font-bold text-[12px]">1/085/000</span>
                                 تومان
                             </span>
-                        </li>
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>فی</span>
-                            <span class="text-[10px]">
+                            </li>
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>فی</span>
+                                <span class="text-[10px]">
                                 <span class="pl-0.5 text-[12px]">500/000</span>
                                 تومان
                             </span>
-                        </li>
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>ارزش افزوده</span>
-                            <span class="text-[10px]">
+                            </li>
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>ارزش افزوده</span>
+                                <span class="text-[10px]">
                                 <span class="pl-0.5 text-[12px]">45/000</span>
                                 تومان
                             </span>
-                        </li>
-                        <li class="flex justify-between  w-full items-center gap-x-8 ">
-                            <span>تخفیف</span>
-                            <span class="text-[10px]">
+                            </li>
+                            <li class="flex justify-between  w-full items-center gap-x-8 ">
+                                <span>تخفیف</span>
+                                <span class="text-[10px]">
                                 <span class="pl-0.5 text-[12px]">5/000</span>
                                 تومان
                             </span>
-                        </li>
-                    </ul>
-                    <div class="min-w-[89px]  bg-gray-200 flex rounded-[8px] justify-center gap-y-2 items-center flex-col h-[64px] ">
-                        <span style="border-bottom: 1px solid #E4E4E4" class="text-[14px] w-full pb-1 text-center text-primary-600 ">35 عدد</span>
-                        <span class="text-[10px]">انبار مرکزی</span>
+                            </li>
+                        </ul>
+                        <div class="min-w-[89px]  bg-gray-200 flex rounded-[8px] justify-center gap-y-2 items-center flex-col h-[64px] ">
+                            <span style="border-bottom: 1px solid #E4E4E4" class="text-[14px] w-full pb-1 text-center text-primary-600 ">35 عدد</span>
+                            <span class="text-[10px]">انبار مرکزی</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
             <!--            nothing -->
             <div class="flex flex-col gap-y-2 h-[250px]  flex justify-center ">
-            <img src="../assets/image/box.png" width="150">
-            <span class="text-[12px] font-light text-primary-900 text-center ">هنوز کالایی به فاکتور<br> اضافه نکرده اید</span>
+                <img src="../assets/image/box.png" width="150">
+                <span class="text-[12px] font-light text-primary-900 text-center ">هنوز کالایی به فاکتور<br> اضافه نکرده اید</span>
             </div>
             <!--            nothing -->
             <a href="#"  class="btn">افزودن اقلام</a>
         </div>
 
+        <!--        MODAL HESAB KETAB START -->
+        <div id="modalHesabKetab" class="fixed w-full transition-all duration-200 z-[999999999999999999] -bottom-full  px-6 py-4 flex flex-col w-full bg max-w-3xl bg-white gap-y-6 ">
+            <div class="flex justify-between items-center   w-full flex ">
+                <span class="text-primary-900 font-medium text-[18px]">حساب کتاب</span>
+                <img src="../assets/icons/closeDate.svg" class="cursor-pointer" onclick="closeModalHesabKetab()">
+            </div>
+            <div class="relative float-label-input">
+                <input type="text" id="name" placeholder=" " class="block rounded border-slate-200  text-sm relative w-full bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-md h-[56px] py-4 px-3 block appearance-none leading-normal focus:border-blue-400" />
+                <label for="name" class="absolute bg-white top-4 right-3 text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-sm px-2 text-grey-darker">تخفیف بر کل فاکتور</label>
+            </div>
+            <div class="flex flex-col w-full items-start justify-start gap-y-2">
+                <div class="flex justify-between w-full items-center text-[12px]">
+                    <span class="text-gray-700"> قیمت نهایی</span>
+                    <span class="text-primary-600">
+                        <span class="font-semibold text-[14px]">6/500/000  </span>
+                    تومان
+                    </span>
+                </div>
+                <div class="flex justify-between w-full items-center text-[12px]">
+                    <span class="text-gray-700">مالیات بر ارزش افزوده</span>
+                    <span class="text-primary-600">
+                        <span class="font-semibold text-[14px]">500/000  </span>
+                    تومان
+                    </span>
+                </div>
+                <div class="flex justify-between w-full items-center text-[12px]">
+                    <span class="text-gray-700">مالیات بر ارزش افزوده</span>
+                    <span class="text-primary-600">
+                        <span class="font-semibold text-[14px]">0  </span>
+                    تومان
+                    </span>
+                </div>
+                <div class="flex justify-between w-full items-center text-[12px]">
+                    <span class="text-gray-700"> قابل پرداخت</span>
+                    <span class="text-primary-600">
+                        <span class="font-semibold text-[14px]">6/500/000  </span>
+                    تومان
+                    </span>
+                </div>
+            </div>
+            <a href="#" class="btn h-btn">ثبت  فاکتور</a>
 
-<!--        MODAL DATE START-->
+
+        </div>
+        <!--        MODAL HESAB KETAB END -->
+
+        <!--        MODAL DATE START-->
         <div id="modalDate" class=" min-h-screen bg-zinc-950/20  -bottom-[101vh] transition-all duration-300 w-full absolute overflow-hidden flex justify-center items-end">
             <div class="w-full  flex  flex-col items-center bg-white  justify-between h-[296px] px-6 py-4 ">
-<!--                start-->
+                <!--                start-->
                 <div class="flex justify-between items-center   w-full ">
-                    <span class="text-primary-900 font-medium text-[18px]">تاریخ تحویل</span>
+                    <span id="titleDate" class="text-primary-900 font-medium text-[18px]">تاریخ تحویل</span>
                     <img src="../assets/icons/closeDate.svg" onclick="closeModalDate()">
                 </div>
 
                 <div class="picker  w-full arrows">
-                        <div class="swiper-container year">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">1388</div>
-                                <div class="swiper-slide">1389</div>
-                                <div class="swiper-slide">1390</div>
-                                <div class="swiper-slide">1391</div>
-                                <div class="swiper-slide">1392</div>
-                                <div class="swiper-slide">1393</div>
-                                <div class="swiper-slide">1394</div>
-                                <div class="swiper-slide">1395</div>
-                                <div class="swiper-slide">1396</div>
-                                <div class="swiper-slide">1397</div>
-                                <div class="swiper-slide">1398</div>
-                                <div class="swiper-slide">1399</div>
-                                <div class="swiper-slide">1400</div>
-                                <div class="swiper-slide">1401</div>
-                                <div class="swiper-slide">1402</div>
-                                <div class="swiper-slide">1403</div>
-                                <div class="swiper-slide">1404</div>
-                                <div class="swiper-slide">1405</div>
-                                <div class="swiper-slide">1406</div>
-                                <div class="swiper-slide">1407</div>
-                                <div class="swiper-slide">1408</div>
-                                <div class="swiper-slide">1409</div>
-                                <div class="swiper-slide">1410</div>
-                                <div class="swiper-slide">1411</div>
-                                <div class="swiper-slide">1412</div>
-                                <div class="swiper-slide">1413</div>
-                                <div class="swiper-slide">1414</div>
-                                <div class="swiper-slide">1415</div>
-                                <div class="swiper-slide">1416</div>
-                                <div class="swiper-slide">1417</div>
-                                <div class="swiper-slide">1418</div>
-                                <div class="swiper-slide">1419</div>
-                                <div class="swiper-slide">1420</div>
-                                <div class="swiper-slide">1421</div>
-                                <div class="swiper-slide">1422</div>
-                                <div class="swiper-slide">1423</div>
-                                <div class="swiper-slide">1424</div>
-                                <div class="swiper-slide">1425</div>
-                                <div class="swiper-slide">1426</div>
-                            </div>
+                    <div class="swiper-container year">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">1388</div>
+                            <div class="swiper-slide">1389</div>
+                            <div class="swiper-slide">1390</div>
+                            <div class="swiper-slide">1391</div>
+                            <div class="swiper-slide">1392</div>
+                            <div class="swiper-slide">1393</div>
+                            <div class="swiper-slide">1394</div>
+                            <div class="swiper-slide">1395</div>
+                            <div class="swiper-slide">1396</div>
+                            <div class="swiper-slide">1397</div>
+                            <div class="swiper-slide">1398</div>
+                            <div class="swiper-slide">1399</div>
+                            <div class="swiper-slide">1400</div>
+                            <div class="swiper-slide">1401</div>
+                            <div class="swiper-slide">1402</div>
+                            <div class="swiper-slide">1403</div>
+                            <div class="swiper-slide">1404</div>
+                            <div class="swiper-slide">1405</div>
+                            <div class="swiper-slide">1406</div>
+                            <div class="swiper-slide">1407</div>
+                            <div class="swiper-slide">1408</div>
+                            <div class="swiper-slide">1409</div>
+                            <div class="swiper-slide">1410</div>
+                            <div class="swiper-slide">1411</div>
+                            <div class="swiper-slide">1412</div>
+                            <div class="swiper-slide">1413</div>
+                            <div class="swiper-slide">1414</div>
+                            <div class="swiper-slide">1415</div>
+                            <div class="swiper-slide">1416</div>
+                            <div class="swiper-slide">1417</div>
+                            <div class="swiper-slide">1418</div>
+                            <div class="swiper-slide">1419</div>
+                            <div class="swiper-slide">1420</div>
+                            <div class="swiper-slide">1421</div>
+                            <div class="swiper-slide">1422</div>
+                            <div class="swiper-slide">1423</div>
+                            <div class="swiper-slide">1424</div>
+                            <div class="swiper-slide">1425</div>
+                            <div class="swiper-slide">1426</div>
                         </div>
-                        <div class="swiper-container month">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">فروردین</div>
-                                <div class="swiper-slide">اردیبهشت</div>
-                                <div class="swiper-slide">خرداد</div>
-                                <div class="swiper-slide">تیر</div>
-                                <div class="swiper-slide">مرداد</div>
-                                <div class="swiper-slide">شهریور</div>
-                                <div class="swiper-slide">مهر</div>
-                                <div class="swiper-slide">آبان</div>
-                                <div class="swiper-slide">آذر</div>
-                                <div class="swiper-slide">دی</div>
-                                <div class="swiper-slide">بهمن</div>
-                                <div class="swiper-slide">اسفند</div>
-                            </div>
-                        </div>
-                        <div class="swiper-container days">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">01</div>
-                                <div class="swiper-slide">02</div>
-                                <div class="swiper-slide">03</div>
-                                <div class="swiper-slide">04</div>
-                                <div class="swiper-slide">05</div>
-                                <div class="swiper-slide">06</div>
-                                <div class="swiper-slide">07</div>
-                                <div class="swiper-slide">08</div>
-                                <div class="swiper-slide">09</div>
-                                <div class="swiper-slide">10</div>
-                                <div class="swiper-slide">11</div>
-                                <div class="swiper-slide">12</div>
-                                <div class="swiper-slide">13</div>
-                                <div class="swiper-slide">14</div>
-                                <div class="swiper-slide">15</div>
-                                <div class="swiper-slide">16</div>
-                                <div class="swiper-slide">17</div>
-                                <div class="swiper-slide">18</div>
-                                <div class="swiper-slide">19</div>
-                                <div class="swiper-slide">20</div>
-                                <div class="swiper-slide">21</div>
-                                <div class="swiper-slide">22</div>
-                                <div class="swiper-slide">23</div>
-                                <div class="swiper-slide">24</div>
-                                <div class="swiper-slide">25</div>
-                                <div class="swiper-slide">26</div>
-                                <div class="swiper-slide">27</div>
-                                <div class="swiper-slide">28</div>
-                                <div class="swiper-slide">29</div>
-                                <div class="swiper-slide">30</div>
-                                <div class="swiper-slide">31</div>
-                            </div>
-                        </div>
-                        <div class="vizor border-primary-500"></div>
                     </div>
+                    <div class="swiper-container month">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">فروردین</div>
+                            <div class="swiper-slide">اردیبهشت</div>
+                            <div class="swiper-slide">خرداد</div>
+                            <div class="swiper-slide">تیر</div>
+                            <div class="swiper-slide">مرداد</div>
+                            <div class="swiper-slide">شهریور</div>
+                            <div class="swiper-slide">مهر</div>
+                            <div class="swiper-slide">آبان</div>
+                            <div class="swiper-slide">آذر</div>
+                            <div class="swiper-slide">دی</div>
+                            <div class="swiper-slide">بهمن</div>
+                            <div class="swiper-slide">اسفند</div>
+                        </div>
+                    </div>
+                    <div class="swiper-container days">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">01</div>
+                            <div class="swiper-slide">02</div>
+                            <div class="swiper-slide">03</div>
+                            <div class="swiper-slide">04</div>
+                            <div class="swiper-slide">05</div>
+                            <div class="swiper-slide">06</div>
+                            <div class="swiper-slide">07</div>
+                            <div class="swiper-slide">08</div>
+                            <div class="swiper-slide">09</div>
+                            <div class="swiper-slide">10</div>
+                            <div class="swiper-slide">11</div>
+                            <div class="swiper-slide">12</div>
+                            <div class="swiper-slide">13</div>
+                            <div class="swiper-slide">14</div>
+                            <div class="swiper-slide">15</div>
+                            <div class="swiper-slide">16</div>
+                            <div class="swiper-slide">17</div>
+                            <div class="swiper-slide">18</div>
+                            <div class="swiper-slide">19</div>
+                            <div class="swiper-slide">20</div>
+                            <div class="swiper-slide">21</div>
+                            <div class="swiper-slide">22</div>
+                            <div class="swiper-slide">23</div>
+                            <div class="swiper-slide">24</div>
+                            <div class="swiper-slide">25</div>
+                            <div class="swiper-slide">26</div>
+                            <div class="swiper-slide">27</div>
+                            <div class="swiper-slide">28</div>
+                            <div class="swiper-slide">29</div>
+                            <div class="swiper-slide">30</div>
+                            <div class="swiper-slide">31</div>
+                        </div>
+                    </div>
+                    <div class="vizor border-primary-500"></div>
+                </div>
 
-                <span onclick="handleDate()" type="button" class="bg-blue-500 place-items-center grid  h-btn w-full text-white rounded-md " >
+                <span id="btnHandleDate" onclick="handleDate()" type="button" class="bg-blue-500 place-items-center grid  h-btn w-full text-white rounded-md " >
+                    تائید
+                </span>
+                <span id="btnHandleDateTahvil" onclick="handleDate2()" type="button" class="bg-blue-500 hidden place-items-center grid  h-btn w-full text-white rounded-md " >
                     تائید
                 </span>
 
-<!--                end-->
+                <!--                end-->
             </div>
         </div>
-<!--        MODAL DATE END-->
+        <!--        MODAL DATE END-->
 
         <!--        MODAL CHOOSE ADDRESS START -->
         <div id="modalChooseAddress" class="hidden bottom-0-impo -bottom-full fixed transition-all duration-200 z-[999999999999999999] -bottom-full px-6 py-4 flex flex-col w-full bg max-w-3xl bg-white bottom-0-impo">
@@ -523,6 +587,7 @@
         orderInformationDiv.classList.remove('hidden')
         orderBtn.classList.add('bg-gray-200')
         bodyClass.classList.add('overflow-y-hidden')
+
     }
     itemsBtn.onclick = () => {
         openAghlam()
@@ -532,17 +597,39 @@
     }
     deliveryDate.onclick = () =>{
         console.log('تاریخ تحویل')
-        openModalDate()
+        openModalDate(1)
+    }
+    deliveryDatePishFactor.onclick = () =>{
+        console.log('تاریخ اعتبار پیش فاکتور')
+        openModalDate(2)
     }
     document.addEventListener('click', () => {
         if (event.target.id ===  'modalDate'){
             closeModalDate()
         }
     })
-    function openModalDate (){
+    function openModalDate (num){
         modalDate.classList.remove('hidden')
         modalDate.classList.remove('-bottom-[101vh]')
         modalDate.classList.add('bottom-0')
+        console.log(typeof num , num)
+        let titleDate = document.getElementById('titleDate')
+        if (num === 1){
+        //         تاریخ تحویل
+            document.getElementById('btnHandleDate').classList.remove('hidden')
+            document.getElementById('btnHandleDateTahvil').classList.add('hidden')
+            titleDate.innerHTML = "تاریخ تحویل";
+
+
+
+        }else if(num === 2){
+            //         تاریخ پیش فاکتور
+            document.getElementById('btnHandleDateTahvil').classList.remove('hidden')
+            document.getElementById('btnHandleDate').classList.add('hidden')
+            titleDate.innerHTML = "تاریخ پیش فاکتور";
+
+        }
+
     }
     function closeModalDate(){
         setTimeout(() => {
@@ -786,6 +873,7 @@
         var start = input.selectionStart;
         var end = input.selectionEnd;
         // input.value
+        // const months = ["فروردين", "ارديبهشت", "خرداد", "تير", "مرداد", "شهريور", "مهر", "آبان", "آذر", "دي", "بهمن", "اسفند"]
         const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
         input.value = Number(Number(pad(year.realIndex))+1388) + '/' + months[Number(pad(month.realIndex))] + '/' + Number(Number(pad(days.realIndex)) + 1);
         input.setSelectionRange(start, end);
@@ -802,6 +890,19 @@
         updateInput()
         closeModalDate()
     }
+    function handleDate2(){
+        console.log("handleDate2()")
+        if (!input) {
+            return false;
+        }
+        start = input.selectionStart;
+        end = input.selectionEnd;
+        const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+        document.getElementById('deliveryDatePishFactor').value = Number(Number(pad(year.realIndex))+1388) + '/' + months[Number(pad(month.realIndex))] + '/' + Number(Number(pad(days.realIndex)) + 1);
+        input.setSelectionRange(start, end);
+        closeModalDate()
+    }
+    // handleDate2()
 </script>
 <!--SWIPER DATE END-->
 
@@ -809,6 +910,8 @@
     const sellingType = document.getElementById('sellingType');
     const modalSellingType = document.getElementById('modalSellingType')
     const modalChooseAddress = document.getElementById('modalChooseAddress')
+    const modalHesabKetab = document.getElementById('modalHesabKetab');
+
     const openModalSellingType = () => {
         modalSellingType.classList.remove('hidden')
         insetHelperModal.classList.remove('hidden')
@@ -846,9 +949,26 @@
         closeModalSellingType()
         closeNavMenu()
         closeModalAddress()
+        closeModalHesabKetab()
     }
     modalDate.classList.add('hidden')
     // document.getElementById('bodyclass').classList.add('overflow-y-hidden')
+    function openModalHesabKetab(){
+        modalHesabKetab.classList.remove('hidden')
+        insetHelperModal.classList.remove('hidden')
+        setTimeout(() => {
+            modalHesabKetab.classList.add('bottom-0-impo')
+        },1)
+        setTimeout(() => {
+            insetHelperModal.classList.remove('opacity-0')
+        },200)
+    }
+    function closeModalHesabKetab() {
+        modalHesabKetab.classList.remove('bottom-0-impo')
+        insetHelperModal.classList.add('opacity-0')
+        modalHesabKetab.classList.add('hidden')
+        insetHelperModal.classList.add('hidden')
+    }
 </script>
 
 </body>

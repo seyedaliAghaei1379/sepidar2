@@ -612,6 +612,10 @@ video {
   top: 1rem;
 }
 
+.top-5 {
+  top: 1.25rem;
+}
+
 .top-6 {
   top: 1.5rem;
 }
@@ -632,6 +636,10 @@ video {
   z-index: 999999999999999999;
 }
 
+.z-\[99999999999999\] {
+  z-index: 99999999999999;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -643,6 +651,10 @@ video {
 
 .mb-16 {
   margin-bottom: 4rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .mb-32 {
@@ -661,6 +673,10 @@ video {
   margin-left: 0.125rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .mr-0 {
   margin-right: 0px;
 }
@@ -669,12 +685,35 @@ video {
   margin-right: 0.125rem;
 }
 
+.mr-6 {
+  margin-right: 1.5rem;
+}
+
 .mr-8 {
   margin-right: 2rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-1\.5 {
+  margin-top: 0.375rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .block {
@@ -705,6 +744,10 @@ video {
   height: 0.5px;
 }
 
+.h-\[0\.5rem\] {
+  height: 0.5rem;
+}
+
 .h-\[116px\] {
   height: 116px;
 }
@@ -731,6 +774,10 @@ video {
 
 .h-\[32px\] {
   height: 32px;
+}
+
+.h-\[353px\] {
+  height: 353px;
 }
 
 .h-\[38px\] {
@@ -773,6 +820,10 @@ video {
   height: 88px;
 }
 
+.h-\[92px\] {
+  height: 92px;
+}
+
 .h-\[96px\] {
   height: 96px;
 }
@@ -795,6 +846,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.max-h-\[200px\] {
+  max-height: 200px;
 }
 
 .max-h-fit {
@@ -858,6 +913,10 @@ video {
   width: 38px;
 }
 
+.w-\[40\%\] {
+  width: 40%;
+}
+
 .w-\[40px\] {
   width: 40px;
 }
@@ -868,6 +927,10 @@ video {
 
 .w-\[58px\] {
   width: 58px;
+}
+
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .w-\[60px\] {
@@ -930,6 +993,12 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .appearance-none {
@@ -1183,6 +1252,11 @@ video {
   background-color: rgb(41 135 229 / var(--tw-bg-opacity));
 }
 
+.bg-red-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
+}
+
 .bg-red-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
@@ -1200,6 +1274,11 @@ video {
 
 .bg-zinc-950\/20 {
   background-color: rgb(9 9 11 / 0.2);
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .p-2 {
@@ -1274,6 +1353,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1336,8 +1420,16 @@ video {
   padding-right: 68px;
 }
 
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
 .pt-2 {
   padding-top: 0.5rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .pt-4 {
@@ -1407,6 +1499,10 @@ video {
 
 .leading-7 {
   line-height: 1.75rem;
+}
+
+.leading-8 {
+  line-height: 2rem;
 }
 
 .leading-normal {

@@ -551,15 +551,13 @@
         modalDate.classList.remove('hidden')
         modalDate.classList.remove('-bottom-[101vh]')
         modalDate.classList.add('bottom-0')
-        console.log(typeof num , num)
+        // console.log(typeof num , num)
         let titleDate = document.getElementById('titleDate')
         if (num === 1){
         //         تاریخ تحویل
             document.getElementById('btnHandleDate').classList.remove('hidden')
             document.getElementById('btnHandleDateTahvil').classList.add('hidden')
             titleDate.innerHTML = "تاریخ تحویل";
-
-
 
         }else if(num === 2){
             //         تاریخ پیش فاکتور

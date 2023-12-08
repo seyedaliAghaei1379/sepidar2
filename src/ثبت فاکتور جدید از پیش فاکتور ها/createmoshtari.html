@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لیست  پیش فاکتوره ها</title>
+    <link rel="stylesheet" href="../../dist/output.css" />
+</head>
+<body>
+<div id="primaryDiv" class="flex flex-col justify-start items-center max-w-3xl mx-auto border min-h-screen ">
+    <div class="flex-1 w-full flex-col justify-start items-center ">
+        <div class="flex flex-col bg-gray-100 px-4 py-4 gap-y-4 w-full">
+            <div class="flex justify-between items-center">
+          <span onclick="openNavMenu()" class="w-[40px] h-[40px] bg-gray-200 rounded-full flex justify-center items-center hover:bg-gray-300/30">
+            <svg  fill="#000000" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32.055 32.055" xml:space="preserve" transform="rotate(90)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <path d="M3.968,12.061C1.775,12.061,0,13.835,0,16.027c0,2.192,1.773,3.967,3.968,3.967c2.189,0,3.966-1.772,3.966-3.967 C7.934,13.835,6.157,12.061,3.968,12.061z M16.233,12.061c-2.188,0-3.968,1.773-3.968,3.965c0,2.192,1.778,3.967,3.968,3.967 s3.97-1.772,3.97-3.967C20.201,13.835,18.423,12.061,16.233,12.061z M28.09,12.061c-2.192,0-3.969,1.774-3.969,3.967 c0,2.19,1.774,3.965,3.969,3.965c2.188,0,3.965-1.772,3.965-3.965S30.278,12.061,28.09,12.061z"></path>
+                </g>
+              </g>
+            </svg>
+          </span>
+
+                <div class="flex flex-col justify-center items-center gap-y-1">
+                    <h4 class="text-primary-900 font-bold text-[20px]">سپیدار</h4>
+                    <span class="text-gray-700 text-[12px] font-light">سه شنبه - 1383/03/16</span>
+                </div>
+                <img src="../../assets/icons/arrowsquareleft.svg" alt="" class="p-2 w-[40px] h-[40px] rounded-full bg-gray-200">
+            </div>
+            <div class="flex justify-between items-start gap-2 w-full flex-col">
+                <p class="text-[16px] text-primary-900 font-semibold">
+                    ایجاد مشتری
+                </p>
+            </div>
+
+        </div>
+        <div class="bg-white py-2 flex justify-center w-full justify-between px-6 w-full text-[12px] text-primary-900 gap-x-6">
+            <span id="publicInfo" class=" w-full bg-gray-200 py-2  px-3 w-[152px] h-[40px] grid place-items-center text-center rounded-lg ">اطلاعات اصلی </span>
+            <span id="addressesbtn" class=" w-full  py-2  px-3 w-[152px]  h-[40px] grid place-items-center text-center rounded-lg">آدرس ها</span>
+        </div>
+        <hr style="height: 0.5rem !important;" class="h-[0.5rem] w-full bg-gray-100">
+        <div id="publicInfoDiv" class=" bg-white w-full flex  flex-col items-start justify-center px-6 py-2 gap-y-2 " >
+            <h4 class="font-medium py-1">نوع طرف حساب</h4>
+
+            <!--        haghighi hoghogi TAB START -->
+            <div class="w-full flex gap-x-2 ">
+                <label  class="labelcheckbox radiobox"  style="border: 1px solid rgba(243 ,243, 243,1 ) !important;">
+                    <input  onclick="handleTarafHesab(1)" type="radio" name="p1" checked>
+                    <span class="checkmark "></span>
+                    <span class="mr-8 min-w-fit text-[14px] block">
+                حقیقی
+                </span>
+                </label>
+                <label  class="labelcheckbox radiobox" style="border: 1px solid rgba(243 ,243, 243,1 ) !important;" >
+                    <input onclick="handleTarafHesab(2)" type="radio" name="p1">
+                    <span class="checkmark "></span>
+                    <span class="mr-8 min-w-fit text-[14px] block">
+                حقوقی
+                </span>
+                </label>
+            </div>
+            <!--        haghighi hoghogi TAB END -->
+
+            <!--        HAGHIGHI DIV START-->
+            <div id="haghighi" class="flex flex-col gap-y-4 mt-2  w-full h-full ">
+                <div class="relative float-label-input w-full  ">
+                    <input type="text" id="name" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <label for="name" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">نام</label>
+                </div>
+                <div class="relative float-label-input w-full  ">
+                    <input type="text" id="lName" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <label for="lName" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">نام خانوادگی</label>
+                </div>
+                <div class="relative float-label-input w-full  ">
+                    <input type="text" id="codeMelli" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <label for="codeMelli" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">کدملی</label>
+                </div>
+                <div class="relative float-label-input w-full  " onclick="openModalDate(2)">
+                    <input type="text" readonly  id="birthday" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <label for="birthday" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">تاریخ تولد</label>
+                </div>
+            </div>
+            <!--        HAGHIGHI DIV END-->
+
+            <!--        HOGHOGHI DIV START-->
+            <div id="hoghoghi" class="hidden flex flex-col gap-y-4 mt-2  w-full h-full">
+                <div class="relative float-label-input w-full  ">
+                    <input type="text" id="nameSherkat" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <label for="nameSherkat" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">نام شرکت</label>
+                </div>
+                <div class="relative float-label-input w-full  ">
+                    <input type="text" id="shenaseMelli" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <label for="shenaseMelli" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">شناسه ملی</label>
+                </div>
+                <div class="relative float-label-input w-full" onclick="openModalDate(1)">
+                    <input readonly type="text" id="tsabt" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                    <label for="tsabt" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">تاریخ ثبت</label>
+                </div>
+            </div>
+            <!--        HOGHOGHI DIV START-->
+
+
+
+        </div>
+
+
+        <div id="addressesDiv" class="hidden mt-2 bg-white w-full flex px-6 py-2 items-start justify-center flex-col gap-y-4">
+            <div class="relative float-label-input w-full  ">
+                <input type="text" id="addressName" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                <label for="addressName" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">آدرس</label>
+            </div>
+            <div class="relative float-label-input w-full  ">
+                <input type="text" id="codePosti" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                <label for="codePosti" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">کد پستی</label>
+            </div>
+            <div class="relative float-label-input w-full" >
+                <input  type="text" id="tHome" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                <label for="tHome" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">تلفن ثابت</label>
+            </div>
+            <div class="relative float-label-input w-full" >
+                <input  type="text" id="phoneNumber" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                <label for="phoneNumber" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">تلفن همراه</label>
+            </div>
+            <div class="relative float-label-input w-full hidden"  id="ph3" >
+                <input  type="text" id="phoneNumber3" placeholder="" class="block rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+                <div class="absolute left-2 top-[7px] bg-primary-500 text-blue-500 flex justify-center items-center border rounded-lg border-blue-400 ">
+                    <img src="../../assets/icons/Vector122121.svg" style="padding: 0.94rem !important;" class="px-2 py-2 w-10" onclick="hiddenInputPhone3()"></div></input>
+                <label for="phoneNumber3" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">شماره سوم</label>
+            </div>
+            <div class="flex flex-col gap-y-2 w-full px-6 py-2">
+                <h4 class="text-primary-600 cursor-pointer text-[14px] py-1" onclick="openInputPhone3()">افزودن شماره بیشتر</h4>
+                <label class="labelcheckbox flex justify-between items-center " style="border: unset;padding-right: 0 !important;">
+                    <input type="checkbox">
+                    <span class="checkmark " style="right: 0 !important;" ></span>
+                    <span class="mr-6 min-w-fit text-[14px] block text-gray-700">انتخاب به عنوان آدرس بیشتر فرض</span>
+                </label>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <div id="btnSabtNahayi" style="box-shadow: 0px -10px 20px 0px #e8e8e8" class="bg-white shadow-xl  w-full  max-w-3xl mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2">
+        <a class="h-btn btn ">ٍثبت نهایی</a>
+    </div>
+    <div id="btnSabtAddressJadid" style="box-shadow: 0px -10px 20px 0px #e8e8e8" class="bg-white hidden shadow-xl  w-full  max-w-3xl mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2">
+        <a class="h-btn btn ">ثبت آدرس جدید</a>
+    </div>
+
+    <!--        MODAL DATE START-->
+    <div id="modalDate" class="max-w-3xl mx-auto min-h-screen bg-zinc-950/20  -bottom-[101vh] transition-all duration-300 w-full absolute overflow-hidden flex justify-center items-end">
+        <div class="w-full  flex  flex-col items-center bg-white  justify-between h-[296px] px-6 py-4 ">
+            <!--                start-->
+            <div class="flex justify-between items-center   w-full ">
+                <span id="titleDate" class="text-primary-900 font-medium text-[18px]">تاریخ تحویل</span>
+                <img src="../../assets/icons/closeDate.svg" onclick="closeModalDate()">
+            </div>
+
+            <div class="picker  w-full arrows">
+                <div class="swiper-container year">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">1388</div>
+                        <div class="swiper-slide">1389</div>
+                        <div class="swiper-slide">1390</div>
+                        <div class="swiper-slide">1391</div>
+                        <div class="swiper-slide">1392</div>
+                        <div class="swiper-slide">1393</div>
+                        <div class="swiper-slide">1394</div>
+                        <div class="swiper-slide">1395</div>
+                        <div class="swiper-slide">1396</div>
+                        <div class="swiper-slide">1397</div>
+                        <div class="swiper-slide">1398</div>
+                        <div class="swiper-slide">1399</div>
+                        <div class="swiper-slide">1400</div>
+                        <div class="swiper-slide">1401</div>
+                        <div class="swiper-slide">1402</div>
+                        <div class="swiper-slide">1403</div>
+                        <div class="swiper-slide">1404</div>
+                        <div class="swiper-slide">1405</div>
+                        <div class="swiper-slide">1406</div>
+                        <div class="swiper-slide">1407</div>
+                        <div class="swiper-slide">1408</div>
+                        <div class="swiper-slide">1409</div>
+                        <div class="swiper-slide">1410</div>
+                        <div class="swiper-slide">1411</div>
+                        <div class="swiper-slide">1412</div>
+                        <div class="swiper-slide">1413</div>
+                        <div class="swiper-slide">1414</div>
+                        <div class="swiper-slide">1415</div>
+                        <div class="swiper-slide">1416</div>
+                        <div class="swiper-slide">1417</div>
+                        <div class="swiper-slide">1418</div>
+                        <div class="swiper-slide">1419</div>
+                        <div class="swiper-slide">1420</div>
+                        <div class="swiper-slide">1421</div>
+                        <div class="swiper-slide">1422</div>
+                        <div class="swiper-slide">1423</div>
+                        <div class="swiper-slide">1424</div>
+                        <div class="swiper-slide">1425</div>
+                        <div class="swiper-slide">1426</div>
+                    </div>
+                </div>
+                <div class="swiper-container month">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">فروردین</div>
+                        <div class="swiper-slide">اردیبهشت</div>
+                        <div class="swiper-slide">خرداد</div>
+                        <div class="swiper-slide">تیر</div>
+                        <div class="swiper-slide">مرداد</div>
+                        <div class="swiper-slide">شهریور</div>
+                        <div class="swiper-slide">مهر</div>
+                        <div class="swiper-slide">آبان</div>
+                        <div class="swiper-slide">آذر</div>
+                        <div class="swiper-slide">دی</div>
+                        <div class="swiper-slide">بهمن</div>
+                        <div class="swiper-slide">اسفند</div>
+                    </div>
+                </div>
+                <div class="swiper-container days">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">01</div>
+                        <div class="swiper-slide">02</div>
+                        <div class="swiper-slide">03</div>
+                        <div class="swiper-slide">04</div>
+                        <div class="swiper-slide">05</div>
+                        <div class="swiper-slide">06</div>
+                        <div class="swiper-slide">07</div>
+                        <div class="swiper-slide">08</div>
+                        <div class="swiper-slide">09</div>
+                        <div class="swiper-slide">10</div>
+                        <div class="swiper-slide">11</div>
+                        <div class="swiper-slide">12</div>
+                        <div class="swiper-slide">13</div>
+                        <div class="swiper-slide">14</div>
+                        <div class="swiper-slide">15</div>
+                        <div class="swiper-slide">16</div>
+                        <div class="swiper-slide">17</div>
+                        <div class="swiper-slide">18</div>
+                        <div class="swiper-slide">19</div>
+                        <div class="swiper-slide">20</div>
+                        <div class="swiper-slide">21</div>
+                        <div class="swiper-slide">22</div>
+                        <div class="swiper-slide">23</div>
+                        <div class="swiper-slide">24</div>
+                        <div class="swiper-slide">25</div>
+                        <div class="swiper-slide">26</div>
+                        <div class="swiper-slide">27</div>
+                        <div class="swiper-slide">28</div>
+                        <div class="swiper-slide">29</div>
+                        <div class="swiper-slide">30</div>
+                        <div class="swiper-slide">31</div>
+                    </div>
+                </div>
+                <div class="vizor border-primary-500"></div>
+            </div>
+
+            <span id="btntsabt" onclick="handleDate()" type="button" class="bg-blue-500 place-items-center grid  h-btn w-full text-white rounded-md " >
+                    تائیدتاریخ ثبت
+            </span>
+            <span id="btnBirthDay" onclick="handleDate2()" type="button" class="bg-blue-500 place-items-center grid  h-btn w-full text-white rounded-md " >
+                    تائید
+            </span>
+            <!--                end-->
+        </div>
+    </div>
+    <!--        MODAL DATE END-->
+
+
+
+
+
+
+
+
+
+
+    <div id="insetHelperModal" class="hidden opacity-0 inset-0 bg-zinc-950/20 fixed z-10 transition-all"> </div>
+    <div id="sidebarMenu" class="fixed hidden transition-all duration-500 -right-full inset-y-0 w-full bg-white max-w-[400px] z-[999999999999999999] ">
+        <ul class="h-full bg-white w-full flex flex-col text-[16px] ">
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <span onclick="closeNavMenu()" class="flex justify-start items-center h-full w-full pr-[5px]  gap-x-6 ">
+                    <span  class="bg-gray-200 w-[32px]  h-[32px] block rounded-full flex justify-center items-center ">
+                        <img class="w-[12px]  h-[12px]" width="14" height="14" src="../../assets/icons/menu/setting-slider-horizontal%20copy.svg">
+                    </span>
+                    <span class="">منو</span>
+                </span>
+
+            </li>
+
+            <li class="px-5 h-[64px] flex w-full bg-primary-500 justify-center items-center ">
+                <a href="" class="flex justify-start items-center h-full flex-1  gap-x-6 ">
+                    <img src="../../assets/image/2%20602.png" class="rounded-full" width="48" height="48">
+                    <span class="text-primary-100">علیرضا حسینی</span>
+                </a>
+
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.45884e-06 11.0039C-0.000222972 11.0788 0.0150549 11.1528 0.0448735 11.2215C0.0746922 11.2901 0.118405 11.3518 0.173257 11.4027L3.06907 14.2489C3.12185 14.3031 3.18492 14.3461 3.25459 14.3755C3.32425 14.4048 3.3991 14.42 3.4747 14.42C3.55031 14.42 3.62514 14.4048 3.69481 14.3755C3.76447 14.3461 3.82755 14.3031 3.88033 14.2489C3.9342 14.1976 3.97709 14.1358 4.00639 14.0674C4.03569 13.999 4.0508 13.9253 4.0508 13.8509C4.0508 13.7764 4.03569 13.7028 4.00639 13.6344C3.97709 13.5659 3.9342 13.5042 3.88033 13.4528L1.96904 11.5746H7.91604C8.06702 11.5746 8.21181 11.5146 8.31857 11.4078C8.42533 11.3011 8.4853 11.1563 8.4853 11.0053C8.4853 10.8544 8.42533 10.7096 8.31857 10.6028C8.21181 10.496 8.06702 10.4361 7.91604 10.4361H1.96904L3.88033 8.55783C3.9342 8.50647 3.97709 8.44471 4.00639 8.37628C4.03569 8.30786 4.0508 8.2342 4.0508 8.15977C4.0508 8.08534 4.03569 8.01168 4.00639 7.94326C3.97709 7.87483 3.9342 7.81307 3.88033 7.76171C3.82755 7.70757 3.76447 7.66455 3.69481 7.63518C3.62514 7.60581 3.55031 7.59067 3.4747 7.59067C3.3991 7.59067 3.32425 7.60581 3.25459 7.63518C3.18492 7.66455 3.12185 7.70757 3.06907 7.76171L0.173257 10.608C0.118745 10.6585 0.0752311 10.7198 0.0454243 10.7879C0.0156175 10.8561 0.000155744 10.9296 2.45884e-06 11.0039ZM2.72256 18.3918C2.7221 18.4657 2.73731 18.5388 2.76717 18.6063C2.79703 18.6739 2.84088 18.7343 2.89581 18.7837C5.01475 20.846 7.85493 22 10.8119 22C13.7688 22 16.6089 20.846 18.7279 18.7837C19.7638 17.7702 20.5868 16.56 21.1487 15.2242C21.7106 13.8884 22 12.4538 22 11.0046C22 9.55546 21.7106 8.12087 21.1487 6.78505C20.5868 5.44923 19.7638 4.23907 18.7279 3.22559C16.6118 1.15774 13.7706 0 10.8119 0C7.85314 0 5.01189 1.15774 2.89581 3.22559C2.84194 3.27696 2.79905 3.33872 2.76975 3.40714C2.74045 3.47556 2.72534 3.54922 2.72534 3.62366C2.72534 3.69809 2.74045 3.77175 2.76975 3.84017C2.79905 3.90859 2.84194 3.97035 2.89581 4.02172C2.94859 4.07585 3.01167 4.11887 3.08134 4.14825C3.151 4.17762 3.22584 4.19275 3.30145 4.19275C3.37705 4.19275 3.45189 4.17762 3.52156 4.14825C3.59122 4.11887 3.6543 4.07585 3.70708 4.02172C5.60459 2.16998 8.15088 1.13345 10.8022 1.13345C13.4536 1.13345 15.9999 2.16998 17.8974 4.02172C18.8276 4.92912 19.5669 6.01349 20.0717 7.21097C20.5764 8.40844 20.8365 9.69482 20.8365 10.9943C20.8365 12.2938 20.5764 13.5802 20.0717 14.7777C19.5669 15.9752 18.8276 17.0595 17.8974 17.9669C16.0008 19.8159 13.4579 20.8525 10.8092 20.8563C8.1604 20.8602 5.61454 19.831 3.71258 17.9876C3.63166 17.9081 3.52917 17.8541 3.41785 17.8324C3.30652 17.8106 3.19125 17.8221 3.08638 17.8653C2.9815 17.9085 2.89163 17.9816 2.82792 18.0754C2.76422 18.1693 2.72949 18.2798 2.72806 18.3932L2.72256 18.3918ZM10.233 11.0039C10.2311 11.1188 10.2634 11.2317 10.3258 11.3281C10.3882 11.4246 10.478 11.5003 10.5836 11.5456C10.6892 11.5909 10.8059 11.6037 10.9188 11.5825C11.0317 11.5612 11.1357 11.5069 11.2177 11.4263C11.2996 11.3458 11.3557 11.2426 11.3788 11.1301C11.4019 11.0175 11.3911 10.9007 11.3475 10.7943C11.304 10.688 11.2298 10.597 11.1344 10.533C11.039 10.4689 10.9268 10.4347 10.8119 10.4347C10.6596 10.4336 10.5132 10.4929 10.4047 10.5996C10.2962 10.7063 10.2344 10.8518 10.233 11.0039Z" fill="#F1F8FF"/>
+                </svg>
+
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="index.html" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/activity.svg">
+                    <span class="">داشبورد</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="addNewRecordFactor.html" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/addsquare.svg">
+                    <span class="">ٍثبت فاکتور جدید</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/Frame%205.svg">
+                    <span class="">لیست فاکتور ها</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/addsquare.svg">
+                    <span class="">ثبت پیش فاکتور جدید</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/Frame%207.svg">
+                    <span class="">لیست پیش فاکتور ها</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/profileadd.svg">
+                    <span class="">ثبت مشتری جدید</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/profile2user.svg">
+                    <span class="">لیست مشتریان</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/element3.svg">
+                    <span class="">لیست کالا و خدمات</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+<style>
+</style>
+<script>
+    // let n  =0 ;
+    // function handleInsertInput(){
+    //     const addressesDiv = document.getElementById('addressesDiv')
+    //     n++;
+    //     if (n === 1){
+    //         addressesDiv.insertAdjacentHTML("beforeend" ,
+    //             `<div class="relative float-label-input w-full" onclick="closeInsertInput()" >
+    //             <input  type="text" id="phoneNumber${n}" placeholder="" class="block rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
+    //             <div class="absolute left-2 top-[7px] bg-primary-500 text-blue-500 flex justify-center items-center border rounded-lg border-blue-400 ">
+    //             <img src="../../assets/icons/Vector122121.svg" style="padding: 0.94rem !important;" class="px-2 py-2 w-10" ></div></input>
+    //             <label for="phoneNumber${n}" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">شماره سوم</label>
+    //         </div>` )
+    //         n++;
+    //     }
+    // }
+
+    function hiddenInputPhone3(){
+        document.getElementById('ph3').classList.add('hidden')
+    }
+    function openInputPhone3(){
+        document.getElementById('ph3').classList.remove('hidden')
+    }
+
+    function closeInsertInput(){
+        const addressesDiv = document.getElementById('addressesDiv')
+
+    }
+</script>
+<script>
+    const addressesDiv = document.getElementById('addressesDiv');
+    const publicInfoDiv = document.getElementById('publicInfoDiv')
+    const addressesbtn = document.getElementById('addressesbtn')
+    const publicInfo = document.getElementById('publicInfo')
+    const btnSabtNahayi = document.getElementById('btnSabtNahayi')
+    const btnSabtAddressJadid = document.getElementById('btnSabtAddressJadid')
+    function openAddresses () {
+        publicInfoDiv.classList.add('hidden')
+        addressesbtn.classList.add('bg-gray-200')
+        addressesDiv.classList.remove('hidden')
+        publicInfo.classList.remove('bg-gray-200')
+        // bodyClass.classList.remove('overflow-y-hidden')
+
+        btnSabtNahayi.classList.add('hidden')
+        btnSabtAddressJadid.classList.remove('hidden')
+    }
+    function openpublicInfo(){
+        publicInfoDiv.classList.remove('hidden')
+        addressesbtn.classList.remove('bg-gray-200')
+        addressesDiv.classList.add('hidden')
+        publicInfo.classList.add('bg-gray-200')
+        // bodyClass.classList.add('overflow-y-hidden')
+        btnSabtAddressJadid.classList.add('hidden')
+        btnSabtNahayi.classList.remove('hidden')
+    }
+    openAddresses()
+    addressesbtn.onclick = () => {
+        openAddresses()
+    }
+    publicInfo.onclick = () => {
+        openpublicInfo()
+    }
+    function handleTarafHesab(e){
+        /*
+        e = 1-> حقیقی
+        e = 2-> حقوقی
+         */
+
+        if (e === 1){
+            console.log(e + "حقیقی")
+            document.getElementById('haghighi').classList.remove('hidden')
+            document.getElementById('hoghoghi').classList.add('hidden')
+
+        }
+        if (e === 2){
+            console.log(e + "حقوقی")
+            document.getElementById('hoghoghi').classList.remove('hidden')
+            document.getElementById('haghighi').classList.add('hidden')
+
+        }
+    }
+</script>
+<style>
+
+    .input-wrapper {
+        text-align: center;
+    }
+    .picker {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        place-items: center ;
+        position: relative;
+        /*width: 300px;*/
+        /*background: red !important;*/
+        overflow: hidden;
+        margin: 1rem auto 0;
+        /*outline: 1px solid #ccc;*/
+        /*padding: 0 30px;*/
+        background-color: #fff;
+        color: #252525;
+        height: 112px;
+    }
+
+    .swiper-container {
+        width: calc(312px / 3);
+        height: 100px;
+        float: left;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        opacity: 0.25;
+        transition: opacity 0.3s ease;
+        cursor: default;
+        /*font-weight: bold;*/
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .swiper-slide-prev,
+    .swiper-slide-next {
+        cursor: pointer;
+    }
+
+    .swiper-slide-active {
+        opacity: 1;
+    }
+
+    .vizor {
+        border-top: 1px solid #2987E5;
+        border-bottom: 1px solid #2987E5;
+        /*height: 70px;*/
+        height: 39px;
+        position: absolute;
+        top: 50%;
+        /*left: 1rem;*/
+        /*right: 1rem;*/
+        width: 100%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        line-height: 62px;
+    }
+    .vizor:before {
+        left: 95px;
+    }
+    .vizor:after {
+        left: 175px;
+    }
+
+    .arrows .swiper-container:after,
+    .arrows .swiper-container:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px;
+        border-color: transparent;
+        /*opacity: 0.5;*/
+        opacity: 0;
+    }
+
+    .arrows .swiper-container:before {
+        top: 0.5rem;
+        border-top-width: 0;
+        border-bottom-color: currentColor;
+    }
+
+    .arrows .swiper-container:after {
+        bottom: 0.5rem;
+        border-bottom-width: 0;
+        border-top-color: currentColor;
+    }
+
+</style>
+
+
+<script src="../../assets/scripts/swiperdate.js"></script>
+<!--SWIPER DATE START-->
+<script>
+    var defaults = {
+        pagination: '.swiper-pagination',
+        slidesPerView: 3,
+        freeMode: true,
+        freeModeSticky: true,
+        freeModeMomentumRatio: 0.25,
+        freeModeVelocityRatio: 0.25,
+        freeModeMinimumVelocity: 0.1,
+        // loop: true,
+        loopAdditionalSlides: 5,
+        direction: 'vertical',
+        slideToClickedSlide: true,
+        centeredSlides: true,
+        onSlideChangeEnd: updateInput
+    };
+
+    var year = Swiper(
+        '.swiper-container.year',
+        Object.assign({}, defaults, {
+            initialSlide: 14
+        })
+    );
+    year.on('slideChangeEnd', function () {
+
+    })
+
+    var month = Swiper(
+        '.swiper-container.month',
+        Object.assign({}, defaults, {
+            initialSlide: 3
+        })
+    );
+
+    var days = Swiper('.swiper-container.days', Object.assign({}, defaults, {
+        initialSlide: 4
+    }));
+
+    var input = document.getElementById('tsabt');
+    input.addEventListener('focus', moveLeft);
+    input.addEventListener('click', function (evt) {
+        var start = input.selectionStart;
+        var mod = start % 3;
+        start -=  mod;
+        input.setSelectionRange(start, start + 2);
+    });
+
+    input.addEventListener('keydown', function(evt) {
+        evt.preventDefault();
+        switch (evt.keyCode) {
+            case 38:
+                change(true);
+                break;
+            case 40:
+                change();
+                break;
+            case 37:
+                moveLeft();
+                break;
+            case 39:
+                moveRight();
+                break;
+        }
+    });
+
+    function moveLeft(e) {
+        var start = input.selectionStart;
+        var end = input.selectionEnd;
+
+        var invalidSelection = (end - start !== 2) || (start % 3 !== 0);
+
+        if (invalidSelection) {
+            input.setSelectionRange(0, 2);
+        } else if (start > 0) {
+            start -= 3;
+            input.setSelectionRange(start, start+2);
+        }
+    }
+
+    function moveRight() {
+        var start = input.selectionStart;
+        var end = input.selectionEnd;
+
+        if (end - start !== 2) {
+            input.setSelectionRange(0, 2);
+        }
+
+        if (end < input.value.length) {
+            start += 3;
+        }
+
+        input.setSelectionRange(start, start+2);
+    }
+
+    function findPart() {
+        var start = input.selectionStart;
+        var mod = start % 3;
+        start -=  mod;
+
+        if (start === 6) {
+            return days;
+        } else if (start === 3) {
+            return month;
+        }
+
+        return year;
+    }
+
+    function change(direction) {
+        var part = findPart();
+        direction? part.slideNext(true, 50) : part.slidePrev(true, 50);
+    }
+
+    function updateInput() {
+        if (!input) {
+            return false;
+        }
+
+        var start = input.selectionStart;
+        var end = input.selectionEnd;
+        // input.value
+        // const months = ["فروردين", "ارديبهشت", "خرداد", "تير", "مرداد", "شهريور", "مهر", "آبان", "آذر", "دي", "بهمن", "اسفند"]
+        const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+        input.value = Number(Number(pad(year.realIndex))+1388) + '/' + months[Number(pad(month.realIndex))] + '/' + Number(Number(pad(days.realIndex)) + 1);
+        input.setSelectionRange(start, end);
+    }
+
+    function pad(v) {
+        return v > 9? v : "0" + String(v);
+    }
+
+    // input.focus();
+    // updateInput()
+    const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+
+    function handleDate(){
+        console.log("handleDate()")
+        updateInput()
+        closeModalDate()
+    }
+    function handleDate2(){
+        console.log("handleDate2()")
+        if (!input) {
+            return false;
+        }
+        start = input.selectionStart;
+        end = input.selectionEnd;
+        const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+        document.getElementById('birthday').value = Number(Number(pad(year.realIndex))+1388) + '/' + months[Number(pad(month.realIndex))] + '/' + Number(Number(pad(days.realIndex)) + 1);
+        input.setSelectionRange(start, end);
+        closeModalDate()
+    }
+    // handleDate2()
+    const modalDate = document.getElementById('modalDate')
+
+    function openModalDate(num){
+        modalDate.classList.remove('hidden')
+        modalDate.classList.remove('-bottom-[101vh]')
+        modalDate.classList.add('bottom-0')
+
+        let titleDate = document.getElementById('titleDate')
+        if (num === 1){
+            //         تاریخ ثبت
+            document.getElementById('btntsabt').classList.remove('hidden')
+            document.getElementById('btnBirthDay').classList.add('hidden')
+
+        }else if(num === 2){
+            //         تاریخ تولد
+            document.getElementById('btnBirthDay').classList.remove('hidden')
+            document.getElementById('btntsabt').classList.add('hidden')
+
+        }
+
+    }
+    function closeModalDate(){
+        setTimeout(() => {
+            modalDate.classList.add('-bottom-[101vh]')
+            modalDate.classList.remove('bottom-0')
+        },100)
+        modalDate.classList.add('hidden')
+    }
+    closeModalDate()
+    document.addEventListener('click', () => {
+        if (event.target.id ===  'modalDate'){
+            closeModalDate()
+        }
+    })
+</script>
+<!--SWIPER DATE END-->
+<script src="../../assets/scripts/main.js"></script>
