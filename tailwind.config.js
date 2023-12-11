@@ -21,6 +21,10 @@ module.exports = {
         secondary : {
           100 : "#EDFFF4",
           500 : "#73D697",
+          900 : "#0A5A29"
+        },
+        red : {
+          500 : "#F66254"
         }
       },
       height : {

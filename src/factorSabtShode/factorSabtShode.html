@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لیست مشتریان</title>
+    <link rel="stylesheet" href="../../dist/output.css" />
+
+</head>
+<body>
+<div class="flex flex-col  items-center justify-start md:max-w-3xl mx-auto border min-h-screen">
+    <div class="flex flex-col bg-gray-100 px-4 py-4 gap-y-4 w-full">
+        <div class="flex justify-between items-center">
+          <span onclick="openNavMenu()" class="w-[40px] h-[40px] bg-gray-200 rounded-full flex justify-center items-center hover:bg-gray-300/30">
+            <svg  fill="#000000" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32.055 32.055" xml:space="preserve" transform="rotate(90)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <path d="M3.968,12.061C1.775,12.061,0,13.835,0,16.027c0,2.192,1.773,3.967,3.968,3.967c2.189,0,3.966-1.772,3.966-3.967 C7.934,13.835,6.157,12.061,3.968,12.061z M16.233,12.061c-2.188,0-3.968,1.773-3.968,3.965c0,2.192,1.778,3.967,3.968,3.967 s3.97-1.772,3.97-3.967C20.201,13.835,18.423,12.061,16.233,12.061z M28.09,12.061c-2.192,0-3.969,1.774-3.969,3.967 c0,2.19,1.774,3.965,3.969,3.965c2.188,0,3.965-1.772,3.965-3.965S30.278,12.061,28.09,12.061z"></path>
+                </g>
+              </g>
+            </svg>
+          </span>
+
+            <div class="flex flex-col justify-center items-center gap-y-1">
+                <h4 class="text-primary-900 font-bold text-[20px]">سپیدار</h4>
+                <span class="text-gray-700 text-[12px] font-light">سه شنبه - 1383/03/16</span>
+            </div>
+            <img src="../../assets/icons/arrowsquareleft.svg" alt="" class="p-2 w-[40px] h-[40px] rounded-full bg-gray-200">
+        </div>
+    </div>
+    <div class="flex flex-col bg-gray-100 px-4 py-4  w-full">
+        <div class="w-full py-2.5 bg-secondary-500 px-4 rounded-t-xl flex justify-between items-center text-[12px] px-2 text-secondary-900 ">
+            <span class="font-medium">فاکتور ثبت شده</span>
+            <span class="font-light"> تاریخ :  1402/04/20</span>
+        </div>
+        <div class="w-full py-1  flex flex-col gap-y-0.5   ">
+            <div class="px-4 bg-white flex flex-col gap-y-2 text-gray-700 text-[12px] font-light ">
+                <div class="flex flex-col gap-y-1 pt-2 pb-0">
+                    <span>مشتری</span>
+                    <h4 class="text-primary-900 text-[14px] font-medium">داروخانه ارجمند (10419)</h4>
+                </div>
+                <div class="w-full flex flex-col gap-y-3 py-4  ">
+                    <ul class="w-full flex items-center justify-between gap-x-5 px-2">
+                        <li class="min-w-fit ">آدرس مشتری</li>
+                        <li class="line-clamp-1 text-primary-900 ">قم - بلوار الغدیر - روبروی ساختما اقتصاد انقلابی -پلاک 21</li>
+                    </ul>
+                    <ul class="w-full flex items-center justify-between gap-x-5 px-2">
+                        <li class="min-w-fit ">نوع فروش</li>
+                        <li class="line-clamp-1 text-primary-900 ">فروش نقدی</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full bg-white  px-4 flex flex-col gap-y-[0.33rem] py-4  text-primary-900 text-[12px] font-light">
+                    <ul class="w-full flex items-center justify-between gap-x-5 px-2">
+                        <li class="min-w-fit ">مجموع قیمت اقلام</li>
+                        <li class="line-clamp-1 text-primary-900 text-[10px]">
+                            <span class="text-primary-600 text-[16px] ml-1">15/600/000 </span>
+                            تومان
+                        </li>
+                    </ul>
+                    <ul class="w-full flex items-center justify-between gap-x-5 px-2">
+                        <li class="min-w-fit ">ارزش افزوده</li>
+                        <li class="line-clamp-1 text-primary-900 text-[10px]">
+                            <span class="text-primary-600 text-[16px] ml-1">600/000 </span>
+                            تومان
+                        </li>
+                    </ul>
+                    <ul class="w-full flex items-center justify-between gap-x-5 px-2">
+                        <li class="min-w-fit ">تخفیف بر کل فاکتور</li>
+                        <li class="line-clamp-1 text-red-500 text-[10px]">
+                            <span class=" text-[16px] ml-1">800/000 </span>
+                            تومان
+                        </li>
+                    </ul>
+            </div>
+            <div class="w-full  rounded-b-xl  shadow-sm px-4 flex py-4 bg-white  text-primary-900 text-[12px] font-light">
+                <ul class="w-full flex items-center justify-between gap-x-5 px-2">
+                    <li class="min-w-fit font-semibold">قابل پرداخت</li>
+                    <li class="line-clamp-1 text-primary-500 text-[10px]">
+                        <span class=" text-[16px] ml-1 font-medium">16/000/000 </span>
+                        تومان
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center items-center  bg-gray-100 px-4  w-full">
+        <h4 class="text-primary-900 py-6 pb-10">لیست اقلام</h4>
+    </div>
+    <div class="w-full bg-white flex flex-col gap-y-3 mb-24">
+        <div class="w-full flex justify-between items-center pt-3 px-6 gap-x-3">
+            <ul class="bg-gray-200 px-3 py-2 rounded-lg text-[12px] flex gap-x-2 w-full justify-between items-center">
+                <li class="text-gray-700">تعداد اقلام</li>
+                <li class="text-primary-600">15  عدد</li>
+            </ul>
+            <ul class="bg-gray-200 px-3 py-2 rounded-lg text-[12px] flex gap-x-2 w-full justify-between items-center">
+                <li class="text-gray-700">تنوع اقلام</li>
+                <li class="text-primary-600">15  نوع</li>
+            </ul>
+        </div>
+        <div class="flex flex-col justify-center px-4 py-4 items-center gap-y-4 sm:grid sm:grid-cols-2 gap-4 ">
+            <div class=" w-full flex flex-col justify-center items-center gap-y-4  ">
+                <h4 class=" text-[14px] text-primary-900 w-full text-right">تستر ادو پرفیوم  ورساچه مدل Crystal Noir حجم 90 میلی لیتر</h4>
+                <div class=" w-full flex justify-between items-start">
+                    <ul class="flex flex-col gap-y-1 justify-center items-center max-w-fit text-gray-700 font-light min-w-[150px] text-[12px]  py-1" >
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>قیمت</span>
+                            <span class=" text-primary-600 text-[10px]">
+                                <span class="pl-0.5 font-bold text-[12px]">1/085/000</span>
+                                تومان
+                            </span>
+                        </li>
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>فی</span>
+                            <span class="text-[10px]">
+                                <span class="pl-0.5 text-[12px]">500/000</span>
+                                تومان
+                            </span>
+                        </li>
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>ارزش افزوده</span>
+                            <span class="text-[10px]">
+                                <span class="pl-0.5 text-[12px]">45/000</span>
+                                تومان
+                            </span>
+                        </li>
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>تخفیف</span>
+                            <span class="text-[10px]">
+                                <span class="pl-0.5 text-[12px]">5/000</span>
+                                تومان
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="min-w-[89px]  bg-gray-200 flex rounded-[8px] justify-center gap-y-2 items-center flex-col h-[64px] ">
+                        <span style="border-bottom: 1px solid #E4E4E4" class="text-[14px] w-full pb-1 text-center text-primary-600 ">35 عدد</span>
+                        <span class="text-[10px]">انبار مرکزی</span>
+                    </div>
+                </div>
+            </div>
+            <div class=" w-full flex flex-col justify-center items-center gap-y-4  ">
+                <h4 class=" text-[14px] text-primary-900 w-full text-right">تستر ادو پرفیوم  ورساچه مدل Crystal Noir حجم 90 میلی لیتر</h4>
+                <div class=" w-full flex justify-between items-start">
+                    <ul class="flex flex-col gap-y-1 justify-center items-center max-w-fit text-gray-700 font-light min-w-[150px] text-[12px]  py-1" >
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>قیمت</span>
+                            <span class=" text-primary-600 text-[10px]">
+                                <span class="pl-0.5 font-bold text-[12px]">1/085/000</span>
+                                تومان
+                            </span>
+                        </li>
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>فی</span>
+                            <span class="text-[10px]">
+                                <span class="pl-0.5 text-[12px]">500/000</span>
+                                تومان
+                            </span>
+                        </li>
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>ارزش افزوده</span>
+                            <span class="text-[10px]">
+                                <span class="pl-0.5 text-[12px]">45/000</span>
+                                تومان
+                            </span>
+                        </li>
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>تخفیف</span>
+                            <span class="text-[10px]">
+                                <span class="pl-0.5 text-[12px]">5/000</span>
+                                تومان
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="min-w-[89px]  bg-gray-200 flex rounded-[8px] justify-center gap-y-2 items-center flex-col h-[64px] ">
+                        <span style="border-bottom: 1px solid #E4E4E4" class="text-[14px] w-full pb-1 text-center text-primary-600 ">35 عدد</span>
+                        <span class="text-[10px]">انبار مرکزی</span>
+                    </div>
+                </div>
+            </div>
+            <div class=" w-full flex flex-col justify-center items-center gap-y-4  ">
+                <h4 class=" text-[14px] text-primary-900 w-full text-right">تستر ادو پرفیوم  ورساچه مدل Crystal Noir حجم 90 میلی لیتر</h4>
+                <div class=" w-full flex justify-between items-start">
+                    <ul class="flex flex-col gap-y-1 justify-center items-center max-w-fit text-gray-700 font-light min-w-[150px] text-[12px]  py-1" >
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>قیمت</span>
+                            <span class=" text-primary-600 text-[10px]">
+                                <span class="pl-0.5 font-bold text-[12px]">1/085/000</span>
+                                تومان
+                            </span>
+                        </li>
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>فی</span>
+                            <span class="text-[10px]">
+                                <span class="pl-0.5 text-[12px]">500/000</span>
+                                تومان
+                            </span>
+                        </li>
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>ارزش افزوده</span>
+                            <span class="text-[10px]">
+                                <span class="pl-0.5 text-[12px]">45/000</span>
+                                تومان
+                            </span>
+                        </li>
+                        <li class="flex justify-between  w-full items-center gap-x-8 ">
+                            <span>تخفیف</span>
+                            <span class="text-[10px]">
+                                <span class="pl-0.5 text-[12px]">5/000</span>
+                                تومان
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="min-w-[89px]  bg-gray-200 flex rounded-[8px] justify-center gap-y-2 items-center flex-col h-[64px] ">
+                        <span style="border-bottom: 1px solid #E4E4E4" class="text-[14px] w-full pb-1 text-center text-primary-600 ">35 عدد</span>
+                        <span class="text-[10px]">انبار مرکزی</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--        BTN SABT NAHAYI START-->
+    <div style="box-shadow: 0px -10px 20px 0px #e8e8e8" class="flex  justify-center items-center w-full fixed bg-white bottom-0 shadow-xl p-2 inset-x-0 mx-auto max-w-3xl h-[88px]">
+        <div style="color: #081725 !important;background: white;border: 1px solid #2987E5" class="btn font-medium hover:bg-primary-500 transition-all flex-1">
+            ویرایش فاکتور
+        </div>
+    </div>
+    <!--        BTN SABT NAHAYI EHD -->
+
+
+    <div id="insetHelperModal" class="hidden opacity-0 inset-0 bg-zinc-950/20 fixed z-10 transition-all"> </div>
+    <div id="sidebarMenu" class="fixed hidden transition-all duration-500 -right-full inset-y-0 w-full bg-white max-w-[400px] z-[999999999999999999] ">
+        <ul class="h-full bg-white w-full flex flex-col text-[16px] ">
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <span onclick="closeNavMenu()" class="flex justify-start items-center h-full w-full pr-[5px]  gap-x-6 ">
+                    <span  class="bg-gray-200 w-[32px]  h-[32px] block rounded-full flex justify-center items-center ">
+                        <img class="w-[12px]  h-[12px]" width="14" height="14" src="../../assets/icons/menu/setting-slider-horizontal%20copy.svg">
+                    </span>
+                    <span class="">منو</span>
+                </span>
+
+            </li>
+
+            <li class="px-5 h-[64px] flex w-full bg-primary-500 justify-center items-center ">
+                <a href="" class="flex justify-start items-center h-full flex-1  gap-x-6 ">
+                    <img src="../../assets/image/2%20602.png" class="rounded-full" width="48" height="48">
+                    <span class="text-primary-100">علیرضا حسینی</span>
+                </a>
+
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.45884e-06 11.0039C-0.000222972 11.0788 0.0150549 11.1528 0.0448735 11.2215C0.0746922 11.2901 0.118405 11.3518 0.173257 11.4027L3.06907 14.2489C3.12185 14.3031 3.18492 14.3461 3.25459 14.3755C3.32425 14.4048 3.3991 14.42 3.4747 14.42C3.55031 14.42 3.62514 14.4048 3.69481 14.3755C3.76447 14.3461 3.82755 14.3031 3.88033 14.2489C3.9342 14.1976 3.97709 14.1358 4.00639 14.0674C4.03569 13.999 4.0508 13.9253 4.0508 13.8509C4.0508 13.7764 4.03569 13.7028 4.00639 13.6344C3.97709 13.5659 3.9342 13.5042 3.88033 13.4528L1.96904 11.5746H7.91604C8.06702 11.5746 8.21181 11.5146 8.31857 11.4078C8.42533 11.3011 8.4853 11.1563 8.4853 11.0053C8.4853 10.8544 8.42533 10.7096 8.31857 10.6028C8.21181 10.496 8.06702 10.4361 7.91604 10.4361H1.96904L3.88033 8.55783C3.9342 8.50647 3.97709 8.44471 4.00639 8.37628C4.03569 8.30786 4.0508 8.2342 4.0508 8.15977C4.0508 8.08534 4.03569 8.01168 4.00639 7.94326C3.97709 7.87483 3.9342 7.81307 3.88033 7.76171C3.82755 7.70757 3.76447 7.66455 3.69481 7.63518C3.62514 7.60581 3.55031 7.59067 3.4747 7.59067C3.3991 7.59067 3.32425 7.60581 3.25459 7.63518C3.18492 7.66455 3.12185 7.70757 3.06907 7.76171L0.173257 10.608C0.118745 10.6585 0.0752311 10.7198 0.0454243 10.7879C0.0156175 10.8561 0.000155744 10.9296 2.45884e-06 11.0039ZM2.72256 18.3918C2.7221 18.4657 2.73731 18.5388 2.76717 18.6063C2.79703 18.6739 2.84088 18.7343 2.89581 18.7837C5.01475 20.846 7.85493 22 10.8119 22C13.7688 22 16.6089 20.846 18.7279 18.7837C19.7638 17.7702 20.5868 16.56 21.1487 15.2242C21.7106 13.8884 22 12.4538 22 11.0046C22 9.55546 21.7106 8.12087 21.1487 6.78505C20.5868 5.44923 19.7638 4.23907 18.7279 3.22559C16.6118 1.15774 13.7706 0 10.8119 0C7.85314 0 5.01189 1.15774 2.89581 3.22559C2.84194 3.27696 2.79905 3.33872 2.76975 3.40714C2.74045 3.47556 2.72534 3.54922 2.72534 3.62366C2.72534 3.69809 2.74045 3.77175 2.76975 3.84017C2.79905 3.90859 2.84194 3.97035 2.89581 4.02172C2.94859 4.07585 3.01167 4.11887 3.08134 4.14825C3.151 4.17762 3.22584 4.19275 3.30145 4.19275C3.37705 4.19275 3.45189 4.17762 3.52156 4.14825C3.59122 4.11887 3.6543 4.07585 3.70708 4.02172C5.60459 2.16998 8.15088 1.13345 10.8022 1.13345C13.4536 1.13345 15.9999 2.16998 17.8974 4.02172C18.8276 4.92912 19.5669 6.01349 20.0717 7.21097C20.5764 8.40844 20.8365 9.69482 20.8365 10.9943C20.8365 12.2938 20.5764 13.5802 20.0717 14.7777C19.5669 15.9752 18.8276 17.0595 17.8974 17.9669C16.0008 19.8159 13.4579 20.8525 10.8092 20.8563C8.1604 20.8602 5.61454 19.831 3.71258 17.9876C3.63166 17.9081 3.52917 17.8541 3.41785 17.8324C3.30652 17.8106 3.19125 17.8221 3.08638 17.8653C2.9815 17.9085 2.89163 17.9816 2.82792 18.0754C2.76422 18.1693 2.72949 18.2798 2.72806 18.3932L2.72256 18.3918ZM10.233 11.0039C10.2311 11.1188 10.2634 11.2317 10.3258 11.3281C10.3882 11.4246 10.478 11.5003 10.5836 11.5456C10.6892 11.5909 10.8059 11.6037 10.9188 11.5825C11.0317 11.5612 11.1357 11.5069 11.2177 11.4263C11.2996 11.3458 11.3557 11.2426 11.3788 11.1301C11.4019 11.0175 11.3911 10.9007 11.3475 10.7943C11.304 10.688 11.2298 10.597 11.1344 10.533C11.039 10.4689 10.9268 10.4347 10.8119 10.4347C10.6596 10.4336 10.5132 10.4929 10.4047 10.5996C10.2962 10.7063 10.2344 10.8518 10.233 11.0039Z" fill="#F1F8FF"/>
+                </svg>
+
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="index.html" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/activity.svg">
+                    <span class="">داشبورد</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="addNewRecordFactor.html" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/addsquare.svg">
+                    <span class="">ٍثبت فاکتور جدید</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/Frame%205.svg">
+                    <span class="">لیست فاکتور ها</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/addsquare.svg">
+                    <span class="">ثبت پیش فاکتور جدید</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/Frame%207.svg">
+                    <span class="">لیست پیش فاکتور ها</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/profileadd.svg">
+                    <span class="">ثبت مشتری جدید</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/profile2user.svg">
+                    <span class="">لیست مشتریان</span>
+                </a>
+            </li>
+            <li class="px-5 h-[64px] flex w-full  justify-center items-center group transition-all hover:bg-gray-200">
+                <a href="" class="flex justify-start items-center h-full w-full pr-2  gap-x-6 ">
+                    <img src="../../assets/icons/menu/element3.svg">
+                    <span class="">لیست کالا و خدمات</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+<script src="../../../assets/scripts/main.js"></script>
