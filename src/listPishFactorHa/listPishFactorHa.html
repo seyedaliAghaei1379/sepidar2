@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>لیست  پیش فاکتوره ها</title>
+    <title>لیست پیش فاکتور ها</title>
     <link rel="stylesheet" href="../../dist/output.css" />
 </head>
 <body>
-<div id="primaryDiv" class="flex flex-col justify-start items-center max-w-3xl mx-auto border min-h-screen ">
-    <div class="flex-1 w-full flex-col justify-start items-center ">
-        <div class="flex flex-col bg-gray-100 px-4 py-4 gap-y-4 w-full">
-            <div class="flex justify-between items-center">
+<div class="flex flex-col  items-center justify-start2 md:max-w-3xl mx-auto border min-h-screen">
+    <div class="flex flex-col bg-gray-100 px-4 py-4 gap-y-4 w-full">
+        <div class="flex justify-between items-center">
           <span onclick="openNavMenu()" class="w-[40px] h-[40px] bg-gray-200 rounded-full flex justify-center items-center hover:bg-gray-300/30">
             <svg  fill="#000000" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 32.055 32.055" xml:space="preserve" transform="rotate(90)">
@@ -25,134 +24,53 @@
             </svg>
           </span>
 
-                <div class="flex flex-col justify-center items-center gap-y-1">
-                    <h4 class="text-primary-900 font-bold text-[20px]">سپیدار</h4>
-                    <span class="text-gray-700 text-[12px] font-light">سه شنبه - 1383/03/16</span>
-                </div>
-                <img src="../../assets/icons/arrowsquareleft.svg" alt="" class="p-2 w-[40px] h-[40px] rounded-full bg-gray-200">
+            <div class="flex flex-col justify-center items-center gap-y-1">
+                <h4 class="text-primary-900 font-bold text-[20px]">سپیدار</h4>
+                <span class="text-gray-700 text-[12px] font-light">سه شنبه - 1383/03/16</span>
             </div>
-            <div class="flex justify-between items-start gap-2 w-full flex-col">
-                <p class="text-[16px] text-primary-900 font-semibold">
-                    ایجاد مشتری
-                </p>
-            </div>
-
+            <img src="../../assets/icons/arrowsquareleft.svg" alt="" class="p-2 w-[40px] h-[40px] rounded-full bg-gray-200">
         </div>
-        <div class="bg-white py-2 flex justify-center w-full justify-between px-6 w-full text-[12px] text-primary-900 gap-x-6">
-            <span id="publicInfo" class=" w-full bg-gray-200 py-2  px-3 w-[152px] h-[40px] grid place-items-center text-center rounded-lg ">اطلاعات اصلی </span>
-            <span id="addressesbtn" class=" w-full  py-2  px-3 w-[152px]  h-[40px] grid place-items-center text-center rounded-lg">آدرس ها</span>
+        <div class="flex justify-between items-start gap-2 w-full flex-col">
+            <p class="text-[16px] text-primary-900 font-medium">
+                لیست فاکتور ها
+            </p>
         </div>
-        <hr style="height: 0.5rem !important;" class="h-[0.5rem] w-full bg-gray-100">
-        <div id="publicInfoDiv" class=" bg-white w-full flex  flex-col items-start justify-center px-6 py-2 gap-y-2 " >
-            <h4 class="font-medium pt-3 pb-2 text-[14px] ">نوع طرف حساب</h4>
-
-            <!--        haghighi hoghogi TAB START -->
-            <div class="w-full flex gap-x-2 mb-5 ">
-                <label  class="labelcheckbox radiobox"  style="border: 1px solid rgba(243 ,243, 243,1 ) !important;">
-                    <input  onclick="handleTarafHesab(1)" type="radio" name="p1" checked>
-                    <span class="checkmark "></span>
-                    <span class="mr-10 min-w-fit text-[14px] block">
-                حقیقی
-                </span>
-                </label>
-                <label  class="labelcheckbox radiobox" style="border: 1px solid rgba(243 ,243, 243,1 ) !important;" >
-                    <input onclick="handleTarafHesab(2)" type="radio" name="p1">
-                    <span class="checkmark "></span>
-                    <span class="mr-10 min-w-fit text-[14px] block">
-                حقوقی
-                </span>
-                </label>
+        <div class="flex gap-x-2 items-center justify-center w-full ">
+            <div class="relative float-label-input  bg-gray-100 w-full">
+                <input type="text" id="name" placeholder=" " class="block  rounded border-slate-200 h-input text-sm relative w-full bg-gray-100 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3 block appearance-none leading-normal focus:border-blue-400">
+                <div class="absolute left-2 top-[7px]  flex justify-center items-center  rounded-lg border-blue-400 ">
+                    <img src="../../assets/icons/searchnormal.svg" class="px-2 py-2 w-10">
+                </div>
+                <label for="name" class="absolute bg-gray-100 top-4 right-3 text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-sm px-2 text-grey-darker">جست و جو</label>
             </div>
-            <!--        haghighi hoghogi TAB END -->
-
-            <!--        HAGHIGHI DIV START-->
-            <div id="haghighi" class="flex flex-col gap-y-4 mt-2  w-full h-full ">
-                <div class="relative float-label-input w-full  ">
-                    <input type="text" id="name" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                    <label for="name" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">نام</label>
-                </div>
-                <div class="relative float-label-input w-full  ">
-                    <input type="text" id="lName" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                    <label for="lName" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">نام خانوادگی</label>
-                </div>
-                <div class="relative float-label-input w-full  ">
-                    <input type="text" id="codeMelli" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                    <label for="codeMelli" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">کدملی</label>
-                </div>
-                <div class="relative float-label-input w-full  " onclick="openModalDate(2)">
-                    <input type="text" readonly  id="birthday" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                    <label for="birthday" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">تاریخ تولد</label>
-                </div>
-            </div>
-            <!--        HAGHIGHI DIV END-->
-
-            <!--        HOGHOGHI DIV START-->
-            <div id="hoghoghi" class="hidden flex flex-col gap-y-4 mt-2  w-full h-full">
-                <div class="relative float-label-input w-full  ">
-                    <input type="text" id="nameSherkat" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                    <label for="nameSherkat" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">نام شرکت</label>
-                </div>
-                <div class="relative float-label-input w-full  ">
-                    <input type="text" id="shenaseMelli" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                    <label for="shenaseMelli" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">شناسه ملی</label>
-                </div>
-                <div class="relative float-label-input w-full" onclick="openModalDate(1)">
-                    <input readonly type="text" id="tsabt" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                    <label for="tsabt" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">تاریخ ثبت</label>
-                </div>
-            </div>
-            <!--        HOGHOGHI DIV START-->
-
-
-
+            <img id="activeCheckBox" onclick="toggleCheckBox()" src="../../assets/icons/task-square.svg"  class="px-3  h-[56px] w-[56px] border border-primary-500 bg-white rounded-lg  ">
+            <img id="removeCheckBox" onclick="toggleCheckBox()" src="../../assets/icons/tagcross.svg"  class="hidden px-3  h-[56px] w-[56px] border border-primary-500 bg-white rounded-lg  ">
         </div>
-
-
-        <div id="addressesDiv" class="hidden mt-2 bg-white w-full flex px-6 py-2 items-start justify-center flex-col gap-y-4">
-            <div class="relative float-label-input w-full  ">
-                <input type="text" id="addressName" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                <label for="addressName" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">آدرس</label>
+        <div class="flex justify-center items-center w-full gap-x-3">
+            <div class="relative float-label-input  bg-gray-100 w-full" onclick="openModalDate(2)">
+                <input type="text" readonly id="date1" placeholder=" " class="block  rounded border-slate-200 h-input text-sm relative w-full bg-gray-100 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3 block appearance-none leading-normal focus:border-blue-400">
+                <div class="absolute left-2 top-[7px]  flex justify-center items-center  rounded-lg border-blue-400 ">
+                    <img src="../../assets/icons/calendar2.svg" class="px-2 py-2 w-10">
+                </div>
+                <label for="date1" class="absolute bg-gray-100 top-4 right-3 text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-sm px-2 text-grey-darker">از تاریخ</label>
             </div>
-            <div class="relative float-label-input w-full  ">
-                <input type="text" id="codePosti" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                <label for="codePosti" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">کد پستی</label>
-            </div>
-            <div class="relative float-label-input w-full" >
-                <input  type="text" id="tHome" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                <label for="tHome" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">تلفن ثابت</label>
-            </div>
-            <div class="relative float-label-input w-full" >
-                <input  type="text" id="phoneNumber" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                <label for="phoneNumber" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">تلفن همراه</label>
-            </div>
-            <div class="relative float-label-input w-full hidden"  id="ph3" >
-                <input  type="text" id="phoneNumber3" placeholder="" class="block rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                <div class="absolute left-2 top-[7px] bg-primary-500 text-blue-500 flex justify-center items-center border rounded-lg border-blue-400 ">
-                    <img src="../../assets/icons/Vector122121.svg" style="padding: 0.94rem !important;" class="px-2 py-2 w-10" onclick="hiddenInputPhone3()"></div></input>
-                <label for="phoneNumber3" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">شماره سوم</label>
-            </div>
-            <div class="flex flex-col gap-y-2 w-full px-6 py-2">
-                <h4 class="text-primary-600 cursor-pointer text-[14px] py-1" onclick="openInputPhone3()">افزودن شماره بیشتر</h4>
-                <label class="labelcheckbox flex justify-between items-center " style="border: unset;padding-right: 0 !important;">
-                    <input type="checkbox">
-                    <span class="checkmark " style="right: 0 !important;" ></span>
-                    <span class="mr-6 min-w-fit text-[14px] block text-gray-700">انتخاب به عنوان آدرس بیشتر فرض</span>
-                </label>
+            <div class="relative float-label-input  bg-gray-100 w-full">
+                <input type="text" id="date2" placeholder=" " readonly onclick="openModalDate(1)" class="block  rounded border-slate-200 h-input text-sm relative w-full bg-gray-100 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3 block appearance-none leading-normal focus:border-blue-400">
+                <div class="absolute left-2 top-[7px]  flex justify-center items-center  rounded-lg border-blue-400 ">
+                    <img src="../../assets/icons/calendar2.svg" class="px-2 py-2 w-10">
+                </div>
+                <label for="date2" class="absolute bg-gray-100 top-4 right-3 text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-sm px-2 text-grey-darker">تا تاریخ</label>
             </div>
         </div>
-
-
-
-
     </div>
 
 
-    <div id="btnSabtNahayi" style="box-shadow: 0px -10px 20px 0px #e8e8e8" class="bg-white shadow-xl  w-full  max-w-3xl mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2">
-        <a class="h-btn btn ">ٍثبت نهایی</a>
+
+
+    <div style="box-shadow: 0px -10px 20px 0px #e8e8e8" class="z-30 bg-white shadow-xl insex-0 fixed w-full  max-w-3xl mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2">
+        <a class="h-btn btn ">ثبت پیش فاکتور جدید</a>
     </div>
-    <div id="btnSabtAddressJadid" style="box-shadow: 0px -10px 20px 0px #e8e8e8" class="bg-white hidden shadow-xl  w-full  max-w-3xl mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2">
-        <a class="h-btn btn ">ثبت آدرس جدید</a>
-    </div>
+
 
     <!--        MODAL DATE START-->
     <div id="modalDate" class="max-w-3xl mx-auto min-h-screen bg-zinc-950/20  -bottom-[101vh] transition-all duration-300 w-full absolute overflow-hidden flex justify-center items-end">
@@ -261,24 +179,194 @@
                 <div class="vizor border-primary-500"></div>
             </div>
 
-            <span id="btntsabt" onclick="handleDate()" type="button" class="bg-blue-500 place-items-center grid  h-btn w-full text-white rounded-md " >
-                    تائیدتاریخ ثبت
+            <span id="fromDate" onclick="handleDate()" type="button" class="bg-blue-500 place-items-center grid  h-btn w-full text-white rounded-md " >
+                    تائیدfromDate
             </span>
-            <span id="btnBirthDay" onclick="handleDate2()" type="button" class="bg-blue-500 place-items-center grid  h-btn w-full text-white rounded-md " >
-                    تائید
+            <span id="toDate" onclick="handleDate2()" type="button" class="bg-blue-500 place-items-center grid  h-btn w-full text-white rounded-md " >
+                    تائیدtoDate
             </span>
             <!--                end-->
         </div>
     </div>
+
+
     <!--        MODAL DATE END-->
 
+    <style>
+        /*for this Page*/
 
+        .labelcheckbox{
+            gap : 0.2rem !important;
+            height: unset !important;
+            padding: 1rem 0.75rem !important;
+        }
+        .labelcheckbox .labelmr-6{
+            margin-right: 1.5rem;
+        }
+        .labelcheckbox .labelmr-8{
+            margin-right: 2rem;
+        }
+        .labelcheckbox .checkmark{
+            display: block !important;
+        }
+        .labelcheckbox .labelpr-5{
+            padding-right: 1.25rem;
+        }
 
+    </style>
+    <div class="w-full bg-gray-100 px-3 py-3 flex flex-col justify-center items-start gap-y-4 mb-24 " >
+        <label class=" lajs  w-full px-3 py-4 rounded-lg bg-white gap-y-2  flex flex-col transition-all">
+            <div class="flex justify-between items-center  text-gray-700 text-[10px] w-full  px-3">
+                <span class="flex items-center  justify-center  gap-x-4">
+                    <input type="checkbox" hidden>
+                    <span class="checkmark hidden"></span>
+                    <span class="labelmr-6">
+                        مشتری
+                    </span>
+                </span>
+                <span>تاریخ ثبت :  1401/07/15</span>
+            </div>
+            <h4 class="text-primary-900 text-[14px] font-medium px-3 labelpr-5 w-full text-right labelmr-8">بیمارستان مادر (15025)</h4>
+            <div class="flex px-3 justify-between items-center gap-x-2 w-full pt-2">
+                <div class="bg-primary-100 h-[41px] w-full text-primary-300 px-2 py-3 rounded-lg flex justify-between  items-center ">
+                    <span class="text-[12px]">تعداد اقلام : </span>
+                    <p class="text-[10px]">
+                        <span class="font-bold text-primary-500 text-[16px]">250</span>
+                        عدد
+                    </p>
+                </div>
 
+                <div class="bg-secondary-100 h-[41px] text-[10px] text-secondary-500 w-full px-1 py-3 rounded-lg flex justify-center items-center gap-x-1  ">
 
+                    <p class="font-bold text-md text-[14px]" style="direction: ltr" >25/106/500 000</p>
+                    تومان
+                </div>
 
+            </div>
 
+        </label>
+        <label class=" lajs  w-full px-3 py-4 rounded-lg bg-white gap-y-2  flex flex-col transition-all">
+            <div class="flex justify-between items-center  text-gray-700 text-[10px] w-full  px-3">
+                <span class="flex items-center  justify-center  gap-x-4">
+                    <input type="checkbox" hidden>
+                    <span class="checkmark hidden"></span>
+                    <span class="labelmr-6">
+                        مشتری
+                    </span>
+                </span>
+                <span>تاریخ ثبت :  1401/07/15</span>
+            </div>
+            <h4 class="text-primary-900 text-[14px] font-medium px-3 labelpr-5 w-full text-right labelmr-8">بیمارستان مادر (15025)</h4>
+            <div class="flex px-3 justify-between items-center gap-x-2 w-full pt-2">
+                <div class="bg-primary-100 h-[41px] w-full text-primary-300 px-2 py-3 rounded-lg flex justify-between  items-center ">
+                    <span class="text-[12px]">تعداد اقلام : </span>
+                    <p class="text-[10px]">
+                        <span class="font-bold text-primary-500 text-[16px]">250</span>
+                        عدد
+                    </p>
+                </div>
 
+                <div class="bg-secondary-100 h-[41px] text-[10px] text-secondary-500 w-full px-1 py-3 rounded-lg flex justify-center items-center gap-x-1  ">
+
+                    <p class="font-bold text-md text-[14px]" style="direction: ltr" >25/106/500 000</p>
+                    تومان
+                </div>
+
+            </div>
+
+        </label>
+        <label class=" lajs  w-full px-3 py-4 rounded-lg bg-white gap-y-2  flex flex-col transition-all">
+            <div class="flex justify-between items-center  text-gray-700 text-[10px] w-full  px-3">
+                <span class="flex items-center  justify-center  gap-x-4">
+                    <input type="checkbox" hidden>
+                    <span class="checkmark hidden"></span>
+                    <span class="labelmr-6">
+                        مشتری
+                    </span>
+                </span>
+                <span>تاریخ ثبت :  1401/07/15</span>
+            </div>
+            <h4 class="text-primary-900 text-[14px] font-medium px-3 labelpr-5 w-full text-right labelmr-8">بیمارستان مادر (15025)</h4>
+            <div class="flex px-3 justify-between items-center gap-x-2 w-full pt-2">
+                <div class="bg-primary-100 h-[41px] w-full text-primary-300 px-2 py-3 rounded-lg flex justify-between  items-center ">
+                    <span class="text-[12px]">تعداد اقلام : </span>
+                    <p class="text-[10px]">
+                        <span class="font-bold text-primary-500 text-[16px]">250</span>
+                        عدد
+                    </p>
+                </div>
+
+                <div class="bg-secondary-100 h-[41px] text-[10px] text-secondary-500 w-full px-1 py-3 rounded-lg flex justify-center items-center gap-x-1  ">
+
+                    <p class="font-bold text-md text-[14px]" style="direction: ltr" >25/106/500 000</p>
+                    تومان
+                </div>
+
+            </div>
+
+        </label>
+        <label class=" lajs  w-full px-3 py-4 rounded-lg bg-white gap-y-2  flex flex-col transition-all">
+            <div class="flex justify-between items-center  text-gray-700 text-[10px] w-full  px-3">
+                <span class="flex items-center  justify-center  gap-x-4">
+                    <input type="checkbox" hidden>
+                    <span class="checkmark hidden"></span>
+                    <span class="labelmr-6">
+                        مشتری
+                    </span>
+                </span>
+                <span>تاریخ ثبت :  1401/07/15</span>
+            </div>
+            <h4 class="text-primary-900 text-[14px] font-medium px-3 labelpr-5 w-full text-right labelmr-8">بیمارستان مادر (15025)</h4>
+            <div class="flex px-3 justify-between items-center gap-x-2 w-full pt-2">
+                <div class="bg-primary-100 h-[41px] w-full text-primary-300 px-2 py-3 rounded-lg flex justify-between  items-center ">
+                    <span class="text-[12px]">تعداد اقلام : </span>
+                    <p class="text-[10px]">
+                        <span class="font-bold text-primary-500 text-[16px]">250</span>
+                        عدد
+                    </p>
+                </div>
+
+                <div class="bg-secondary-100 h-[41px] text-[10px] text-secondary-500 w-full px-1 py-3 rounded-lg flex justify-center items-center gap-x-1  ">
+
+                    <p class="font-bold text-md text-[14px]" style="direction: ltr" >25/106/500 000</p>
+                    تومان
+                </div>
+
+            </div>
+
+        </label>
+        <label class=" lajs  w-full px-3 py-4 rounded-lg bg-white gap-y-2  flex flex-col transition-all">
+            <div class="flex justify-between items-center  text-gray-700 text-[10px] w-full  px-3">
+                <span class="flex items-center  justify-center  gap-x-4">
+                    <input type="checkbox" hidden>
+                    <span class="checkmark hidden"></span>
+                    <span class="labelmr-6">
+                        مشتری
+                    </span>
+                </span>
+                <span>تاریخ ثبت :  1401/07/15</span>
+            </div>
+            <h4 class="text-primary-900 text-[14px] font-medium px-3 labelpr-5 w-full text-right labelmr-8">بیمارستان مادر (15025)</h4>
+            <div class="flex px-3 justify-between items-center gap-x-2 w-full pt-2">
+                <div class="bg-primary-100 h-[41px] w-full text-primary-300 px-2 py-3 rounded-lg flex justify-between  items-center ">
+                    <span class="text-[12px]">تعداد اقلام : </span>
+                    <p class="text-[10px]">
+                        <span class="font-bold text-primary-500 text-[16px]">250</span>
+                        عدد
+                    </p>
+                </div>
+
+                <div class="bg-secondary-100 h-[41px] text-[10px] text-secondary-500 w-full px-1 py-3 rounded-lg flex justify-center items-center gap-x-1  ">
+
+                    <p class="font-bold text-md text-[14px]" style="direction: ltr" >25/106/500 000</p>
+                    تومان
+                </div>
+
+            </div>
+
+        </label>
+
+    </div>
 
 
     <div id="insetHelperModal" class="hidden opacity-0 inset-0 bg-zinc-950/20 fixed z-10 transition-all"> </div>
@@ -357,94 +445,10 @@
         </ul>
     </div>
 </div>
+
 </body>
 </html>
-<style>
-</style>
-<script>
-    // let n  =0 ;
-    // function handleInsertInput(){
-    //     const addressesDiv = document.getElementById('addressesDiv')
-    //     n++;
-    //     if (n === 1){
-    //         addressesDiv.insertAdjacentHTML("beforeend" ,
-    //             `<div class="relative float-label-input w-full" onclick="closeInsertInput()" >
-    //             <input  type="text" id="phoneNumber${n}" placeholder="" class="block rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-    //             <div class="absolute left-2 top-[7px] bg-primary-500 text-blue-500 flex justify-center items-center border rounded-lg border-blue-400 ">
-    //             <img src="../../assets/icons/Vector122121.svg" style="padding: 0.94rem !important;" class="px-2 py-2 w-10" ></div></input>
-    //             <label for="phoneNumber${n}" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">شماره سوم</label>
-    //         </div>` )
-    //         n++;
-    //     }
-    // }
 
-    function hiddenInputPhone3(){
-        document.getElementById('ph3').classList.add('hidden')
-    }
-    function openInputPhone3(){
-        document.getElementById('ph3').classList.remove('hidden')
-    }
-
-    function closeInsertInput(){
-        const addressesDiv = document.getElementById('addressesDiv')
-
-    }
-</script>
-<script>
-    const addressesDiv = document.getElementById('addressesDiv');
-    const publicInfoDiv = document.getElementById('publicInfoDiv')
-    const addressesbtn = document.getElementById('addressesbtn')
-    const publicInfo = document.getElementById('publicInfo')
-    const btnSabtNahayi = document.getElementById('btnSabtNahayi')
-    const btnSabtAddressJadid = document.getElementById('btnSabtAddressJadid')
-    function openAddresses () {
-        publicInfoDiv.classList.add('hidden')
-        addressesbtn.classList.add('bg-gray-200')
-        addressesDiv.classList.remove('hidden')
-        publicInfo.classList.remove('bg-gray-200')
-        // bodyClass.classList.remove('overflow-y-hidden')
-
-        btnSabtNahayi.classList.add('hidden')
-        btnSabtAddressJadid.classList.remove('hidden')
-    }
-    function openpublicInfo(){
-        publicInfoDiv.classList.remove('hidden')
-        addressesbtn.classList.remove('bg-gray-200')
-        addressesDiv.classList.add('hidden')
-        publicInfo.classList.add('bg-gray-200')
-        // bodyClass.classList.add('overflow-y-hidden')
-        btnSabtAddressJadid.classList.add('hidden')
-        btnSabtNahayi.classList.remove('hidden')
-    }
-    openAddresses()
-    addressesbtn.onclick = () => {
-        openAddresses()
-    }
-    publicInfo.onclick = () => {
-        openpublicInfo()
-    }
-    function handleTarafHesab(e){
-        /*
-        e = 1-> حقیقی
-        e = 2-> حقوقی
-         */
-
-        if (e === 1){
-            console.log(e + "حقیقی")
-            document.getElementById('haghighi').classList.remove('hidden')
-            document.getElementById('hoghoghi').classList.add('hidden')
-
-        }
-        if (e === 2){
-            console.log(e + "حقوقی")
-            document.getElementById('hoghoghi').classList.remove('hidden')
-            openpublicInfo()
-            document.getElementById('haghighi').classList.add('hidden')
-
-        }
-    }
-
-</script>
 <style>
 
     .input-wrapper {
@@ -549,8 +553,9 @@
 
 </style>
 
-
 <script src="../../assets/scripts/swiperdate.js"></script>
+
+
 <!--SWIPER DATE START-->
 <script>
     var defaults = {
@@ -566,7 +571,7 @@
         direction: 'vertical',
         slideToClickedSlide: true,
         centeredSlides: true,
-        onSlideChangeEnd: updateInput
+        // onSlideChangeEnd: updateInput
     };
 
     var year = Swiper(
@@ -590,7 +595,7 @@
         initialSlide: 4
     }));
 
-    var input = document.getElementById('tsabt');
+    var input = document.getElementById('date1');
     input.addEventListener('focus', moveLeft);
     input.addEventListener('click', function (evt) {
         var start = input.selectionStart;
@@ -700,7 +705,7 @@
         start = input.selectionStart;
         end = input.selectionEnd;
         const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
-        document.getElementById('birthday').value = Number(Number(pad(year.realIndex))+1388) + '/' + months[Number(pad(month.realIndex))] + '/' + Number(Number(pad(days.realIndex)) + 1);
+        document.getElementById('date2').value = Number(Number(pad(year.realIndex))+1388) + '/' + months[Number(pad(month.realIndex))] + '/' + Number(Number(pad(days.realIndex)) + 1);
         input.setSelectionRange(start, end);
         closeModalDate()
     }
@@ -714,14 +719,16 @@
 
         let titleDate = document.getElementById('titleDate')
         if (num === 1){
-            //         تاریخ ثبت
-            document.getElementById('btntsabt').classList.remove('hidden')
-            document.getElementById('btnBirthDay').classList.add('hidden')
+            //         تا تاریخ
+            document.getElementById('toDate').classList.remove('hidden')
+            document.getElementById('fromDate').classList.add('hidden')
+            titleDate.innerHTML = "تا تاریخ"
 
         }else if(num === 2){
-            //         تاریخ تولد
-            document.getElementById('btnBirthDay').classList.remove('hidden')
-            document.getElementById('btntsabt').classList.add('hidden')
+            //         از تاریخ
+            document.getElementById('toDate').classList.add('hidden')
+            document.getElementById('fromDate').classList.remove('hidden')
+            titleDate.innerHTML = "از تاریخ"
 
         }
 
@@ -740,9 +747,33 @@
         }
     })
 </script>
-<!--SWIPER DATE END-->
-<script src="../../assets/scripts/main.js"></script>
-
 <script>
-    openpublicInfo()
+    const activeCheckBox = document.getElementById('activeCheckBox')
+    const removeCheckBox = document.getElementById('removeCheckBox')
+    function toggleCheckBox(){
+        activeCheckBox.classList.toggle('hidden')
+        removeCheckBox.classList.toggle('hidden')
+
+        const labels = document.querySelectorAll('.lajs')
+        console.log(labels)
+        for (i = 0; i < labels.length; i++){
+            console.log(i)
+            labels[i].classList.toggle('labelcheckbox')
+            // document.querySelector('.lajs').classList.toggle('labelcheckbox');
+        }
+
+
+    }
 </script>
+<!--SWIPER DATE END-->
+
+<script src="../../../assets/scripts/main.js"></script>
+<style>
+    .checkmark {
+        position: absolute;
+        top: 22px !important;
+        right: 25px !important;
+        border-radius: 5px;
+    }
+
+</style>
