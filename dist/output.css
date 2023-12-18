@@ -921,6 +921,14 @@ video {
   max-height: 100vh;
 }
 
+.min-h-\[24px\] {
+  min-height: 24px;
+}
+
+.min-h-\[80px\] {
+  min-height: 80px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1021,6 +1029,10 @@ video {
   min-width: 150px;
 }
 
+.min-w-\[24px\] {
+  min-width: 24px;
+}
+
 .min-w-\[278px\] {
   min-width: 278px;
 }
@@ -1032,6 +1044,10 @@ video {
 .min-w-fit {
   min-width: -moz-fit-content;
   min-width: fit-content;
+}
+
+.min-w-\[22px\] {
+  min-width: 22px;
 }
 
 .max-w-3xl {
@@ -1666,6 +1682,11 @@ video {
   letter-spacing: 0em;
 }
 
+.text-\[\#CC6B71\] {
+  --tw-text-opacity: 1;
+  color: rgb(204 107 113 / var(--tw-text-opacity));
+}
+
 .text-\[\#a8abb4\] {
   --tw-text-opacity: 1;
   color: rgb(168 171 180 / var(--tw-text-opacity));
@@ -2207,6 +2228,10 @@ label:has(input[type="radio"]:checked){
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:border-b-0 {
+    border-bottom-width: 0px;
   }
 
   .sm\:px-2 {
