@@ -72,7 +72,7 @@
             <span id="itemsBtn" class=" w-full  py-2  px-3 w-[152px]  h-[40px] grid place-items-center text-center rounded-lg">اقلام</span>
         </div>
         <div id="orderInformationDiv" class=" w-full px-6 bg-white py-[30px] flex flex-col justify-between flex-1 ">
-            <div class="flex flex-col gap-y-4   ">
+            <div class="flex flex-col gap-y-4  mb-16 ">
             <div class="relative float-label-input  ">
                 <input readonly onclick="openModalAddress()" type="text" id="address" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
                 <img class="absolute left-4 top-6  text-blue-500" src="../assets/icons/chevronb.svg">
@@ -246,7 +246,7 @@
 
 
 <!--        MODAL DATE START-->
-        <div id="modalDate" class=" min-h-screen bg-zinc-950/20  -bottom-[101vh] transition-all duration-300 w-full absolute overflow-hidden flex justify-center items-end">
+        <div id="modalDate" class=" min-h-screen bg-zinc-950/20  -bottom-[101vh] transition-all duration-300 w-full fixed overflow-hidden flex justify-center items-end">
             <div class="w-full  flex  flex-col items-center bg-white  justify-between h-[296px] px-6 py-4 ">
 <!--                start-->
                 <div class="flex justify-between items-center   w-full ">
@@ -368,34 +368,25 @@
                 <img src="../assets/icons/closeDate.svg" class="cursor-pointer" onclick="closeModalAddress()">
             </div>
             <form class="w-full flex flex-col justify-start items-start max-h-fit gap-4 pt-4  text-gray-700 ">
-                <label class="labelcheckbox radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark"></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
+
+                <div class="max-h-[250px] flex flex-col gap-y-2 overflow-y-auto w-full">
+
+                    <label  class="labelcheckbox radiobox flex items-center p-4-impo ">
+                        <input type="radio" name="address">
+                        <span class="checkmark tp15"></span>
+                        <span class="mr-8 min-w-fit text-[14px] block">
                 ادرس 1
                 </span>
-                </label>
-                <label class="labelcheckbox radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark "></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
-                دوم
+                    </label>
+                    <label  class="labelcheckbox radiobox flex items-center p-4-impo ">
+                        <input type="radio" name="address">
+                        <span class="checkmark tp15"></span>
+                        <span class="mr-8 min-w-fit text-[14px] block">
+                ادرس 1
                 </span>
-                </label>
-                <label class="labelcheckbox radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark "></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
-                سوم
-                </span>
-                </label>
-                <label class="labelcheckbox  radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark "></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
-                        آدرس چهارم
-                </span>
-                </label>
+                    </label>
+
+                </div>
                 <button type="submit" class="btn h-btn w-full col-span-2">تائید</button>
 
             </form>
@@ -456,28 +447,28 @@
             <div class="flex flex-col w-full items-start justify-start gap-y-2">
                 <div class="flex justify-between w-full items-center text-[12px]">
                     <span class="text-gray-700"> قیمت نهایی</span>
-                    <span class="text-primary-600">
+                    <span class="text-primary-600 text-[10px]">
                         <span class="font-semibold text-[14px]">6/500/000  </span>
                     تومان
                     </span>
                 </div>
                 <div class="flex justify-between w-full items-center text-[12px]">
                     <span class="text-gray-700">مالیات بر ارزش افزوده</span>
-                    <span class="text-primary-600">
+                    <span class="text-primary-600 text-[10px]">
                         <span class="font-semibold text-[14px]">500/000  </span>
                     تومان
                     </span>
                 </div>
                 <div class="flex justify-between w-full items-center text-[12px]">
                     <span class="text-gray-700">مالیات بر ارزش افزوده</span>
-                    <span class="text-primary-600">
+                    <span class="text-primary-600 text-[10px]">
                         <span class="font-semibold text-[14px]">0  </span>
                     تومان
                     </span>
                 </div>
                 <div class="flex justify-between w-full items-center text-[12px]">
                         <span class="text-gray-700"> قابل پرداخت</span>
-                    <span class="text-primary-600">
+                    <span class="text-primary-600 text-[10px]">
                         <span class="font-semibold text-[14px]">6/500/000  </span>
                     تومان
                     </span>
@@ -578,14 +569,14 @@
         itemsBtn.classList.add('bg-gray-200')
         orderInformationDiv.classList.add('hidden')
         orderBtn.classList.remove('bg-gray-200')
-        bodyClass.classList.remove('overflow-y-hidden')
+
     }
     function openOrderBtn(){
         itemsDiv.classList.add('hidden')
         itemsBtn.classList.remove('bg-gray-200')
         orderInformationDiv.classList.remove('hidden')
         orderBtn.classList.add('bg-gray-200')
-        bodyClass.classList.add('overflow-y-hidden')
+
 
     }
     itemsBtn.onclick = () => {
@@ -614,10 +605,10 @@
             modalDate.classList.remove('bottom-0')
         },100)
         modalDate.classList.add('hidden')
-        // document.querySelector('.bodyclass').classList.add('overflow-hidden')
+
     }
     // closeModalDate()
-    // document.querySelector('.bodyclass').classList.add('overflow-hidden')
+
 
 
 
@@ -910,7 +901,7 @@
     sellingType.onclick = openModalSellingType;
 
     modalDate.classList.add('hidden')
-    // document.getElementById('bodyclass').classList.add('overflow-y-hidden')
+
 
     function openModalHesabKetab(){
         modalHesabKetab.classList.remove('hidden')

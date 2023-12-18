@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../dist/mobiscroll.javascript.min.css">
     <script src="../assets/scripts/mobiscroll.javascript.min.js" ></script>
 </head>
-<body id="bodyclass" class="bodyclass overflow-y-hidden">
+<body  class=" overflow-y-hidden">
 <div  class="flex flex-col justify-start items-center md:max-w-3xl mx-auto  ">
     <div class="flex flex-col bg-gray-100  pt-4 gap-y-2 w-full min-h-screen  border relative">
         <div class="flex justify-between px-4 items-center">
@@ -72,7 +72,7 @@
             <span id="itemsBtn" class=" w-full  py-2  px-3 w-[152px]  h-[40px] grid place-items-center text-center rounded-lg">اقلام</span>
         </div>
         <div id="orderInformationDiv" class=" w-full px-6 bg-white py-[30px] flex flex-col justify-between flex-1 ">
-            <div class="flex flex-col gap-y-4   ">
+            <div class="flex flex-col gap-y-4  mb-16 ">
             <div class="relative float-label-input  ">
                 <input readonly onclick="openModalAddress()" type="text" id="address" placeholder="" class="block  rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
                 <img class="absolute left-4 top-6  text-blue-500" src="../assets/icons/chevronb.svg">
@@ -223,12 +223,17 @@
             <span class="text-[12px] font-light text-primary-900 text-center ">هنوز کالایی به فاکتور<br> اضافه نکرده اید</span>
             </div>
             <!--            nothing -->
+
             <a href="#"  class="btn">افزودن اقلام</a>
+
+<!--            <div  class="bg-white shadow-xl  w-full  max-w-3xl mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2 fixed bottom-0 flex justify-center items-center ">-->
+<!--                <a href="#"  class="btn">افزودن اقلام</a>-->
+<!--            </div>-->
         </div>
 
 
 <!--        MODAL DATE START-->
-        <div id="modalDate" class=" min-h-screen bg-zinc-950/20  -bottom-[101vh] transition-all duration-300 w-full absolute overflow-hidden flex justify-center items-end">
+        <div id="modalDate" class=" min-h-screen bg-zinc-950/20  -bottom-[101vh] transition-all duration-300 w-full fixed overflow-hidden flex justify-center items-end">
             <div class="w-full  flex  flex-col items-center bg-white  justify-between h-[296px] px-6 py-4 ">
 <!--                start-->
                 <div class="flex justify-between items-center   w-full ">
@@ -350,34 +355,24 @@
                 <img src="../assets/icons/closeDate.svg" class="cursor-pointer" onclick="closeModalAddress()">
             </div>
             <form class="w-full flex flex-col justify-start items-start max-h-fit gap-4 pt-4  text-gray-700 ">
-                <label class="labelcheckbox radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark"></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
+                <div class="max-h-[250px] flex flex-col gap-y-2 overflow-y-auto w-full">
+
+                    <label  class="labelcheckbox radiobox flex items-center p-4-impo ">
+                        <input type="radio" name="address">
+                        <span class="checkmark tp15"></span>
+                        <span class="mr-8 min-w-fit text-[14px] block">
                 ادرس 1
                 </span>
-                </label>
-                <label class="labelcheckbox radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark "></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
-                دوم
+                    </label>
+                    <label  class="labelcheckbox radiobox flex items-center p-4-impo ">
+                        <input type="radio" name="address">
+                        <span class="checkmark tp15"></span>
+                        <span class="mr-8 min-w-fit text-[14px] block">
+                ادرس 1
                 </span>
-                </label>
-                <label class="labelcheckbox radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark "></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
-                سوم
-                </span>
-                </label>
-                <label class="labelcheckbox  radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark "></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
-                        آدرس چهارم
-                </span>
-                </label>
+                    </label>
+
+                </div>
                 <button type="submit" class="btn h-btn w-full col-span-2">تائید</button>
 
             </form>
@@ -509,20 +504,18 @@
     const itemsBtn = document.getElementById('itemsBtn')
     const orderBtn = document.getElementById('orderBtn')
     const modalDate = document.getElementById('modalDate')
-    const bodyClass = document.getElementById('bodyclass')
+
     function openAghlam () {
         itemsDiv.classList.remove('hidden')
         itemsBtn.classList.add('bg-gray-200')
         orderInformationDiv.classList.add('hidden')
         orderBtn.classList.remove('bg-gray-200')
-        bodyClass.classList.remove('overflow-y-hidden')
     }
     function openOrderBtn(){
         itemsDiv.classList.add('hidden')
         itemsBtn.classList.remove('bg-gray-200')
         orderInformationDiv.classList.remove('hidden')
         orderBtn.classList.add('bg-gray-200')
-        bodyClass.classList.add('overflow-y-hidden')
     }
     itemsBtn.onclick = () => {
         openAghlam()
@@ -550,10 +543,8 @@
             modalDate.classList.remove('bottom-0')
         },100)
         modalDate.classList.add('hidden')
-        // document.querySelector('.bodyclass').classList.add('overflow-hidden')
     }
     // closeModalDate()
-    // document.querySelector('.bodyclass').classList.add('overflow-hidden')
 
 
 
@@ -848,7 +839,6 @@
         closeModalAddress()
     }
     modalDate.classList.add('hidden')
-    // document.getElementById('bodyclass').classList.add('overflow-y-hidden')
 </script>
 
 </body>

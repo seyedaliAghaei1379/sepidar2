@@ -3,7 +3,16 @@
 @tailwind utilities;
 
 /* Add Config Colors and Fonts */
-
+@font-face {
+    font-family: kalameh-regular;
+    src: url("../assets/fonts/KalamehWebFaNum-Thin.woff");
+    font-weight:200;
+}
+@font-face {
+    font-family: kalameh-regular;
+    src: url("../assets/fonts/KalamehWebFaNum-Light.woff");
+    font-weight:300;
+}
 @font-face {
     font-family: kalameh-regular;
     src: url("../assets/fonts/KalamehWebFaNum-Regular.woff");
@@ -29,16 +38,7 @@
     src: url("../assets/fonts/KalamehWebFaNum-ExtraBold.woff");
     font-weight:900;
 }
-@font-face {
-    font-family: kalameh-regular;
-    src: url("../assets/fonts/KalamehWebFaNum-Thin.woff");
-    font-weight:200;
-}
-@font-face {
-    font-family: kalameh-regular;
-    src: url("../assets/fonts/KalamehWebFaNum-Light.woff");
-    font-weight:300;
-}
+
 
 /*@import "/dist/mobiscroll.javascript.min.css";*/
 
@@ -147,6 +147,7 @@ input[type="text"]{
     background: linear-gradient(180deg, rgba(255,255,255,1) 24%, rgba(255,255,255,0.1657913165266106) 100%);
 }
 
+
 .labelcheckbox{
     @apply w-full border h-[48px] border-gray-200 gap-x-4 items-center border rounded-lg px-3  flex items-center   py-2
 }
@@ -203,15 +204,24 @@ input[type="text"]{
 }
 
 /* Style the checkmark/indicator */
-.labelcheckbox .checkmark:after {
-    right: 4px;
-    top: 2px;
-    width: 4px;
-    height: 9px;
+/*.labelcheckbox .checkmark:after {*/
+/*    right: 4px;*/
+/*    top: 2px;*/
+/*    width: 4px;*/
+/*    height: 9px;*/
+/*    border: solid white;*/
+/*    border-width: 0 3px 3px 0;*/
+/*    -webkit-transform: rotate(45deg);*/
+/*    -ms-transform: rotate(45deg);*/
+/*    transform: rotate(45deg);*/
+/*}*/
+.labelcheckbox .checkmark:after{
+    right: 3.3px;
+    top: 1px;
+    width: 5px;
+    height: 9.5px;
     border: solid white;
     border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
@@ -246,4 +256,16 @@ label:has(input[type="radio"]:checked){
     border-radius: 25px;
     border: 2px solid #A8ABB4;
     background-color: #ffffff;
+}
+.tp15{
+    top: 15.5px !important;
+ }
+.p-4-impo{
+    padding: 1rem !important;
+}
+.gtgt{
+    color: #A8ABB4;
+}
+.parentLabel > .labelcheckboxch1:has(input[type="checkbox"]:checked) .gtgt{
+    color: white !important;
 }

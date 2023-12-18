@@ -5,12 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>recordFactor</title>
+    <title>recordFactor3</title>
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../dist/mobiscroll.javascript.min.css">
     <script src="../assets/scripts/mobiscroll.javascript.min.js" ></script>
 </head>
-<body id="bodyclass" class="bodyclass overflow-y-hidden">
+<body>
 <div  class="flex flex-col justify-start items-center md:max-w-3xl mx-auto  ">
     <div class="flex flex-col bg-gray-100  pt-4 gap-y-2 w-full min-h-screen  border relative">
         <div class="flex justify-between px-4 items-center">
@@ -62,6 +62,8 @@
                         <span class="text-[12px] text-gray-700">تاریخ : 1402/04/20</span>
                     </div>
                 </div>
+
+
         </div>
         <div class="bg-white py-2 flex justify-center w-full justify-between px-6 w-full text-[12px] text-primary-900 gap-x-6">
             <span id="orderBtn" class=" w-full bg-gray-200 py-2  px-3 w-[152px] h-[40px] grid place-items-center text-center rounded-lg ">اطلاعات سفارش </span>
@@ -74,6 +76,7 @@
                     <img class="absolute left-4 top-6  text-blue-500" src="../assets/icons/chevronb.svg">
                     <label for="address" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white ">آدرس مشتری</label>
                 </div>
+
                 <div class="relative float-label-input  ">
                     <input type="text" id="sellingType" readonly placeholder="" class="block rounded-md w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
                     <img class="absolute left-4 top-6  text-blue-500" src="../assets/icons/chevronb.svg">
@@ -81,21 +84,22 @@
                 </div>
                 <div class="relative float-label-input  ">
                     <input type="text" id="SettlementAgreements" placeholder="" class="block rounded-md  w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                    <label for="SettlementAgreements" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white">قراردادهای تسویه حساب</label>
+                    <label for="SettlementAgreements" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white">توافقات تسویه</label>
                 </div>
                 <div class="relative float-label-input  ">
                     <input  type="text" id="deliveryDate" readonly placeholder="" class="block rounded-md  w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
                     <label for="deliveryDate" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white">تاریخ تحویل</label>
                 </div>
-                <div class="relative float-label-input  ">
-                    <input  type="text" id="deliveryDatePishFactor" readonly placeholder="" class="block rounded-md  w-full border-gray-200 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded py-4 px-3 block appearance-none leading-normal focus:border-blue-400 h-[56px]">
-                    <label for="deliveryDatePishFactor" class="absolute top-4 right-3 text-[14px] text-gray-400 pointer-events-none transition duration-200 ease-in-outbg-white text-[14px] px-2 text-grey-darker bg-white"> تاریخ اعتبار پیش فاکتور</label>
-                </div>
             </div>
-            <div class="btn">
-                ثبت فاکتور
-            </div>
+<!--            jila-->
 
+<!--            <div class="btn">-->
+<!--                ثبت فاکتور-->
+<!--            </div>-->
+
+        </div>
+        <div id="sabtFactorBtnFixed" class="z-30 bg-white shadow-xl insex-0 fixed w-full  max-w-3xl mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2">
+            <a class="h-btn btn ">ثبت فاکتور</a>
         </div>
         <div id="itemsDiv"  class="hidden w-full px-6 bg-white py-4 flex flex-col justify-between items-center  flex-1 gap-y-6 " >
             <div class="flex flex-col justify-center items-center gap-y-4 sm:grid sm:grid-cols-2 gap-4 ">
@@ -223,16 +227,21 @@
                 <span class="text-[12px] font-light text-primary-900 text-center ">هنوز کالایی به فاکتور<br> اضافه نکرده اید</span>
             </div>
             <!--            nothing -->
+
             <a href="#"  class="btn">افزودن اقلام</a>
+
+            <!--            <div  class="bg-white shadow-xl  w-full  max-w-3xl mx-auto h-fixedbtnmodal bottom-0 flex px-3 py-1 justify-center items-center gap-x-2 fixed bottom-0 flex justify-center items-center ">-->
+            <!--                <a href="#"  class="btn">افزودن اقلام</a>-->
+            <!--            </div>-->
         </div>
 
 
         <!--        MODAL DATE START-->
-        <div id="modalDate" class=" min-h-screen bg-zinc-950/20  -bottom-[101vh] transition-all duration-300 w-full fixed overflow-hidden flex justify-center items-end">
+        <div id="modalDate" class="z-[999999999999999999]  min-h-screen bg-zinc-950/20  -bottom-[101vh] transition-all duration-300 w-full fixed overflow-hidden flex justify-center items-end">
             <div class="w-full  flex  flex-col items-center bg-white  justify-between h-[296px] px-6 py-4 ">
                 <!--                start-->
                 <div class="flex justify-between items-center   w-full ">
-                    <span id="titleDate" class="text-primary-900 font-medium text-[18px]">تاریخ تحویل</span>
+                    <span class="text-primary-900 font-medium text-[18px]">تاریخ تحویل</span>
                     <img src="../assets/icons/closeDate.svg" onclick="closeModalDate()">
                 </div>
 
@@ -334,10 +343,7 @@
                     <div class="vizor border-primary-500"></div>
                 </div>
 
-                <span id="btnHandleDate" onclick="handleDate()" type="button" class="bg-blue-500 place-items-center grid  h-btn w-full text-white rounded-md " >
-                    تائید
-                </span>
-                <span id="btnHandleDateTahvil" onclick="handleDate2()" type="button" class="bg-blue-500 hidden place-items-center grid  h-btn w-full text-white rounded-md " >
+                <span onclick="handleDate()" type="button" class="bg-blue-500 place-items-center grid  h-btn w-full text-white rounded-md " >
                     تائید
                 </span>
 
@@ -353,34 +359,25 @@
                 <img src="../assets/icons/closeDate.svg" class="cursor-pointer" onclick="closeModalAddress()">
             </div>
             <form class="w-full flex flex-col justify-start items-start max-h-fit gap-4 pt-4  text-gray-700 ">
-                <label class="labelcheckbox radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark"></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
+                <div class="max-h-[250px] flex flex-col gap-y-2 overflow-y-auto w-full">
+
+                    <label  class="labelcheckbox radiobox flex items-center p-4-impo ">
+                        <input type="radio" name="address">
+                        <span class="checkmark tp15"></span>
+                        <span class="mr-8 min-w-fit text-[14px] block">
                 ادرس 1
                 </span>
-                </label>
-                <label class="labelcheckbox radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark "></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
-                دوم
+                    </label>
+                    <label  class="labelcheckbox radiobox flex items-center p-4-impo ">
+                        <input type="radio" name="address">
+                        <span class="checkmark tp15"></span>
+                        <span class="mr-8 min-w-fit text-[14px] block">
+                ادرس 1
                 </span>
-                </label>
-                <label class="labelcheckbox radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark "></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
-                سوم
-                </span>
-                </label>
-                <label class="labelcheckbox  radiobox">
-                    <input type="radio" name="address">
-                    <span class="checkmark "></span>
-                    <span class="mr-8 min-w-fit text-[14px] block">
-                        آدرس چهارم
-                </span>
-                </label>
+                    </label>
+
+                </div>
+
                 <button type="submit" class="btn h-btn w-full col-span-2">تائید</button>
 
             </form>
@@ -512,20 +509,20 @@
     const itemsBtn = document.getElementById('itemsBtn')
     const orderBtn = document.getElementById('orderBtn')
     const modalDate = document.getElementById('modalDate')
-    const bodyClass = document.getElementById('bodyclass')
+    const sabtFactorBtnFixed = document.getElementById('sabtFactorBtnFixed')
     function openAghlam () {
         itemsDiv.classList.remove('hidden')
         itemsBtn.classList.add('bg-gray-200')
         orderInformationDiv.classList.add('hidden')
         orderBtn.classList.remove('bg-gray-200')
-
+        sabtFactorBtnFixed.classList.add('hidden')
     }
     function openOrderBtn(){
         itemsDiv.classList.add('hidden')
         itemsBtn.classList.remove('bg-gray-200')
         orderInformationDiv.classList.remove('hidden')
         orderBtn.classList.add('bg-gray-200')
-
+        sabtFactorBtnFixed.classList.remove('hidden')
 
     }
     itemsBtn.onclick = () => {
@@ -536,37 +533,17 @@
     }
     deliveryDate.onclick = () =>{
         console.log('تاریخ تحویل')
-        openModalDate(1)
-    }
-    deliveryDatePishFactor.onclick = () =>{
-        console.log('تاریخ اعتبار پیش فاکتور')
-        openModalDate(2)
+        openModalDate()
     }
     document.addEventListener('click', () => {
         if (event.target.id ===  'modalDate'){
             closeModalDate()
         }
     })
-    function openModalDate (num){
+    function openModalDate (){
         modalDate.classList.remove('hidden')
         modalDate.classList.remove('-bottom-[101vh]')
         modalDate.classList.add('bottom-0')
-        // console.log(typeof num , num)
-        let titleDate = document.getElementById('titleDate')
-        if (num === 1){
-        //         تاریخ تحویل
-            document.getElementById('btnHandleDate').classList.remove('hidden')
-            document.getElementById('btnHandleDateTahvil').classList.add('hidden')
-            titleDate.innerHTML = "تاریخ تحویل";
-
-        }else if(num === 2){
-            //         تاریخ پیش فاکتور
-            document.getElementById('btnHandleDateTahvil').classList.remove('hidden')
-            document.getElementById('btnHandleDate').classList.add('hidden')
-            titleDate.innerHTML = "تاریخ پیش فاکتور";
-
-        }
-
     }
     function closeModalDate(){
         setTimeout(() => {
@@ -574,10 +551,8 @@
             modalDate.classList.remove('bottom-0')
         },100)
         modalDate.classList.add('hidden')
-
     }
     // closeModalDate()
-
 
 
 
@@ -810,7 +785,6 @@
         var start = input.selectionStart;
         var end = input.selectionEnd;
         // input.value
-        // const months = ["فروردين", "ارديبهشت", "خرداد", "تير", "مرداد", "شهريور", "مهر", "آبان", "آذر", "دي", "بهمن", "اسفند"]
         const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
         input.value = Number(Number(pad(year.realIndex))+1388) + '/' + months[Number(pad(month.realIndex))] + '/' + Number(Number(pad(days.realIndex)) + 1);
         input.setSelectionRange(start, end);
@@ -827,19 +801,6 @@
         updateInput()
         closeModalDate()
     }
-    function handleDate2(){
-        console.log("handleDate2()")
-        if (!input) {
-            return false;
-        }
-        start = input.selectionStart;
-        end = input.selectionEnd;
-        const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
-        document.getElementById('deliveryDatePishFactor').value = Number(Number(pad(year.realIndex))+1388) + '/' + months[Number(pad(month.realIndex))] + '/' + Number(Number(pad(days.realIndex)) + 1);
-        input.setSelectionRange(start, end);
-        closeModalDate()
-    }
-    // handleDate2()
 </script>
 <!--SWIPER DATE END-->
 
@@ -886,7 +847,6 @@
         closeModalAddress()
     }
     modalDate.classList.add('hidden')
-
 </script>
 
 </body>

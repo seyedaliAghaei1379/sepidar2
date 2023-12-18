@@ -83,20 +83,20 @@
 
             <!--        HAGHIGHI DIV START-->
             <div id="haghighi" class="flex flex-col gap-y-4 mt-2  w-full h-full ">
-                <div class="w-full flex-col flex items-start justify-start  gap-y-6 text-[14px] text-primary-900">
-                    <ul class="grid grid-cols-2 w-full justify-start items-center  gap-x-3   ">
+                <div class="w-full flex-col flex items-start justify-start   text-[14px] text-primary-900">
+                    <ul class="grid grid-cols-2 w-full justify-start items-center  gap-x-3 py-4 border-b   ">
                         <li class="pr-4"> نام</li>
                         <li class="text-gray-700">سیدعلی</li>
                     </ul>
-                    <ul class="grid grid-cols-2 w-full justify-start items-center  gap-x-3">
+                    <ul class="grid grid-cols-2 w-full justify-start items-center  gap-x-3 py-4 border-b">
                         <li class="pr-4">نام خانوادگی </li>
                         <li class="text-gray-700">سیدآقائی</li>
                     </ul>
-                        <ul class="grid grid-cols-2 w-full justify-start items-center  gap-x-3">
+                        <ul class="grid grid-cols-2 w-full justify-start items-center  gap-x-3 py-4 border-b">
                         <li class="pr-4">کدملی</li>
                         <li class="text-gray-700">0371973805</li>
                     </ul>
-                            <ul class="grid grid-cols-2 w-full justify-start items-center  gap-x-3">
+                            <ul class="grid grid-cols-2 w-full justify-start items-center  gap-x-3 py-4 ">
                         <li class="pr-4">تاریخ تولد</li>
                         <li class="text-gray-700">1369/02/25</li>
                     </ul>
@@ -120,7 +120,7 @@
                 <input type="radio" name="address" class="absolute opacity-0 inset-0" checked>
                 <span style="" class="chio w-[16px] h-[16px] rounded-full mt-1.5  border-2 border-white bg-white"></span>
                 <div class="flex flex-col gap-y-2 pt-1 text-gray-700">
-                    <h4 class="text-[14px]">قم - بلوار الغدیر - روبروی ساختمان اقتصاد دارایی - پلاک 31 - طبقه همکف</h4>
+                    <h4 class="text-[14px] pb-1">قم - بلوار الغدیر - روبروی ساختمان اقتصاد دارایی - پلاک 31 - طبقه همکف</h4>
                     <span class=" text-[12px]">
                         کد پستی : 31500151505
                     </span>
@@ -133,7 +133,7 @@
                 <input type="radio" name="address" class="absolute opacity-0 inset-0">
                 <span style="" class="chio w-[16px] h-[16px] rounded-full mt-1.5  border-2 border-white bg-white"></span>
                 <div class="flex flex-col gap-y-2 pt-1 text-gray-700">
-                    <h4 class="text-[14px]">قم - بلوار الغدیر - روبروی ساختمان اقتصاد دارایی - پلاک 31 - طبقه همکف</h4>
+                    <h4 class="text-[14px] pb-1">قم - بلوار الغدیر - روبروی ساختمان اقتصاد دارایی - پلاک 31 - طبقه همکف</h4>
                     <span class=" text-[12px]">
                         کد پستی : 31500151505
                     </span>
@@ -168,7 +168,7 @@
 
     <div id="factorHaModal" class=" hidden -bottom-[101vh] bottom-0 transiton-all bg-white py-3 px-3  flex flex-col  fixed w-full max-w-3xl mx-auto z-[9999999999]">
         <div class="w-full  bg-white px-4 py-2 flex flex-col gap-y-2 justify-center ">
-            <img src="../../assets/icons/Rectangle%20140.svg" class="w-12 mb-8 mx-auto">
+            <img src="../../assets/icons/Rectangle%20140.svg" class="w-12 mb-6 mx-auto">
             <a href="#" class="border border-primary-500 bg-primary-500 text-white py-4 text-center text-[14px] rounded-lg">ثبت فاکتور جدید</a>
             <a href="#" class="border border-primary-500 text-[14px] py-4 text-center rounded-lg text-primary-900">ثبت پیش فاکتور </a>
         </div>
@@ -293,7 +293,7 @@
         addressesbtn.classList.add('bg-gray-200')
         addressesDiv.classList.remove('hidden')
         publicInfo.classList.remove('bg-gray-200')
-        // bodyClass.classList.remove('overflow-y-hidden')
+        //
 
     }
     function openpublicInfo(){
@@ -301,7 +301,7 @@
         addressesbtn.classList.remove('bg-gray-200')
         addressesDiv.classList.add('hidden')
         publicInfo.classList.add('bg-gray-200')
-        // bodyClass.classList.add('overflow-y-hidden')
+        //
     }
     openAddresses()
     addressesbtn.onclick = () => {
