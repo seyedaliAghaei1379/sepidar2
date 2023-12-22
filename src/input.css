@@ -269,3 +269,162 @@ label:has(input[type="radio"]:checked){
 .parentLabel > .labelcheckboxch1:has(input[type="checkbox"]:checked) .gtgt{
     color: white !important;
 }
+
+.p-logo {
+    animation: rotate-gradient 14s infinite ;
+    background: rgb(187,255,251);
+    background: linear-gradient(0deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+}
+@keyframes rotate-gradient {
+    0% {
+        background: linear-gradient(0deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    2% {
+        background: linear-gradient(7.2deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    4% {
+        background: linear-gradient(14.4deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    6% {
+        background: linear-gradient(21.6deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    8% {
+        background: linear-gradient(28.8deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    10% {
+        background: linear-gradient(36deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    12% {
+        background: linear-gradient(43.2deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    14% {
+        background: linear-gradient(50.4deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    16% {
+        background: linear-gradient(57.6deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    18% {
+        background: linear-gradient(64.8deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    20% {
+        background: linear-gradient(72deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    22% {
+        background: linear-gradient(79.2deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    /* Adding a step in the middle */
+    24% {
+        background: linear-gradient(86.4deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    26% {
+        background: linear-gradient(93.6deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    28% {
+        background: linear-gradient(100.8deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    30% {
+        background: linear-gradient(108deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    32% {
+        background: linear-gradient(115.2deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    34% {
+        background: linear-gradient(122.4deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    36% {
+        background: linear-gradient(129.6deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    38% {
+        background: linear-gradient(136.8deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    40% {
+        background: linear-gradient(144deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    42% {
+        background: linear-gradient(151.2deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    44% {
+        background: linear-gradient(158.4deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    46% {
+        background: linear-gradient(165.6deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    48% {
+        background: linear-gradient(172.8deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    50% {
+        background: linear-gradient(180deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    52% {
+        background: linear-gradient(187.2deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    54% {
+        background: linear-gradient(194.4deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    56% {
+        background: linear-gradient(201.6deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    58% {
+        background: linear-gradient(208.8deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    60% {
+        background: linear-gradient(216deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    62% {
+        background: linear-gradient(223.2deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    64% {
+        background: linear-gradient(230.4deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    66% {
+        background: linear-gradient(237.6deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    68% {
+        background: linear-gradient(244.8deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    70% {
+        background: linear-gradient(252deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    72% {
+        background: linear-gradient(259.2deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    74% {
+        background: linear-gradient(266.4deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    76% {
+        background: linear-gradient(273.6deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    80% {
+        background: linear-gradient(280.8deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    82% {
+        background: linear-gradient(288deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    84% {
+        background: linear-gradient(295.2deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    86% {
+        background: linear-gradient(302.4deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    88% {
+        background: linear-gradient(309.6deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    90% {
+        background: linear-gradient(316.8deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    92% {
+        background: linear-gradient(331.2deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    94% {
+        background: linear-gradient(338.4deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    96% {
+        background: linear-gradient(345.6deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    98% {
+        background: linear-gradient(352.8deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+    100% {
+        background: linear-gradient(360deg, rgba(204,255,252,1) 0%, rgba(235,255,252,1) 43%, rgba(255,255,255,1) 100%);
+    }
+}
